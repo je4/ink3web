@@ -14,7 +14,16 @@ import "embed"
 //go:embed bootstrap-icons/font/bootstrap-icons.min.css bootstrap-icons/font/fonts/bootstrap-icons.woff2
 //go:embed bootstrap-icons/font/fonts/bootstrap-icons.woff
 //go:embed css/ibm-plex-mono.css css/ibm-plex-sans-condensed.css css/ibm-plex-sans.css css/ibm-plex-serif.css
-//go:embed img/*
+//go:embed fonts/ibm-plex-sans-v19-latin_latin-ext-regular.woff2 fonts/ibm-plex-sans-v19-latin_latin-ext-italic.woff2 fonts/FontAwesome.otf fonts/fontawesome*
+//go:embed fonts/ibm-plex-sans-v19-latin_latin-ext-500.woff2 fonts/ibm-plex-sans-v19-latin_latin-ext-700.woff2
+//go:embed fonts/ibm-plex-sans-v19-latin_latin-ext-600.woff2 fonts/ibm-plex-sans-v19-latin_latin-ext-600.ttf
+//go:embed img/frame.svg img/frame0.png img/histories.png img/revolving.png img/7373.svg img/title_??_1024x117.png
+//go:embed img/border*.png img/title_background*.png img/edge*.png img/image_mask.png img/120px-DeepL_logo.svg.png
+//go:embed img/prev*.png img/next*.png img/?.png img/??.png img/hook.png img/line_medium.png img/line_short.png
+//go:embed img/ki.png img/ki2.png img/lupe.png img/prev2.png img/index_bg2.jpg img/index_bg_dark.jpg img/index_bg_light.jpg
+//go:embed img/lupe_black.png img/ki2_black.png img/coll_act.png img/wesen_behaelter/*_klein.png img/sdmllogo.png
+//go:embed img/viaf.png
+//go:embed img/access_denied_dark.png img/access_denied_light.png
 //go:embed flag-icons/css/flag-icons.min.css flag-icons/flags/4x3/de.svg flag-icons/flags/4x3/gb-eng.svg
 //go:embed flag-icons/flags/4x3/fr.svg flag-icons/flags/4x3/it.svg
 //go:embed videojs/video-js.min.css videojs/video.min.js
