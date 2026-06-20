@@ -1,4 +1,4 @@
-package ink3
+package ink3_20260620
 
 import "embed"
 
