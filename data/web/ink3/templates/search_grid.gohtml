@@ -81,15 +81,28 @@
                                 <div class="d-block gap-2">
                                     {{- range $collFacet := .CollectionFacets }}
                                         {{- if $collFacet.Checked }}
-                                        <button
-                                                onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
-                                                type="button"
-                                                class="btn btn-lg collectionButtonxx"
-                                                value="{{ $collFacet.ID }}"
-                                                selected="{{ if $collFacet.Checked }}true{{ else }}false{{ end }}">
+                                            <button
+                                                    onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                    type="button"
+                                                    class="btn btn-lg collectionButton"
+                                                    value="{{ $collFacet.ID }}"
+                                                    selected="{{ if $collFacet.Checked }}true{{ else }}false{{ end }}">
                                                 <span>{{ abbrev 50 $collFacet.Name }}</span><i class="iconx" data-icon="close16"></i>
                                                 {{- $ds := digits $collFacet.Count }}
-                                        </button>
+                                            </button>
+                                        {{- end }}
+                                    {{- end }}
+                                    {{- range $catFacet := .CatalogFacets }}
+                                        {{- if $catFacet.Checked }}
+                                            <button
+                                                    onclick="{{ if $catFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                    type="button"
+                                                    class="btn btn-lg catalogButton"
+                                                    value="{{ $catFacet.ID }}"
+                                                    selected="{{ if $catFacet.Checked }}true{{ else }}false{{ end }}">
+                                                <span>{{ abbrev 50 $catFacet.Name }}</span><i class="iconx" data-icon="close16"></i>
+                                                {{- $ds := digits $catFacet.Count }}
+                                            </button>
                                         {{- end }}
                                     {{- end }}
                                     {{- range $parent, $vocabFacets := .VocabularyFacets }}
@@ -370,27 +383,53 @@
             <li class="nav-item mb-1">
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Sammlung" $lang }}</summary>
-                    
+
                     <div class="tags cols collection">
                         {{ range $collFacet := .CollectionFacets }}
                             {{ if not $collFacet.Checked }}
-                            <button
-                                stylex="margin: 1px; padding: 1px 4px 1px 4px;"
-                                onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
-                                type="button"
-                                class="btn collectionButton {{ if $collFacet.Checked }}on{{ end }}" value="{{ $collFacet.ID }}"
-                                selected="{{ if $collFacet.Checked }}true{{ else }}false{{ end }}"
-                            >
-                                <div class="name">
-                                    <span>{{ abbrev 50 $collFacet.Name }}</span>
-                                    <i class="num"><b>{{ $collFacet.Count }}</b></i>
-                                </div>
+                                <button
+                                        stylex="margin: 1px; padding: 1px 4px 1px 4px;"
+                                        onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                        type="button"
+                                        class="btn collectionButton {{ if $collFacet.Checked }}on{{ end }}" value="{{ $collFacet.ID }}"
+                                        selected="{{ if $collFacet.Checked }}true{{ else }}false{{ end }}"
+                                >
+                                    <div class="name">
+                                        <span>{{ abbrev 50 $collFacet.Name }}</span>
+                                        <i class="num"><b>{{ $collFacet.Count }}</b></i>
+                                    </div>
 
-                            </button>
+                                </button>
                             {{ end }}
                         {{ end }}
                     </div>
-                </details>    
+                </details>
+            </li>
+            <!-- Thema -->
+            <li class="nav-item mb-1">
+                <details class="ds">
+                    <summary class="summary textbig"><span class="icon"></span>{{ localize "Thema" $lang }}</summary>
+
+                    <div class="tags cols collection">
+                        {{ range $catFacet := .CatalogFacets }}
+                            {{ if not $catFacet.Checked }}
+                                <button
+                                        stylex="margin: 1px; padding: 1px 4px 1px 4px;"
+                                        onclick="{{ if $catFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                        type="button"
+                                        class="btn catalogButton {{ if $catFacet.Checked }}on{{ end }}" value="{{ $catFacet.ID }}"
+                                        selected="{{ if $catFacet.Checked }}true{{ else }}false{{ end }}"
+                                >
+                                    <div class="name">
+                                        <span>{{ abbrev 50 $catFacet.Name }}</span>
+                                        <i class="num"><b>{{ $catFacet.Count }}</b></i>
+                                    </div>
+
+                                </button>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </details>
             </li>
             <!-- other filters -->
 
