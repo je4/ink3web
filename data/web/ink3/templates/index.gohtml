@@ -41,7 +41,7 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end shadow">
                         <li><a class="dropdown-item active" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Alle</a></li>
-                        <li><a class="dropdown-item" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Verfasser</a></li>
+                        <li><a class="dropdown-item" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Verfassende</a></li>
                         <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Titel</a></li>
                         <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Volltext</a></li>
                         <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Sammlung</a></li>
@@ -99,18 +99,24 @@
         </details>
 
         <!-- ohter filters -->
-        <details class="ds">
+ <details class="ds">
+            <summary class="summary textbig"><span class="icon"></span>Ressourcentyp</summary>
+            <div class="detail tags cols collection">
+            </div>
+        </details>
+ <details class="ds">
+            <summary class="summary textbig"><span class="icon"></span>Thema</summary>
+            <div class="detail tags cols collection">
+            </div>
+        </details>
+       
+       <!-- <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Zugang</summary>
             <div class="detail tags cols collection">
             </div>
-        </details>
+        </details> -->
         <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Bibliothek</summary>
-            <div class="detail tags cols collection">
-            </div>
-        </details>
-        <details class="ds">
-            <summary class="summary textbig"><span class="icon"></span>Ressourcentyp</summary>
             <div class="detail tags cols collection">
             </div>
         </details>
@@ -119,16 +125,11 @@
             <div class="detail tags cols collection">
             </div>
         </details>
-        <details class="ds">
-            <summary class="summary textbig"><span class="icon"></span>Thema</summary>
-            <div class="detail tags cols collection">
-            </div>
-        </details>
-         <details class="ds">
+       <!--  <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Sprache</summary>
             <div class="detail tags cols collection">
             </div>
-        </details>
+        </details> -->
                  
     </main>
 
