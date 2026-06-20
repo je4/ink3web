@@ -107,6 +107,24 @@
  <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Thema</summary>
             <div class="detail tags cols collection">
+                {{- range $key, $catalog := .Catalogs }}
+
+                    <button
+                            style=""
+                            onclick="this.setAttribute('selected', 'true');search('{{ $searchBase }}', '', false, false)"
+                            type="button"
+                            class="btn catalogButton"
+                            value="{{ $catalog.Id }}"
+                            selected="false"
+                    >
+                        <div class="name">
+                            <span>{{ $catalog.Title }}</span>
+                            <i class="num"><b>{{ $catalog.Count}}</b></i>
+                        </div>
+                        <i class="info" data-href="vitrine.php?t='.$temp[0].'" onClick="openVitrine();return false">i</i>
+                    </button>
+
+                {{ end }}
             </div>
         </details>
        
