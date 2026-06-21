@@ -34,7 +34,7 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end shadow">
                         <li><a class="dropdown-item active" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Alle</a></li>
-                        <li><a class="dropdown-item" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Verfasser</a></li>
+                        <li><a class="dopdown-item" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Verfasser</a></li>
                         <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Titel</a></li>
                         <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Volltext</a></li>
                         <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Sammlung</a></li>
@@ -393,13 +393,14 @@
         </div>
         <ul class="mynav nav nav-pills flex-column mb-auto">
             <!-- collections -->
+            {{ if gt (len .CollectionFacets) 0 }}
             <li class="nav-item mb-1">
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Sammlung" $lang }}</summary>
 
                     <div class="tags cols collection">
                         {{ range $collFacet := .CollectionFacets }}
-                            {{ if not $collFacet.Checked }}
+                            {{ if and (not $collFacet.Checked) (gt $collFacet.Count 0) }}
                                 <button
                                         stylex="margin: 1px; padding: 1px 4px 1px 4px;"
                                         onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
@@ -418,14 +419,16 @@
                     </div>
                 </details>
             </li>
+            {{ end }}
             <!-- Thema -->
+            {{ if gt (len .CatalogFacets) 0 }}
             <li class="nav-item mb-1">
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Thema" $lang }}</summary>
 
                     <div class="tags cols collection">
                         {{ range $catFacet := .CatalogFacets }}
-                            {{ if not $catFacet.Checked }}
+                            {{ if and (not $catFacet.Checked) (gt $catFacet.Count 0) }}
                                 <button
                                         stylex="margin: 1px; padding: 1px 4px 1px 4px;"
                                         onclick="{{ if $catFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
@@ -444,14 +447,16 @@
                     </div>
                 </details>
             </li>
+            {{ end }}
             <!-- Media -->
+            {{ if gt (len .MediaFacets) 0 }}
             <li class="nav-item mb-1">
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Ressourcentyp" $lang }}</summary>
 
                     <div class="tags cols collection">
                         {{ range $mediaFacet := .MediaFacets }}
-                            {{ if not $mediaFacet.Checked }}
+                            {{ if and (not $mediaFacet.Checked) (gt $mediaFacet.Count 0) }}
                                 <button
                                         stylex="margin: 1px; padding: 1px 4px 1px 4px;"
                                         onclick="{{ if $mediaFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
@@ -470,6 +475,7 @@
                     </div>
                 </details>
             </li>
+            {{ end }}
             <!-- other filters -->
 
             
