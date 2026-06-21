@@ -91,7 +91,9 @@
                             <span>{{ $coll.Title }}</span>
                             <i class="num"><b>{{ $coll.Count}}</b></i>
                         </div>
+                        {{- if $coll.Url }}
                         <i class="info" data-href="vitrine.php?t='.$temp[0].'" onClick="openVitrine();return false">i</i>
+                        {{- end }}
                     </button>
                         
                 {{ end }}
@@ -99,9 +101,29 @@
         </details>
 
         <!-- ohter filters -->
- <details class="ds">
+        <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Ressourcentyp</summary>
             <div class="detail tags cols collection">
+                {{- range $key, $media := .Medias }}
+
+                    <button
+                            style=""
+                            onclick="this.setAttribute('selected', 'true');search('{{ $searchBase }}', '', false, false)"
+                            type="button"
+                            class="btn mediaButton"
+                            value="{{ $media.Id }}"
+                            selected="false"
+                    >
+                        <div class="name">
+                            <span>{{ $media.Title }}</span>
+                            <i class="num"><b>{{ $media.Count}}</b></i>
+                        </div>
+                        {{- if $media.Url }}
+                        <i class="info" data-href="vitrine.php?t='.$temp[0].'" onClick="openVitrine();return false">i</i>
+                        {{- end }}
+                    </button>
+
+                {{ end }}
             </div>
         </details>
  <details class="ds">
@@ -121,7 +143,9 @@
                             <span>{{ $catalog.Title }}</span>
                             <i class="num"><b>{{ $catalog.Count}}</b></i>
                         </div>
+                        {{- if $catalog.Url }}
                         <i class="info" data-href="vitrine.php?t='.$temp[0].'" onClick="openVitrine();return false">i</i>
+                        {{- end }}
                     </button>
 
                 {{ end }}

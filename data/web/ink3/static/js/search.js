@@ -58,6 +58,26 @@ function search(url, cursor, exhibition, ki, sortField, sortOrder) {
     }
 
 
+    let medias = document.getElementsByClassName("mediaButton")
+    let mediaParam = "";
+    for (let i = 0; i < medias.length; i++) {
+        if (medias[i].getAttribute("selected") === "true") {
+            mediaParam += medias[i].getAttribute("value") + ",";
+        }
+    }
+    if ( medias.length === 0 ){
+        medias = document.getElementsByClassName("mediaCheck");
+        for (let i = 0; i < medias.length; i++) {
+            if (medias[i].checked) {
+                mediaParam += medias[i].getAttribute("value") + ",";
+            }
+        }
+    }
+    if (mediaParam !== "") {
+        params.set("medias", mediaParam);
+    }
+
+
     let vocs = document.getElementsByClassName("vocButton")
     let vocParam = "";
     for (let i = 0; i < vocs.length; i++) {

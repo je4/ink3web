@@ -105,6 +105,19 @@
                                             </button>
                                         {{- end }}
                                     {{- end }}
+                                    {{- range $mediaFacet := .MediaFacets }}
+                                        {{- if $mediaFacet.Checked }}
+                                            <button
+                                                    onclick="{{ if $mediaFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                    type="button"
+                                                    class="btn btn-lg mediaButton"
+                                                    value="{{ $mediaFacet.ID }}"
+                                                    selected="{{ if $mediaFacet.Checked }}true{{ else }}false{{ end }}">
+                                                <span>{{ localize (abbrev 50 $mediaFacet.Name) $lang }}</span><i class="iconx" data-icon="close16"></i>
+                                                {{- $ds := digits $mediaFacet.Count }}
+                                            </button>
+                                        {{- end }}
+                                    {{- end }}
                                     {{- range $parent, $vocabFacets := .VocabularyFacets }}
                                         {{- range $vocabFacet := $vocabFacets }}
                                             {{- if $vocabFacet.Checked }}
@@ -423,6 +436,32 @@
                                     <div class="name">
                                         <span>{{ abbrev 50 $catFacet.Name }}</span>
                                         <i class="num"><b>{{ $catFacet.Count }}</b></i>
+                                    </div>
+
+                                </button>
+                            {{ end }}
+                        {{ end }}
+                    </div>
+                </details>
+            </li>
+            <!-- Media -->
+            <li class="nav-item mb-1">
+                <details class="ds">
+                    <summary class="summary textbig"><span class="icon"></span>{{ localize "Ressourcentyp" $lang }}</summary>
+
+                    <div class="tags cols collection">
+                        {{ range $mediaFacet := .MediaFacets }}
+                            {{ if not $mediaFacet.Checked }}
+                                <button
+                                        stylex="margin: 1px; padding: 1px 4px 1px 4px;"
+                                        onclick="{{ if $mediaFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                        type="button"
+                                        class="btn mediaButton {{ if $mediaFacet.Checked }}on{{ end }}" value="{{ $mediaFacet.ID }}"
+                                        selected="{{ if $mediaFacet.Checked }}true{{ else }}false{{ end }}"
+                                >
+                                    <div class="name">
+                                        <span>{{ abbrev 50 $mediaFacet.Name }}</span>
+                                        <i class="num"><b>{{ $mediaFacet.Count }}</b></i>
                                     </div>
 
                                 </button>
