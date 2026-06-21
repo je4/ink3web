@@ -112,7 +112,7 @@
                                         
                                                         onclick="{{ if $vocabFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                         type="button"
-                                                        class="btn btn-lg btn-secondaryxx vocButtonxx"
+                                                        class="btn btn-lg btn-secondaryxx vocButton"
                                                         value="voc:{{ $parent }}:{{ $vocabFacet.Name }}" selected="{{ if $vocabFacet.Checked }}true{{ else }}false{{ end }}"
                                                 >        
                                                     <span>{{ abbrev 32 (localize $vocabFacet.Name $lang) }}</span>
