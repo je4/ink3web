@@ -294,8 +294,9 @@ img.flipvertical {
 --bs-dropdown-item-padding-x:0.5rem;
 }
 .dropdown-toggle:after{
+    position: relative;
+    top:0.35rem;
     border:0;
-   
     width:1em;
     height:1em;
     mask-image:url('../img/icon-pull.svg');
