@@ -70,10 +70,17 @@
         */}}{{- end}}
        
     </div>
+    <!-- collection -->
+    {{ if ne (ptrString $source.Base.CollectionTitle) "" }}
+        <div >{{ $source.Base.CollectionTitle }}</div>
+    {{ end }}
+
     <!-- date -->
+    {{/*
     {{ if $source.Base.Date }}
     <div>{{ if ne ( ptrString $source.Base.Date) "" }}{{ $source.Base.Date }}{{ end }}</div>
     {{ end }}
+    */}}
 </div>
 
 {{ end }}
@@ -414,22 +421,24 @@
                         <div class="detail">
                             {{- range $cat := $source.Base.Category }}
                                 
+                                <div class="cats">
                                 {{- $catParts := splitList "!!" $cat }}
                                 
-                                <ol class="breadcrumb">
+                                <ul class="taghierarchy">
                                     {{- $first := true }}
                                     {{- $catString := "" }}
                                     {{- range $key, $catPart := $catParts }}
                                         
                                         {{- if not $first }}
                                             {{- $catString = printf "%s!!%s" $catString $catPart }}
-                                            <li class="breadcrumb-item"><a class="btn" href="{{ if or $isExhibition $isIFrame }}#{{ else }}{{ printf "%ssearch=category:\"%s\"" $searchBase $catString }}{{ end }}">{{ $catPart }}</a></li>
+                                            <li class="taghierarchy-item"><a class="btn" href="{{ if or $isExhibition $isIFrame }}#{{ else }}{{ printf "%ssearch=category:\"%s\"" $searchBase $catString }}{{ end }}">{{ $catPart }}</a><ul>
                                         {{- else }}
                                             {{- $catString = $catPart }}
                                             {{- $first = false }}
                                         {{- end }}
                                     {{- end }}
-                                </ol>
+                                </ul>
+                                </div>
                             {{- end }}
                         </div>
                     </div>                   
@@ -577,38 +586,35 @@
                     <div class="infoline">
                         <div class="summary">Verwandte Einträge</div>
                         <div class="detail">
-                            <table>
-                            {{ range $ref := $references }}
+                             <table class="references">
+                            {{ range $ref := $references }}                               
                                 <tr>
-                                    <td style="vertical-align: top;" class="pe-2">
+                                    <td class="poster">
                                         {{ if and $ref.Poster (ne $ref.Poster.URI "") }}
-                                            <a href="{{ printf "%s/detail/%s/%s" $detailAddr $ref.Signature $lang }}"><img src="{{ medialink $ref.Poster.URI "resize" "size100x100/formatJPEG/autorotate" true }}" style="width: 100px; min-width: 100px; height: auto;" /></a>
+                                            <a href="{{ printf "%s/detail/%s/%s" $detailAddr $ref.Signature $lang }}"><img src="{{ medialink $ref.Poster.URI "resize" "size200x200/formatJPEG/autorotate" true }}"  /></a>
                                         {{ end }}
                                     </td>
+                                    
                                     <td>
                                 {{- $title := multiLang $ref.Title }}
-                                        <a href="{{ printf "%s/detail/%s/%s" $detailAddr $ref.Signature $lang }}"><span style="font-weight: bold;">{{ $title.String }}</span>
-                                {{ if $ref.Date }}<span style="font-weight: normal;">{{ if ne ( ptrString $ref.Date) "" }}({{ $ref.Date }}){{ end }}</span>{{ end }}
+                                        <div>
+                                        <a href="{{ printf "%s/detail/%s/%s" $detailAddr $ref.Signature $lang }}"><spam class="title">{{ $title.String }}</span>
+                                {{ if $ref.Date }}<span class="date">{{ if ne ( ptrString $ref.Date) "" }}({{ $ref.Date }}){{ end }}</span>{{ end }}
                                         </a>
-                                <br />
+                                        </div>
                                 {{- range $key, $p := $ref.Person}}
                                     {{- if hasPrefix "artist" $p.Role}}
-                                        {{- if gt $key 0}}; {{end}}<a class="link-underline link-underline-opacity-10" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a>
+                                        {{- if gt $key 0}}; {{end}}<div class="opacity-50"><a class="link" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a></div>
                                     {{- end}}
-                                {{- end}}<br />
+                                {{- end}}
                                 {{- range $p := $ref.Person}}
                                     {{- if not (hasPrefix "artist" $p.Role)}}
-                                        <a class="link-underline link-underline-opacity-10" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a> ({{camelcase (trimPrefix "performer:" $p.Role)}})<br />
+                                        <div class="opacity-50"><a class="link" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a> ({{camelcase (trimPrefix "performer:" $p.Role)}})</div>
                                     {{- end}}
                                 {{- end}}
                                     </td>
                                 </tr>
-                                <tr>
-                                    <td></td>
-                                    <td>
-                                        <hr /><br />
-                                    </td>
-                                </tr>
+                                
                             {{ end }}
                             </table>
                         </div>

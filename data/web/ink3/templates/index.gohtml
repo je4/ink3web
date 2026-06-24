@@ -3,6 +3,7 @@
 {{- $lang := .Lang}}
 {{- $root := .RootPath }}
 {{- $useKI := .KI }}
+{{- $filters := false }}
 
 {{- $searchBase := printf "%s/grid/%s" .SearchAddr .Lang }}
 <html lang="{{ $lang }}">
@@ -99,7 +100,7 @@
                 {{ end }}
             </div>
         </details>
-
+        {{- if $filters }}
         <!-- ohter filters -->
         <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Ressourcentyp</summary>
@@ -176,7 +177,7 @@
             <div class="detail tags cols collection">
             </div>
         </details> -->
-                 
+        {{ end }}         
     </main>
 
     {{ template "footer.gohtml" . }}

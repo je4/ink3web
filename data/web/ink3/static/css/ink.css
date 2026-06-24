@@ -882,6 +882,29 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
     
 }
 
+/* taghierarchy */
+
+ ul.taghierarchy,  ul.taghierarchy ul{
+    position: relative;
+    margin:0;
+    padding:0;
+    list-style: none;
+}
+ ul.taghierarchy ul{
+    padding-left:2rem;
+}
+ ul.taghierarchy ul li::before {
+            
+    position: absolute;
+    top:2px;
+    width:1rem;
+    height:0.75rem;
+    left: 0.5rem;           
+    border-bottom:1px solid currentColor;
+    border-left:1px solid currentColor;
+    content:'';
+}
+
 /* alert */
 
 .autotranslation{
@@ -1284,6 +1307,37 @@ details > div{
      height:100%;
 }
 
+/* references */
+
+.references{
+    border-bottom:1px solid currentcolor !important;
+}
+.references tr{
+    border-top:1px solid currentcolor;
+}
+.references td{
+    padding:1rem 0;
+}
+.references .poster{
+    width:25%;
+    max-width:400px;
+    padding-right:1rem;
+   
+}
+.references .poster a{
+    display: block;
+    width:100%;
+    aspect-ratio: 1.5;
+    overflow: hidden;
+    background-color: rgba(var(--bs-color),0.05);
+
+}
+.references .poster img{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+    mix-blend-mode: multiply;
+}
 
 
 /* costom icons */
