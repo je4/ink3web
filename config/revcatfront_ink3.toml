@@ -8,7 +8,6 @@ searchaddr = "https://ink3.sammlung.cc"
 detailaddr = "https://ink3.sammlung.cc"
 
 mode = "dark"
-
 templates = "/root/ink3web/data/web/ink3/templates/"
 staticfiles = "/root/ink3web/data/web/ink3/static"
 datadir = "/var/www/vhosts/performance.ausstellung.cc/digitalesee"
