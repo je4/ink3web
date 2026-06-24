@@ -3,7 +3,7 @@
 {{- $lang := .Lang}}
 {{- $root := .RootPath }}
 {{- $useKI := .KI }}
-{{- $filters := false }}
+{{- $filters := true }}
 
 {{- $searchBase := printf "%s/grid/%s" .SearchAddr .Lang }}
 <html lang="{{ $lang }}">
@@ -131,7 +131,7 @@
             <summary class="summary textbig"><span class="icon"></span>Thema</summary>
             <div class="detail tags cols collection">
                 {{- range $key, $catalog := .Catalogs }}
-
+                    {{ if gt $catalog.Count 0 }}
                     <button
                             style=""
                             onclick="this.setAttribute('selected', 'true');search('{{ $searchBase }}', '', false, false)"
@@ -149,6 +149,7 @@
                         {{- end }}
                     </button>
 
+                {{ end }}
                 {{ end }}
             </div>
         </details>
