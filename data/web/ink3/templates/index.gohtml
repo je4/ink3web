@@ -79,7 +79,7 @@
             <summary class="summary textbig"><span class="icon"></span>Sammlungen</summary>
             <div class="detail tags cols collection">
                 {{- range $key, $coll := .Collections }}
-                        
+                    {{ if gt $coll.Count 0 }}
                     <button 
                         style="" 
                         onclick="this.setAttribute('selected', 'true');search('{{ $searchBase }}', '', false, false)" 
@@ -96,7 +96,7 @@
                         <i class="info" data-href="vitrine.php?t='.$temp[0].'" onClick="openVitrine();return false">i</i>
                         {{- end }}
                     </button>
-                        
+                    {{ end }}
                 {{ end }}
             </div>
         </details>
