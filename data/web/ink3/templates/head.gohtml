@@ -92,7 +92,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
     <meta name="author" content="Jürgen Enge <juergen@info-age.net>">
-    <title>{{ localize "title" $lang }}</title>
+    <title>{{if eq $name "scb.mab"}}SCB Katalog{{ else }}InK 3{{ end }}{{ /*}}{{ localize "title" $lang }}{{ */ }}</title>
 
 
     <link href="{{ $root }}static/bootstrap/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
