@@ -4,6 +4,7 @@
 {{- $root := .RootPath }}
 {{- $useKI := .KI }}
 {{- $filters := true }}
+{{- $name := .Name }}
 
 {{- $searchBase := printf "%s/grid/%s" .SearchAddr .Lang }}
 <html lang="{{ $lang }}">
@@ -24,10 +25,18 @@
 
         <div class="sticky">
             <details class="ds logo">
+                {{- if eq $name "scb.mab" }}
+                <summary class="summary textbig"><span class="icon"></span><h1>SCB Katalog</h1></summary>
+                <div class="detail text textbig">
+                    Der SCB Katalog versammelt Forschungsergebnisse und -Publikationen der Schola Cantorum Baciliensis (SCB).
+                    Er fungiert als Datenbasis hinter dem Forschungsportal der Schola.
+                </div>
+                {{- else }}
                 <summary class="summary textbig"><span class="icon"></span><h1>InK</h1></summary>
                 <div class="detail text textbig">
                     Der Integrierte Katalog vereint Quellen der Forschung und Lehre der Hochschule für Gestaltung und Kunst FHNW sowie von digitalen Sondersammlungen.
                 </div>
+                {{- end }}
             </details>
         </div>
 
