@@ -2,7 +2,7 @@ name = "scb.mab"
 logfile = ""
 loglevel = "DEBUG"
 
-localaddr = "localhost:8449"
+localaddr = "localhost:8452"
 externaladdr = "https://ink3.sammlung.cc"
 searchaddr = "https://ink3.sammlung.cc"
 detailaddr = "https://ink3.sammlung.cc"
