@@ -13,10 +13,10 @@ staticfiles = "/root/ink3web/data/web/ink3/static"
 datadir = "/var/www/vhosts/performance.ausstellung.cc/digitalesee"
 
 mediaserverbase = "https://ba14ns21403-sec1.fhnw.ch/mediasrv"
-mediaserverkey = "sdfsdafsdfsdfsd"
+mediaserverkey = "%%MEDIASERVER_KEY%%"
 mediaservertokenexp = "6h"
 
-jwtkey = "iox6poi24ajoai36fjoaej2fe4aoij" # ":Xf/#|IKYrDsNi4]LN*o(W7;:"
+jwtkey = "%%JWTKEY%%" # ":Xf/#|IKYrDsNi4]LN*o(W7;:"
 jwtalg = "HS512"
 
 fieldmapping.author = "[persons].name"
@@ -43,7 +43,7 @@ basefilter = """
 #password="schweiz"
 
 [login]
-jwtkey = "iox6poi24ajoai36fjoaej2fe4aoij" # ":Xf/#|IKYrDsNi4]LN*o(W7;:"
+jwtkey = "%%LOGIN_JWTKEY%%" # ":Xf/#|IKYrDsNi4]LN*o(W7;:"
 jwtalg = ["HS256","HS384","HS512"]
 linktokenexp = "1h"
 #url = "https://intern.hgk.fhnw.ch/ango/shib/auth/localhost"
