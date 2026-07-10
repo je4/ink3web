@@ -200,6 +200,12 @@ url = ""
 contact = ""
 
 
+[[catalogs]]
+id = 100
+identifier = "catalog:\"Testing\""
+title = "Testumgebung"
+url = ""
+contact = ""
 
 [[collections]]
 id = 1
