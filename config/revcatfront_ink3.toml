@@ -173,27 +173,41 @@ contact = ""
 
 [[catalogs]]
 id = 6
+identifier = "catalog:\"Art\""
+title = "Art"
+url = ""
+contact = ""
+
+[[catalogs]]
+id = 7
+identifier = "catalog:\"Design\""
+title = "Design"
+url = ""
+contact = ""
+
+[[catalogs]]
+id = 8
 identifier = "catalog:\"Contemporary\""
 title = "Contemporary Discourses"
 url = ""
 contact = ""
 
 [[catalogs]]
-id = 6
+id = 9
 identifier = "catalog:\"Performance\""
 title = "Performance Art"
 url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-03"
 contact = ""
 
 [[catalogs]]
-id = 8
+id = 10
 identifier = "catalog:\"Video\""
 title = "Video Art and Culture"
 url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-08"
 contact = ""
 
 [[catalogs]]
-id = 9
+id = 20
 identifier = "catalog:\"Open\""
 title = "Open and Free Access"
 url = ""
