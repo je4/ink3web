@@ -3,9 +3,9 @@ logfile = ""
 loglevel = "DEBUG"
 
 localaddr = "localhost:8452"
-externaladdr = "https://ink3.sammlung.cc"
-searchaddr = "https://ink3.sammlung.cc"
-detailaddr = "https://ink3.sammlung.cc"
+externaladdr = "https://scb.mab.sammlung.cc"
+searchaddr = "https://scb.mab.sammlung.cc"
+detailaddr = "https://scb.mab.sammlung.cc"
 
 mode = "dark"
 
