@@ -138,8 +138,8 @@ title = "GPX File"
 
 [[catalogs]]
 id = 1
-identifier = "catalog:\"Student\""
-title = "Student Outcomes"
+identifier = "catalog:\"Graduation\""
+title = "Graduation"
 url = "https://www.fhnw.ch/de/gestaltung-kunst"
 contact = ""
 
@@ -213,6 +213,12 @@ title = "Open and Free Access"
 url = ""
 contact = ""
 
+[[catalogs]]
+id = 21
+identifier = "catalog:\"Educational\""
+title = "Educational Resources"
+url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=08-00"
+contact = ""
 
 [[catalogs]]
 id = 100
