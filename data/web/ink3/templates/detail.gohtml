@@ -322,7 +322,7 @@
                     {{ if ne (ptrString $source.Base.CollectionTitle) "" }}
                     <div class="infoline">
                         <div class="summary">Sammlung</div>
-                        <div class="detail">{{ $source.Base.CollectionTitle }}</div>
+                        <div class="detail">{{ $source.Base.CollectionTitle }}</a></div>
                     </div>
                     {{ end }}
 
@@ -598,7 +598,7 @@
                                     <td>
                                 {{- $title := multiLang $ref.Title }}
                                         <div>
-                                        <a href="{{ printf "%s/detail/%s/%s" $detailAddr $ref.Signature $lang }}"><spam class="title">{{ $title.String }}</span>
+                                        <a href="{{ printf "%s/detail/%s/%s" $detailAddr $ref.Signature $lang }}"><span class="title">{{ $title.String }}</span>
                                 {{ if $ref.Date }}<span class="date">{{ if ne ( ptrString $ref.Date) "" }}({{ $ref.Date }}){{ end }}</span>{{ end }}
                                         </a>
                                         </div>

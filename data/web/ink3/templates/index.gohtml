@@ -46,7 +46,7 @@
             <div class="d-md-flex gap-2" role="search">
                 <div class="left d-md-flex gap-3">
                 <div class="dropdown d-none d-md-block" >
-                    <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" onclick="event.stopPropagation()">
                                 Alle
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end shadow">
@@ -63,7 +63,7 @@
 
                 <div class="searchfield flex-grow-1">
                     <input
-                        onkeyup="if (event.keyCode === 13) search('{{ $searchBase }}') "
+                        onkeyup="if (event.keyCode === 13) doSearch('{{ $searchBase }}') "
                         id="search"
                         class="form-control form-control-lg"
                         type="search"
@@ -71,12 +71,12 @@
                         aria-label="{{ localize "search" $lang }}"
                         value=""
                     />
-                    <a class="iconx" data-icon="close" onClick="searchClear()"></a>
+                    <a class="iconx" data-icon="close" onClick="document.getElementById('search').value='';doSearch('{{ $searchBase }}') "></a>
                 </div>
                 </div>
                 <!-- ki search -->
                 <label class="toggle"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
-                <!--<button onclick="search('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
+                <!--<button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
                         
                 
             </div>
@@ -91,7 +91,7 @@
                     {{ if gt $coll.Count 0 }}
                     <button 
                         style="" 
-                        onclick="this.setAttribute('selected', 'true');search('{{ $searchBase }}', '', false, false)" 
+                        onclick="this.setAttribute('selected', 'true');doSearch('{{ $searchBase }}', '', false, false)"
                         type="button" 
                         class="btn  collectionButton" 
                         value="{{ $coll.Id }}" 
@@ -121,7 +121,7 @@
 
                     <button
                             style=""
-                            onclick="this.setAttribute('selected', 'true');search('{{ $searchBase }}', '', false, false)"
+                            onclick="this.setAttribute('selected', 'true');doSearch('{{ $searchBase }}', '', false, false)"
                             type="button"
                             class="btn mediaButton"
                             value="{{ $media.Id }}"
@@ -149,7 +149,7 @@
                     {{ if gt $catalog.Count 0 }}
                     <button
                             style=""
-                            onclick="this.setAttribute('selected', 'true');search('{{ $searchBase }}', '', false, false)"
+                            onclick="this.setAttribute('selected', 'true');doSearch('{{ $searchBase }}', '', false, false)"
                             type="button"
                             class="btn catalogButton"
                             value="{{ $catalog.Id }}"

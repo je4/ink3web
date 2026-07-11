@@ -43,7 +43,7 @@
             </div>
             <div class="searchfield">
                 <input
-                        onkeyup="if (event.keyCode === 13) search('{{ $searchBase }}') "
+                        onkeyup="if (event.keyCode === 13) doSearch('{{ $searchBase }}') "
                         id="search"
                         class="form-control form-control-lg"
                         type="search"
@@ -51,7 +51,7 @@
                         aria-label="{{ localize "search" $lang }}"
                         value="{{.RequestQuery.Search}}"
                 />
-                <a class="iconx" data-icon="close16" onClick="searchClear()"></a>
+                <a class="iconx" data-icon="close16" onClick="document.getElementById('search').value='';doSearch('{{ $searchBase }}') "></a>
 
             </div>
         </div>
@@ -60,7 +60,7 @@
             <!-- ki search -->
             {{/*
             <label class="toggle"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
-            <!--<button onclick="search('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
+            <!--<button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
              */}}
                 
             <!-- filter togggle-->
@@ -84,7 +84,7 @@
                                     {{- range $collFacet := .CollectionFacets }}
                                         {{- if $collFacet.Checked }}
                                             <button
-                                                    onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                    onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                     type="button"
                                                     class="btn btn-lg collectionButton"
                                                     value="{{ $collFacet.ID }}"
@@ -97,7 +97,7 @@
                                     {{- range $catFacet := .CatalogFacets }}
                                         {{- if $catFacet.Checked }}
                                             <button
-                                                    onclick="{{ if $catFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                    onclick="{{ if $catFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                     type="button"
                                                     class="btn btn-lg catalogButton"
                                                     value="{{ $catFacet.ID }}"
@@ -110,7 +110,7 @@
                                     {{- range $mediaFacet := .MediaFacets }}
                                         {{- if $mediaFacet.Checked }}
                                             <button
-                                                    onclick="{{ if $mediaFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                    onclick="{{ if $mediaFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                     type="button"
                                                     class="btn btn-lg mediaButton"
                                                     value="{{ $mediaFacet.ID }}"
@@ -125,7 +125,7 @@
                                             {{- if $vocabFacet.Checked }}
                                                 <button
                                         
-                                                        onclick="{{ if $vocabFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                        onclick="{{ if $vocabFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                         type="button"
                                                         class="btn btn-lg btn-secondaryxx vocButton"
                                                         value="voc:{{ $parent }}:{{ $vocabFacet.Name }}" selected="{{ if $vocabFacet.Checked }}true{{ else }}false{{ end }}"
@@ -405,7 +405,7 @@
                             {{ if and (not $collFacet.Checked) (gt $collFacet.Count 0) }}
                                 <button
                                         stylex="margin: 1px; padding: 1px 4px 1px 4px;"
-                                        onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                        onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                         type="button"
                                         class="btn collectionButton {{ if $collFacet.Checked }}on{{ end }}" value="{{ $collFacet.ID }}"
                                         selected="{{ if $collFacet.Checked }}true{{ else }}false{{ end }}"
@@ -433,7 +433,7 @@
                             {{ if and (not $catFacet.Checked) (gt $catFacet.Count 0) }}
                                 <button
                                         stylex="margin: 1px; padding: 1px 4px 1px 4px;"
-                                        onclick="{{ if $catFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                        onclick="{{ if $catFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                         type="button"
                                         class="btn catalogButton {{ if $catFacet.Checked }}on{{ end }}" value="{{ $catFacet.ID }}"
                                         selected="{{ if $catFacet.Checked }}true{{ else }}false{{ end }}"
@@ -461,7 +461,7 @@
                             {{ if and (not $mediaFacet.Checked) (gt $mediaFacet.Count 0) }}
                                 <button
                                         stylex="margin: 1px; padding: 1px 4px 1px 4px;"
-                                        onclick="{{ if $mediaFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                        onclick="{{ if $mediaFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                         type="button"
                                         class="btn mediaButton {{ if $mediaFacet.Checked }}on{{ end }}" value="{{ $mediaFacet.ID }}"
                                         selected="{{ if $mediaFacet.Checked }}true{{ else }}false{{ end }}"
@@ -502,7 +502,7 @@
 
                             <button
                                 
-                                onclick="{{ if $vocabFacet.Checked }}this.removeAttribute('selected'){{ else }}this.setAttribute('selected', 'true'){{ end }};search('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                onclick="{{ if $vocabFacet.Checked }}this.removeAttribute('selected'){{ else }}this.setAttribute('selected', 'true'){{ end }};doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                 type="button"
                                 class="btn vocButton {{ if $vocabFacet.Checked }}on{{ end }}"
                                 value="voc:{{ $parent }}:{{ $vocabFacet.Name }}"

@@ -1,6 +1,10 @@
 const removePrefix = (value, prefix) =>
     value.startsWith(prefix) ? value.slice(prefix.length) : value;
 
+function doSearch(url, cursor, exhibition, ki, sortField, sortOrder) {
+    search(url, cursor, exhibition, ki, sortField, sortOrder)
+}
+
 function search(url, cursor, exhibition, ki, sortField, sortOrder) {
     let search = document.getElementById("search").value;
 
