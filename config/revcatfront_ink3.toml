@@ -227,6 +227,8 @@ title = "Testumgebung"
 url = ""
 contact = ""
 
+
+
 [[collections]]
 id = 1
 identifier = "cat:\"forms2!!diplom\""
@@ -259,7 +261,34 @@ image = ""
 contact = "Regine Halter, Catherine Walthard, Anka Falk"
 
 [[collections]]
-id = 5
+id = 9
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Plant_Intelligence\""
+title = "Plant Intelligence"
+url = "https://plants-intelligence.ch/"
+image = ""
+contact = "Yvonne Volkart"
+
+[[collections]]
+id = 10
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Peripher_ies\""
+title = "Peripher_ies"
+url = "https://plants-intelligence.ch/"
+image = ""
+contact = "Max Spielmann, Catherine Walthard"
+
+
+[[collections]]
+id = 12
+identifier = "cat:\"zotero2!!Netzkulturen\""
+title = "Netzkulturen"
+url = "https://plants-intelligence.ch/"
+image = ""
+contact = "Stefanie Bräuer"
+
+
+
+[[collections]]
+id = 15
 identifier = "cat:\"zotero2!!Werke!!Lehre_Weiterbildung!!Incubator for Design Cultures\""
 title = "Incubator for Design Cultures"
 url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/37"
@@ -267,7 +296,7 @@ image = ""
 contact = "Marianna Meyer"
 
 [[collections]]
-id = 6
+id = 16
 identifier = "cat:\"zotero2!!Werke!!Memory Full\""
 title = "Memory Full"
 url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/31"
@@ -314,21 +343,6 @@ url = "https://mediathek.hgk.fhnw.ch/"
 image = ""
 contact = "mediathek.hgk@fhnw.ch"
 
-[[collections]]
-id = 32
-identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Plant_Intelligence\""
-title = "Plant Intelligence"
-url = "https://plants-intelligence.ch/"
-image = ""
-contact = "Yvonne Volkart"
-
-[[collections]]
-id = 33
-identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Peripher_ies\""
-title = "Peripher_ies"
-url = "https://plants-intelligence.ch/"
-image = ""
-contact = "Max Spielmann, Catherine Walthard"
 
 [[collections]]
 id = 34
@@ -426,7 +440,17 @@ image = "performance_chronik_klein.png"
 contact = "Muda Mathis, Sabine Gebhardt Fink, Margarit von Büren"
 
 [[collections]]
-id = 72
+id = 73
+identifier = "cat:\"zotero2!!Performance Art!!\""
+title = "Performance Art Dossiers"
+url = "https://plants-intelligence.ch/"
+image = ""
+contact = "Max Spielmann, Catherine Walthard"
+
+
+
+[[collections]]
+id = 74
 identifier = "cat:\"bangbang\""
 title = "Revolving Histories"
 url = "https://revolving-histories.ch/"
@@ -434,7 +458,7 @@ image = "revolving_histories_klein.png"
 contact = "Sabine Gebhardt Fink, Muda Mathis, Chris Regn, Andrea Saemann, Margarit von Büren"
 
 [[collections]]
-id = 73
+id = 75
 identifier = "cat:\"zotero2!!Performance Art!!Together Elsewhere\""
 title = "Together Elsewhere"
 url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/26"
@@ -442,7 +466,7 @@ image = "together_elsewhere_klein.png"
 contact = "Gisela Hochuli (PANCH), Pavana Reid (PAB)"
 
 [[collections]]
-id = 74
+id = 84
 identifier = "cat:\"zotero2!!Archive des Ephemeren\""
 title = "Archive des Ephemeren"
 url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/12"
@@ -517,6 +541,15 @@ contact = "Tabea Lurk"
 id = 201
 identifier = "cat:\"zotero2!!Werke!!Hochschule für Musik!!Motet Cycles\""
 title = "Motet Cycles"
+url = ""
+image = ""
+contact = "Tabea Lurk"
+
+
+[[collections]]
+id = 201
+identifier = "cat:\"neos!!test\""
+title = "Datentest Punkt"
 url = ""
 image = ""
 contact = "Tabea Lurk"
