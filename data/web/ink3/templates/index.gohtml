@@ -42,7 +42,7 @@
 
         <!-- search line -->
 
-        <div class="searchbar container-fluid">
+        <div class="searchbar container-fluid pb-2 py-lg-3">
             <div class="d-md-flex gap-2" role="search">
                 <div class="left d-md-flex gap-3">
                 <div class="dropdown d-none d-md-block" >
@@ -74,17 +74,20 @@
                     <a class="iconx" data-icon="close" onClick="document.getElementById('search').value='';doSearch('{{ $searchBase }}') "></a>
                 </div>
                 </div>
+                <!-- access -->
+                <label class="toggle"><input type="checkbox" name="access" checkedx /><span class="checkmark"></span><span>Offener Zugang</span></label>
                 <!-- ki search -->
-                <label class="toggle"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
+                {{/*
+                <label class="toggle"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>-->
                 <!--<button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
-                        
+                */}}             
                 
             </div>
         </div>
 
         <!-- filters tags -->
 
-        <details class="ds" open>
+        <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Sammlungen</summary>
             <div class="detail tags cols collection">
                 {{- range $key, $coll := .Collections }}

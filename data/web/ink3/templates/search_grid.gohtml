@@ -25,7 +25,7 @@
     </div>
 </div>
 
-<div class="searchbar container-fluid">
+<div class="searchbar container-fluid pb-2 py-lg-3">
     <div class="d-md-flex gap-2" role="search">
         <div class="left d-flex gap-3">
             <div class="dropdown d-none d-md-block">
@@ -34,7 +34,7 @@
                     </button>
                     <ul class="dropdown-menu dropdown-menu-end shadow">
                         <li><a class="dropdown-item active" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Alle</a></li>
-                        <li><a class="dopdown-item" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Verfasser</a></li>
+                        <li><a class="dropdown-item" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Verfasser</a></li>
                         <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Titel</a></li>
                         <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Volltext</a></li>
                         <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Sammlung</a></li>
@@ -56,13 +56,14 @@
             </div>
         </div>
         <div class="right d-flex flex-grow-1">
+            <!-- access -->
+                <label class="toggle"><input type="checkbox" name="access" checkedx /><span class="checkmark"></span><span>Offener Zugang</span></label>
             
             <!-- ki search -->
             {{/*
             <label class="toggle"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
             <!--<button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
              */}}
-                
             <!-- filter togggle-->
             <div class="d-flex flex-grow-1 justify-content-end">
                     
@@ -86,7 +87,7 @@
                                             <button
                                                     onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                     type="button"
-                                                    class="btn btn-lg collectionButton"
+                                                    class="btn btn-lg collectionButtonxx"
                                                     value="{{ $collFacet.ID }}"
                                                     selected="{{ if $collFacet.Checked }}true{{ else }}false{{ end }}">
                                                 <span>{{ abbrev 50 $collFacet.Name }}</span><i class="iconx" data-icon="close16"></i>
@@ -387,9 +388,9 @@
     </div>
     </main>
     <!-- Filter Panel -->
-    <div style="overflow: auto; width:500px;" id="facetBar"
+    <div id="facetBar"
          class="d-nonexx flex-column flex-shrink-0
-					p-3 offcanvas offcanvas-end">
+					p-lg-3 offcanvas offcanvas-end">
         <div class="offcanvas-header">
             <button type="button" class="btn-close btn-lg" data-bs-toggle="offcanvas" data-bs-target="#facetBar" aria-controls="facetBar" aria-label="Close"></button>
         </div>
@@ -400,7 +401,7 @@
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Sammlung" $lang }}</summary>
 
-                    <div class="tags cols collection">
+                    <div class="tags cols collection px-2 px-lg-0">
                         {{ range $collFacet := .CollectionFacets }}
                             {{ if and (not $collFacet.Checked) (gt $collFacet.Count 0) }}
                                 <button
@@ -428,7 +429,7 @@
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Thema" $lang }}</summary>
 
-                    <div class="tags cols collection">
+                    <div class="tags cols collection px-2 px-lg-0">
                         {{ range $catFacet := .CatalogFacets }}
                             {{ if and (not $catFacet.Checked) (gt $catFacet.Count 0) }}
                                 <button
@@ -456,7 +457,7 @@
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Ressourcentyp" $lang }}</summary>
 
-                    <div class="tags cols collection">
+                    <div class="tags cols collection px-2 px-lg-0">
                         {{ range $mediaFacet := .MediaFacets }}
                             {{ if and (not $mediaFacet.Checked) (gt $mediaFacet.Count 0) }}
                                 <button
@@ -495,7 +496,7 @@
                         <summary class="summary textbig"><span class="icon"></span>{{ localize $parent $lang }} </summary>
                        
 
-                       <div class="tags cols collection">
+                       <div class="tags cols collection px-2 px-lg-0">
                         {{ range $vocabFacet := $vocabFacets }}
                             {{ if not $vocabFacet.Checked }}
                            

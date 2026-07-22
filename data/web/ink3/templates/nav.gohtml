@@ -6,13 +6,12 @@
 {{- $mode := .Mode }}
 {{- $name := .Name }}
 
-
 <nav class="maincolor navbar">
     <div id="bdNavbar" class="offcanvas-lg offcanvas-end d-lg-flex  flex-grow-1  container-fluid justify-content-between py-1" tabindex="-1" aria-labelledby="bdNavbarOffcanvasLabel">
         
         <div class="offcanvas-header w-100 p-2">
-            <h5 id="bdNavbarOffcanvasLabel" class="offcanvas-title text-white">{{ if eq $name "scb.mab" }}SCB Katalog{{ else }}InK{{ end }}</h5>
-            <button class="btn-close btn-close-white" type="button" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
+            <h5 id="bdNavbarOffcanvasLabel" class="offcanvas-title text-white">&nbsp;</h5>
+            <button class="btn-close" type="button" data-bs-dismiss="offcanvas" aria-label="Close" data-bs-target="#bdNavbar"></button>
         </div>
         <div class="offcanvas-body d-lg-flex flex-grow-1 w-100">
 
@@ -20,7 +19,7 @@
             </div>
             
             <!-- title -->
-            <div class="center">
+            <div class="center d-none d-lg-flex">
                 <a {{ if not $isExhibition }} href="{{ $searchAddr }}/{{ $lang }}"{{ end }}>
                     {{ if eq $name "scb.mab" }}SCB Katalog{{ else }}Integrierter Katalog{{ end }}, Mediathek HGK Basel
                 </a>
@@ -29,7 +28,7 @@
             <div class="right">
             
             <!-- language -->
-            <div class="dropdown  bd-lang-toggle">
+            <div class="dropdown dropdown-m-h bd-lang-toggle">
                 <button class="btn btn-text btn-sm dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
                     {{ upper $lang }}
                 </button>
@@ -40,14 +39,14 @@
             </div>
 
             <!-- mode -->
-            <div class="dropdown bd-mode-toggle">
+            <div class="dropdown dropdown-m-h bd-mode-toggle">
                 <button class="btn btn-text btn-sm dropdown-toggle" 
                         id="bd-theme"
                         type="button"
                         aria-expanded="false"
                         data-bs-toggle="dropdown"
                         aria-label="Toggle theme (auto)">
-                    <span class="visually-hiddenxx" id="bd-theme-text">Dark</span>
+                    <span id="bd-theme-text">Dark</span>
                 </button>
                 <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
                     <li>
@@ -66,24 +65,31 @@
         
             {{ if .User.IsLoggedIn }}
                 <div class="dropdown">
-                    <button class="btn btn-light btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{{ .User.Email}}</button>
-                    <div class="dropdown-menu dropdown-menu-end" aria-labelledby="dropdownMenuButton1">
-                        <div class="ms-2 me-2">
-                            <h3 class="card-title mb-0">{{ .User.FirstName }} {{ .User.LastName }}</h3>
-                                    <ul class="list-group list-group-flush">
-                                        <li class="bg-transparent">
-                                            <i class="bi bi-hash me-2"></i>{{ .User.UserID }}
-                                        </li>
-                                        <li class="bg-transparent">
-                                            <i class="bi bi-envelope me-2"></i>{{ .User.Email}}
-                                        </li>
-                                        <li class="bg-transparent">
-                                            <i class="bi bi-building me-2"></i>{{ .User.HomeOrg }}
-                                        </li>
-                                        {{ range $grp := .User.Groups }}
-                                        <li class="bg-transparent"><i class="bi bi-people me-2"></i>{{ $grp }}</li>
-                                        {{ end}}
+                    <button class="btn btn-text btn-sm dropdown-toggle username" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <span id="bd-theme-text">{{ .User.Email}}</span>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="dropdownMenuButton1">
+                        <div>
+                            <ul class="list-group list-group-flush">
+                                <li class="bg-transparent px-2">
+                                    User ID: {{ .User.UserID }}
+                                </li>
                             </ul>
+                            <div class="mt-2  py-2 p-lg-2 border-top">Berechtigung:</div>
+                            <ul class="list-group list-group-flush px-2">    
+                            
+                                <li class="bg-transparent">
+                                    <i class="bi bi-building me-2"></i>{{ .User.HomeOrg }}
+                                </li>
+                                {{ range $grp := .User.Groups }}
+                                        <li><i class="bi bi-people me-2"></i>{{ $grp }}</li>
+                                {{ end}}
+                            </ul>
+                             <ul class="list-group list-group-flush mt-2 pt-2 border-top"> 
+                                <li>
+                                    <button type="button" class="dropdown-item d-flex align-items-center px-0 px-lg-2" data-bs-theme-value="auto" data-bs-theme-text="Auto">Logout</button>
+                                </li>  
+                            </ul> 
                         </div>
                     </div>
                 </div>
