@@ -29,17 +29,17 @@
     <div class="d-md-flex gap-2" role="search">
         <div class="left d-flex gap-3">
             <div class="dropdown d-none d-md-block">
-                    <button class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        Alle
-                    </button>
-                    <ul class="dropdown-menu dropdown-menu-end shadow">
-                        <li><a class="dropdown-item active" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Alle</a></li>
-                        <li><a class="dropdown-item" href="de{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Verfasser</a></li>
-                        <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Titel</a></li>
-                        <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Volltext</a></li>
-                        <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Sammlung</a></li>
-                        <li><a class="dropdown-item" href="en{{ if ne .Params "" }}?{{ .Params }}{{ end }}">Signatur</a></li>
-                    </ul>
+                <button id="searchTypeButton" class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" value="all">
+                    Alle
+                </button>
+                <ul class="dropdown-menu dropdown-menu-end shadow" id="searchTypeMenu">
+                    <li><a class="dropdown-item active" href="#" data-value="all">Alle</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="author">Verfassende</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="title">Titel</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="fulltext">Volltext</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="collection">Sammlung</a></li>
+                    <li><a class="dropdown-item" href="#" data-value="signature">Signatur</a></li>
+                </ul>
             </div>
             <div class="searchfield">
                 <input

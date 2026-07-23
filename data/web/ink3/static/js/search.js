@@ -7,7 +7,7 @@ function doSearch(url, cursor, exhibition, ki, sortField, sortOrder) {
 
 function search(url, cursor, exhibition, ki, sortField, sortOrder) {
     let search = document.getElementById("search").value;
-
+    let searchType = document.getElementById("searchTypeButton").value
     const params = new URLSearchParams({
         search: search,
     });
@@ -91,6 +91,9 @@ function search(url, cursor, exhibition, ki, sortField, sortOrder) {
             vocParam += value + ",";
         }
     }
+    if( searchType.length > 0 ) {
+        params.set("searchtype", searchType)
+    }
     if ( vocs.length > 0 ){
         params.set("vocabulary", vocParam);
     }
@@ -102,3 +105,37 @@ function search(url, cursor, exhibition, ki, sortField, sortOrder) {
     }
     window.location.href = url + "?" + params.toString();
 }
+
+    document.addEventListener('DOMContentLoaded', function() {
+    const searchTypeButton = document.getElementById('searchTypeButton');
+    const searchTypeMenu = document.getElementById('searchTypeMenu');
+
+    function updateSearchType(value, label) {
+    if (!searchTypeButton) return;
+    searchTypeButton.value = value;
+    searchTypeButton.innerText = label;
+
+    // Aktive Klasse im Menü umschalten
+    searchTypeMenu.querySelectorAll('.dropdown-item').forEach(item => {
+    item.classList.toggle('active', item.dataset.value === value);
+});
+}
+
+    // Klick-Event für das Menü (Event Delegation)
+    searchTypeMenu?.addEventListener('click', function(e) {
+    const target = e.target.closest('.dropdown-item');
+    if (target) {
+    e.preventDefault();
+    updateSearchType(target.dataset.value, target.innerText.trim());
+}
+});
+
+    // Zustand aus URL wiederherstellen
+    const currentType = new URLSearchParams(window.location.search).get('searchtype');
+    if (currentType) {
+    const activeItem = searchTypeMenu?.querySelector(`[data-value="${currentType}"]`);
+    if (activeItem) {
+    updateSearchType(currentType, activeItem.innerText.trim());
+}
+}
+});
