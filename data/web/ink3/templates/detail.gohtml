@@ -133,19 +133,19 @@
                             {{- end }}
                             {{- if eq $typedMedia.GetType "video" }}
                                 {{ $videoCount = len $typedMedia.GetItems}}
-                                {{ $videos = $typedMedia.GetItems }}
+                                {{ $videos = sortMediaItems $typedMedia.GetItems }}
                             {{- end }}
                             {{- if eq $typedMedia.GetType "image" }}
                                 {{ $imageCount = len $typedMedia.GetItems}}
-                                {{ $images = $typedMedia.GetItems }}
+                                {{ $images = sortMediaItems $typedMedia.GetItems }}
                             {{- end }}
                             {{- if eq $typedMedia.GetType "audio" }}
                                 {{ $audioCount = len $typedMedia.GetItems}}
-                                {{ $audios = $typedMedia.GetItems }}
+                                {{ $audios = sortMediaItems $typedMedia.GetItems }}
                             {{- end }}
                             {{- if eq $typedMedia.GetType "pdf" }}
                                 {{ $pdfCount = len $typedMedia.GetItems}}
-                                {{ $pdfs = $typedMedia.GetItems }}
+                                {{ $pdfs = sortMediaItems $typedMedia.GetItems }}
                             {{- end }}
                             {{- if eq $typedMedia.GetType "webrecorder" }}
                                 {{ $webrecorderCount = len $typedMedia.GetItems}}
@@ -233,7 +233,10 @@
                                 {{- if gt $pdfCount 0 }}
                                     {{- range $key, $media := $pdfs }}
                                         <span id="thumb{{ $num }}" class="masked pdf {{ if eq $num 0 }} active{{ end }}" onclick="carouselTo({{ $num }});" >
-                                            <div></div>
+                                            <img
+                                                    class="bd-placeholder-img card-img-top"
+                                                    src="{{ medialink (printf "%s%s" $media.URI "$$poster") "resize" "size100x1000/formatPNG/autorotate" (and $source.Base.MediaVisible $source.Base.MediaProtected) }}"
+                                            />
                                         </span>
                                         {{- $num = add $num 1}}
                                     {{- end }}
@@ -243,7 +246,7 @@
                                         <span id="thumb{{ $num }}" class="masked audio {{ if eq $num 0 }} active{{ end }}" onclick="carouselTo({{ $num }});" >
                                             <img 
                                                 class="bd-placeholder-img card-img-top" 
-                                                src="{{ medialink $media.URI "resize" "size100x1000/formatPNG/autorotate" (and $source.Base.MediaVisible $source.Base.MediaProtected) }}" 
+                                                src="{{ medialink (printf "%s%s" $media.URI "$$poster") "resize" "size100x1000/formatPNG/autorotate" (and $source.Base.MediaVisible $source.Base.MediaProtected) }}"
                                             />
                                         </span>
                                         {{- $num = add $num 1}}
