@@ -325,7 +325,7 @@
                     {{ if ne (ptrString $source.Base.CollectionTitle) "" }}
                     <div class="infoline">
                         <div class="summary">Bestand</div>
-                        <div class="detail">{{ $source.Base.CollectionTitle }}</a></div>
+                        <div class="detail"><a href="{{ printf "%s/%s/%s?searchtype=estate&search=\"%s\"" $searchAddr $searchSource $lang (ptrString $source.Base.CollectionTitle) }}">{{ $source.Base.CollectionTitle }}</a></div>
                     </div>
                     {{ end }}
 
