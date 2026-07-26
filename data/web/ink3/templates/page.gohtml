@@ -1,0 +1,44 @@
+<!doctype html>
+{{- $lang := .Lang}}
+{{- $root := .RootPath }}
+{{- $isExhibition := .Exhibition }}
+{{- $searchAddr := .SearchAddr }}
+<html lang="{{ $lang }}">
+<head>
+    {{ template "head.gohtml" . }}
+    <style>
+        [data-bs-theme=dark] img.qr {
+            filter: invert(1);
+        }
+
+    </style>
+</head>
+
+<body class="w-100 bg">
+    {{ template "nav.gohtml" . }}
+
+
+<main>
+    <div class="ds logo">
+        <a class="summary textbig" href="{{ $root }}"><span class="icon back"></span><h1>
+                    {{ .Meta.title }}
+            </h1></a>
+    </div>
+</main>
+
+    <div class="container-fluid p-0 d-flex h-100">
+        <div id="markdown" class="px-4 py-1">
+            {{ .HTML | toHTML }}
+        </div>
+    </div>
+
+<!-- ---------- script ---------- -->
+
+ {{ template "footer.gohtml" . }}
+<script src="{{ .RootPath }}static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="{{ .RootPath }}static/js/script.js"></script>
+<script>
+</script>
+
+</body>
+</html>
