@@ -345,7 +345,7 @@
                         
                         {{- $firstPerson := true}}
                         {{- range $key, $p := $source.Base.Person}}{{/*
-                            */}}{{- if hasPrefix "artist" $p.Role}}{{ if not $firstPerson }}; {{ end }}<a class="link" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a>{{/* if $p.Year }} (*{{ $p.Year }}){{ end }}{{ range $key, $id := $p.Identifier }}{{ if eq $id.Name "viaf" }}<img src="{{ $root }}static/img/viaf.png" alt="VIAF" width="18">{{ end }}{{ end */}}{{/*
+                            */}}{{- if hasPrefix "artist" $p.Role}}{{ if not $firstPerson }}; {{ end }}<a class="link" href="{{ printf "%s/%s/%s" $searchAddr $searchSource $lang }}?searchtype=author&search={{ $p.Name }}">{{$p.Name}}</a>{{/* if $p.Year }} (*{{ $p.Year }}){{ end }}{{ range $key, $id := $p.Identifier }}{{ if eq $id.Name "viaf" }}<img src="{{ $root }}static/img/viaf.png" alt="VIAF" width="18">{{ end }}{{ end */}}{{/*
                                 */}}{{- $firstPerson = false }}{{/*
                                 */}}{{- end}}{{/*
                             */}}{{- end}}
@@ -353,7 +353,7 @@
                         {{- range $p := $source.Base.Person}}
                             {{- if not (hasPrefix "artist" $p.Role)}}
                                 {{ if not $firstPerson }}<br />{{ $firstPerson = true }}{{ end }}
-                                <a class="link" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a> ({{camelcase (trimPrefix "performer:" $p.Role)}})<br />
+                                <a class="link" href="{{ printf "%s/%s/%s" $searchAddr $searchSource $lang }}?searchtype=author&search={{  $p.Name }}">{{$p.Name}}</a> ({{camelcase (trimPrefix "performer:" $p.Role)}})<br />
                             {{- end}}
                         {{- end}}
                         </div>
