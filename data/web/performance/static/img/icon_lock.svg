@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
+  <defs>
+    <style>
+      .st0, .st1 {
+        fill: none;
+      }
+     .st1 {
+        stroke: #000;
+        stroke-miterlimit: 10;
+        stroke-width: 4px;
+      }
+    </style>
+  </defs>
+  <rect class="st0" width="50" height="50"/>
+  <path class="st1" d="M24.88,6.95"/>
+  <rect class="st1" x="11" y="22" width="28" height="20"/>
+  <path class="st1" d="M16,22v-4c0-4.97,4.03-9,9-9s9,4.03,9,9v4"/>
+  <line class="st1" x1="25" y1="28" x2="25" y2="36"/>
+</svg>
