@@ -334,6 +334,11 @@
                                                             {{ if ne $edge.Date "" }}({{ $edge.Date }}){{ end }}
                                                         </div>
                                                     {{ end }}
+                                                    {{- if ne (ptrString $edge.Edge.Base.CollectionTitle) "" }}
+                                                        <div class="estate">
+                                                            {{ ptrString $edge.Edge.Base.CollectionTitle }}
+                                                        </div>
+                                                    {{- end }}
 
                                                     <div class="medias">
                                                     {{- range $mc := $edge.Edge.Base.MediaCount }}
