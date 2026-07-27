@@ -15,6 +15,7 @@
 {{- if $isExhibition }}{{ $searchBase = printf "%sexhibition&" $searchBase }}{{ end }}
 {{- $search := $searchBase }}
 {{- if ne .Params "" }}{{ $search = printf "%s%s" $search .Params }}{{ end }}
+{{- $back := .Back }}{{ if eq $back "" }}{{ $back = $search }}{{ end }}
 <html lang="{{ $lang }}">
 <head>
     {{ template "head.gohtml" . }}
@@ -45,7 +46,7 @@
 
 <main>
     <div class="ds logo">
-        <a class="summary textbig" href="{{ $search }}"><span class="icon back"></span><h1>
+        <a class="summary textbig" href="{{ $back }}"><span class="icon back"></span><h1>
         {{- $title1 := multiLang $source.Base.Title }}
         {{- $title := $title1.String }}
         {{- $parts := split $title ". " -}}
@@ -325,7 +326,11 @@
                     {{ if ne (ptrString $source.Base.CollectionTitle) "" }}
                     <div class="infoline">
                         <div class="summary">Bestand</div>
-                        <div class="detail"><a class="link" href="{{ printf "%s/%s/%s" $searchAddr $searchSource $lang }}?searchtype=estate&search={{ ptrString $source.Base.CollectionTitle }}">{{ $source.Base.CollectionTitle }}</a></div>
+                        <div class="detail">
+                            <a class="link" href="{{ printf "%s/%s/%s" $searchAddr $searchSource $lang }}?searchtype=estate&search={{ ptrString $source.Base.CollectionTitle }}">{{ $source.Base.CollectionTitle }}</a>
+                            {{- $ref := staticRef "estate" (ptrString $source.Base.CollectionTitle)}}
+                            {{- if ne $ref "" }}<a class="info" href="{{ $root }}pages/{{ $ref }}?back={{ .Self }}">i</a>{{ end }}
+                        </div>
                     </div>
                     {{ end }}
 

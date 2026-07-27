@@ -1103,6 +1103,17 @@ details > div{
         display: none;
     }
     */
+
+    .infoline .detail .info {
+        flex:0 0 1.5rem;
+        border-radius: 100%;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.35rem;
+        text-align: center;
+        opacity:1;
+        border:1px solid currentColor;
+    }
     .infoline .detail p:last-child{
         margin: 0;
     }
@@ -1177,6 +1188,16 @@ details > div{
     }
     .infoline .detail{
         color:var(--color);
+    }
+    .infoline .detail .info {
+        flex:0 0 1.5rem;
+        border-radius: 100%;
+        width: 1.5rem;
+        height: 1.5rem;
+        line-height: 1.35rem;
+        text-align: center;
+        opacity:1;
+        border:1px solid currentColor;
     }
     .infogroup .infoline:first-child  > *:first-child{
         padding-top:0.5rem;
