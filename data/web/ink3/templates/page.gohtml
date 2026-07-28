@@ -21,14 +21,14 @@
 
 <main>
     <div class="ds logo">
-        <a class="summary textbig" href="{{ $back }}"><span class="icon back"></span><h1>
+        <a class="summary textbig" href="{{ $back }}" onclick="event.preventDefault(); historyOrLink('{{ $back }}');"><span class="icon back"></span><h1>
                     {{ .Meta.title }}
             </h1></a>
     </div>
 </main>
 
     <div class="container-fluid p-0 d-flex h-100">
-        <div id="markdown" class="px-4 py-1">
+        <div class="px-4 py-1 markdown">
             {{ .HTML | toHTML }}
         </div>
     </div>
