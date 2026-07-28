@@ -10,6 +10,7 @@ detailaddr = "https://ink3.sammlung.cc"
 mode = "dark"
 templates = "/root/ink3web/data/web/ink3/templates/"
 staticfiles = "/root/ink3web/data/web/ink3/static"
+pagesfiles = "/root/ink3pages/ink3/pages/"
 datadir = "/var/www/vhosts/performance.ausstellung.cc/digitalesee"
 
 mediaserverbase = "https://ba14ns21403-sec1.fhnw.ch/mediasrv"
