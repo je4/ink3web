@@ -463,10 +463,10 @@
                             <div>
                             {{range $note := $source.Notes}}
                                 <div>{{ $note.Title }}</div>
-                                <p class="opacity-50">{{ toHTMLif $note.Text }}</p> 
+                                <div class="opacity-50">{{ toHTMLif $note.Text }}</div> 
                             {{end}}
                             </div>
-                            <a class="link readmore">Read more<a/> …
+                            <div class="readmore"><a class="link ">Read more</a> …</div>
                         </div>
                     </div>
                 </div>    

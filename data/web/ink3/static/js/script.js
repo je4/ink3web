@@ -20,7 +20,7 @@
   document.querySelectorAll(".textclamp").forEach(el => {
     const readMore = el.querySelector(".readmore");
     if (readMore) {
-      //readMore.hidden = el.scrollHeight <= el.clientHeight;
+      readMore.hidden = el.scrollHeight <= el.clientHeight;
     }
   });
 

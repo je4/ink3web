@@ -1211,6 +1211,9 @@ details > div{
         opacity:1;
         border:1px solid currentColor;
     }
+    .infoline .detail p{
+        margin:0 0 1rem 0
+    }
     .infogroup .infoline:first-child  > *:first-child{
         padding-top:0.5rem;
     }
