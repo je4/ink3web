@@ -1,88 +1,41 @@
 
-/* theme */
-
-/*!
- * Color mode toggler for Bootstrap's docs (https://getbootstrap.com/)
- * Copyright 2011-2025 The Bootstrap Authors
- * Licensed under the Creative Commons Attribution 3.0 Unported License.
- */
-
 (() => {
   'use strict'
 
-  const getStoredTheme = () => localStorage.getItem('theme')
-  const setStoredTheme = theme => localStorage.setItem('theme', theme)
-
-  const getPreferredTheme = () => {
-   
-    const storedTheme = getStoredTheme()
-     console.log('th:'+storedTheme)
-    if (storedTheme) {
-      return storedTheme
-    }
-
-    return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-  }
-
-  const setTheme = theme => {
-    if (theme === 'auto') {
-      document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
-    } else {
-      console.log('set'+theme)
-      document.documentElement.setAttribute('data-bs-theme', theme)
-    }
-  }
-
-  setTheme(getPreferredTheme())
-
-  const showActiveTheme = (theme, focus = false) => {
-    const themeSwitcher = document.querySelector('#bd-theme')
-
-    if (!themeSwitcher) {
-      return
-    }
-
-    const themeSwitcherText = document.querySelector('#bd-theme-text')
-    //const activeThemeIcon = document.querySelector('.theme-icon-active use')
-    const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
-    //const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
-
-    document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
-      element.classList.remove('active')
-      element.setAttribute('aria-pressed', 'false')
-    })
-
-    btnToActive.classList.add('active')
-    btnToActive.setAttribute('aria-pressed', 'true')
-    //activeThemeIcon.setAttribute('href', svgOfActiveBtn)
-    //const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
-    //themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
-
-    if (focus) {
-      themeSwitcher.focus()
-    }
-  }
-
-  window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
-    const storedTheme = getStoredTheme()
-    if (storedTheme !== 'light' && storedTheme !== 'dark') {
-      setTheme(getPreferredTheme())
-    }
+  /* theme switch */
+  // theme switch fucntions are located in the head.gohtml file, because they are needed before the page is loaded to avoid flickering
+  
+  // redo the init to change the nav button to the corect state
+  initTheme();
+  
+  // listeen to theme changes
+  document.addEventListener("click", e => {
+    const btn = e.target.closest("[data-bs-theme-value]");
+    if (!btn) return;
+    console.log('theme:'+btn.dataset.bsThemeValue);
+    setTheme(btn.dataset.bsThemeValue);
   })
 
-  window.addEventListener('DOMContentLoaded', () => {
-    showActiveTheme(getPreferredTheme())
+  /* read. more */
+  document.querySelectorAll(".textclamp").forEach(el => {
+    const readMore = el.querySelector(".readmore");
+    if (readMore) {
+      //readMore.hidden = el.scrollHeight <= el.clientHeight;
+    }
+  });
 
-    document.querySelectorAll('[data-bs-theme-value]')
-      .forEach(toggle => {
-        toggle.addEventListener('click', () => {
-          const theme = toggle.getAttribute('data-bs-theme-value')
-          setStoredTheme(theme)
-          setTheme(theme)
-          showActiveTheme(theme, true)
-        })
-      })
-  })
+  document.addEventListener("click", e => {
+    const btn = e.target.closest(".readmore");
+    if (!btn) return;
+
+    e.preventDefault();
+
+    const container = btn.closest(".textclamp");
+    if (!container) return;
+
+    container.classList.remove("textclamp");
+    btn.hidden = true; // optional: "Read more" ausblenden
+  });
 })()
 
 function historyOrLink(link) {
