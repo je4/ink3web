@@ -11,6 +11,8 @@
 {{- $useKI := .KI }}
 {{- $page := .Page }}
 {{- $roles := list "author" "performer" "artist" "director" "camera" }}
+{{- $back := .Back }}{{ if eq $back "" }}{{ $back = $root }}{{ end }}
+
 <html lang="{{ $lang }}">
 
 {{template "head.gohtml" . }}
@@ -21,7 +23,7 @@
 <main>
 <div class="sticky">
     <div class="ds logo">
-        <a class="summary textbig" href="/"><span class="icon back"></span><h1>InK</h1></a>
+        <a class="summary textbig" href="{{ $back }}" onclick="event.preventDefault(); historyOrLink('{{ $back }}');"><span class="icon back"></span><h1>InK</h1></a>
     </div>
 </div>
 

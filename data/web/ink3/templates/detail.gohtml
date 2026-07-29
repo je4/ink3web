@@ -46,7 +46,7 @@
 
 <main>
     <div class="ds logo">
-        <a class="summary textbig" href="{{ $back }}"><span class="icon back"></span><h1>
+        <a class="summary textbig" href="{{ $back }}" onclick="event.preventDefault(); historyOrLink('{{ $back }}');"><span class="icon back"></span><h1>
         {{- $title1 := multiLang $source.Base.Title }}
         {{- $title := $title1.String }}
         {{- $parts := split $title ". " -}}
