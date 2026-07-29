@@ -393,6 +393,18 @@ img.flipvertical {
     line-height: 3rem;
 }
 
+.toggle.access .checkmark{
+    background-image:url('../img/icon-locked.svg');
+    background-size:16px;
+    background-repeat:no-repeat;
+    background-position:center;
+    border:0;
+}
+.toggle.access input:checked ~ .checkmark{
+    background-image:url('../img/icon-unlocked.svg');
+    background-color:transparent;
+
+}
 
 
 
@@ -1115,7 +1127,7 @@ details > div{
     }
     */
 
-    .infoline .detail .info {
+    .infoline .detail .info, .infobutton {
         display: inline-block;
         border-radius: 100%;
         width: 1.5rem;
@@ -1152,7 +1164,6 @@ details > div{
         text-overflow: ellipsis;
     }
     
-   
     .infoline .btn:hover{
         background:var(--color);
         color:var(--color-on);
@@ -1200,16 +1211,6 @@ details > div{
     }
     .infoline .detail{
         color:var(--color);
-    }
-    .infoline .detail .info {
-        flex:0 0 1.5rem;
-        border-radius: 100%;
-        width: 1.5rem;
-        height: 1.5rem;
-        line-height: 1.35rem;
-        text-align: center;
-        opacity:1;
-        border:1px solid currentColor;
     }
     .infoline .detail p{
         margin:0 0 1rem 0

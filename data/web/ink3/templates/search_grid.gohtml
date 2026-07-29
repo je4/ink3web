@@ -53,15 +53,15 @@
                 />
                 <a class="iconx" data-icon="close16" onClick="document.getElementById('search').value='';doSearch('{{ $searchBase }}') "></a>
 
-            </div>
+            </div>   
         </div>
         <div class="right d-flex flex-grow-1">
             <!-- access -->
-                <label class="toggle"><input type="checkbox" name="access" checkedx /><span class="checkmark"></span><span>Offener Zugang</span></label>
+                <label class="toggle access" title="Es werden auch Einträge mit geshlossenen Medien angezeigt"><input type="checkbox" name="access" checkedx /><span class="checkmark"></span><span >Zugang</span></label><!--<a class="infobutton ms-0">i</a>-->
             
             <!-- ki search -->
             {{/*
-            <label class="toggle"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
+            <label class="toggle "><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
             <!--<button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
              */}}
             <!-- filter togggle-->
