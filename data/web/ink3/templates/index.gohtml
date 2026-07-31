@@ -53,12 +53,12 @@
                             Alle
                         </button>
                         <ul class="dropdown-menu dropdown-menu-end shadow" id="searchTypeMenu">
-                            <li><a class="dropdown-item active" href="#" data-value="all">Alle</a></li>
-                            <li><a class="dropdown-item" href="#" data-value="author">Verfassende</a></li>
-                            <li><a class="dropdown-item" href="#" data-value="title">Titel</a></li>
-                            <li><a class="dropdown-item" href="#" data-value="fulltext">Volltext</a></li>
-                            <li><a class="dropdown-item" href="#" data-value="estate">Bestand</a></li>
-                            <li><a class="dropdown-item" href="#" data-value="signature">Signatur</a></li>
+                            <li><a class="dropdown-item active" href="#" data-value="all">All Fields</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="author">Persons</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="title">Title</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="fulltext">Full Text</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="estate">Estates</a></li>
+                            <li><a class="dropdown-item" href="#" data-value="signature">Signature</a></li>
                         </ul>
                     </div>
 
@@ -90,7 +90,7 @@
         <!-- filters tags -->
 
         <details class="ds">
-            <summary class="summary textbig"><span class="icon"></span>Sammlungen</summary>
+            <summary class="summary textbig"><span class="icon"></span>Collections</summary>
             <div class="detail tags cols collection">
                 {{- range $key, $coll := .Collections }}
                     {{ if gt $coll.Count 0 }}
@@ -120,7 +120,7 @@
         {{- if $filters }}
         <!-- ohter filters -->
         <details class="ds">
-            <summary class="summary textbig"><span class="icon"></span>Ressourcentyp</summary>
+            <summary class="summary textbig"><span class="icon"></span>Resource Types</summary>
             <div class="detail tags cols collection">
                 {{- range $key, $media := .Medias }}
 
@@ -148,7 +148,7 @@
             </div>
         </details>
  <details class="ds">
-            <summary class="summary textbig"><span class="icon"></span>Thema</summary>
+            <summary class="summary textbig"><span class="icon"></span>Topic</summary>
             <div class="detail tags cols collection">
                 {{- range $key, $catalog := .Catalogs }}
                     {{ if gt $catalog.Count 0 }}
@@ -184,7 +184,7 @@
         </details> -->
         <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>
-<a href="https://www.fhnw.ch/de/gestaltung-kunst/ueber-uns/campus/mediathek" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Bibliothek</a>
+<a href="https://www.fhnw.ch/de/gestaltung-kunst/ueber-uns/campus/mediathek" target="_blank" rel="noopener noreferrer" style="color: inherit; text-decoration: none;">Mediathek</a>
 </summary>
             <div class="detail tags cols collection">
             </div>
