@@ -215,13 +215,6 @@ url = ""
 contact = ""
 
 [[catalogs]]
-id = 21
-identifier = "catalog:\"Educational\""
-title = "Educational Resources"
-url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=08-00"
-contact = ""
-
-[[catalogs]]
 id = 100
 identifier = "catalog:\"Testing\""
 title = "Testumgebung"
@@ -255,6 +248,14 @@ contact = "Eva Hauck"
 
 [[collections]]
 id = 4
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Peripher_ies\""
+title = "Peripher_ies"
+url = "https://sndscp.ch/"
+image = ""
+contact = "Max Spielmann, Catherine Walthard"
+
+[[collections]]
+id = 5
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!CulturalSpace&Design - Research\""
 title = "Cultural Spaces and Design"
 url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/32"
@@ -262,21 +263,12 @@ image = ""
 contact = "Regine Halter, Catherine Walthard, Anka Falk"
 
 [[collections]]
-id = 9
+id = 6
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Plant_Intelligence\""
 title = "Plant Intelligence"
 url = "https://plants-intelligence.ch/"
 image = ""
 contact = "Yvonne Volkart"
-
-[[collections]]
-id = 10
-identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Peripher_ies\""
-title = "Peripher_ies"
-url = "https://plants-intelligence.ch/"
-image = ""
-contact = "Max Spielmann, Catherine Walthard"
-
 
 [[collections]]
 id = 12
@@ -316,23 +308,23 @@ contact = "ICDP"
 id = 18
 identifier = "cat:\"zotero2!!HyperWerk\""
 title = "Hyperwerk / Transversal Design"
-url = ""
+url = "https://www.hypermagazine.ch/"
 image = ""
-contact = "ICDM"
+contact = "IXDM"
 
 [[collections]]
 id = 19
 identifier = "cat:\"zotero2!!Institut Mode-Design Web\""
 title = "Mode Design/Doing Fashion Publisc"
-url = ""
+url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/mode-design-ba"
 image = ""
-contact = "Mode"
+contact = "Institut Mode"
 
 [[collections]]
 id = 20
 identifier = "cat:\"zotero2!!Institut Mode-Design\""
 title = "Mode Design/Doing Fashion"
-url = ""
+url = "https://doingfashion.ch/"
 image = ""
 contact = "Mode"
 
@@ -340,7 +332,7 @@ contact = "Mode"
 id = 31
 identifier = "cat:\"zotero2!!Werke\""
 title = "Forschungsdaten & Publikationen"
-url = "https://mediathek.hgk.fhnw.ch/"
+url = ""
 image = ""
 contact = "mediathek.hgk@fhnw.ch"
 
@@ -372,7 +364,13 @@ image = ""
 contact = "René Pulfer"
 
 
-
+[[collections]]
+id = 50
+identifier = "cat:\"zotero2!!Summe2017\""
+title = "Summe 2017"
+url = "https://summe.xyz/"
+image = ""
+contact = "mediathek.hgk@fhnw.ch"
 
 
 
@@ -380,7 +378,7 @@ contact = "René Pulfer"
 id = 53
 identifier = "cat:\"zotero2!!e-Publications\""
 title = "e-Publications"
-url = ""
+url = "https://fhnw.swisscovery.slsp.ch/discovery/collectionDiscovery?vid=41SLSP_FNW:VU1&collectionId=8182193720005518&lang=de"
 image = ""
 contact = "Tabea Lurk"
 
