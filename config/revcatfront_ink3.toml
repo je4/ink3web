@@ -172,19 +172,19 @@ title = "Creative Publishing"
 url = ""
 contact = ""
 
-[[catalogs]]
-id = 6
-identifier = "catalog:\"Art\""
-title = "Art"
-url = ""
-contact = ""
+#[[catalogs]]
+#id = 6
+#identifier = "catalog:\"Art\""
+#title = "Art"
+#url = ""
+3contact = ""
 
-[[catalogs]]
-id = 7
-identifier = "catalog:\"Design\""
-title = "Design"
-url = ""
-contact = ""
+#[[catalogs]]
+#id = 7
+#identifier = "catalog:\"Design\""
+#title = "Design"
+#url = ""
+#contact = ""
 
 [[catalogs]]
 id = 8
