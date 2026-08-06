@@ -282,7 +282,7 @@ contact = "Marianna Meyer"
 [[collections]]
 id = 11
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!SMUC\""
-title = "SMUC Scaling Material Urban Commons"
+title = "SMUC"
 url = "https://criticalmedialab.ch/projects/smuc/"
 image = ""
 contact = "Viktor Bedö"
@@ -535,7 +535,7 @@ contact = "Tabea Lurk"
 [[collections]]
 id = 200
 identifier = "cat:\"zotero2!!HSM-Datenbanken\""
-title = "Forschungsdaten Schola Cantorum Basiliensis"
+title = "Forschungsdaten SCB"
 url = "https://www.forschung.schola-cantorum-basiliensis.ch/de.html"
 image = ""
 contact = "Tabea Lurk"
