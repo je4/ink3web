@@ -377,6 +377,14 @@ url = "https://doingfashion.ch/"
 image = ""
 contact = "Mode"
 
+[[collections]]
+id = 47
+identifier = "cat:\"zotero2!!Videocity_memoriav\""
+title = "Fotoarchiv Hans-Peter Huser"
+url = 
+image = ""
+contact = "Kommunikation HGK Basel FHNW"
+
 
 [[collections]]
 id = 48
@@ -475,6 +483,22 @@ title = "Together Elsewhere"
 url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/26"
 image = "together_elsewhere_klein.png"
 contact = "Gisela Hochuli (PANCH), Pavana Reid (PAB)"
+
+[[collections]]
+id = 79
+identifier = "cat:\"zotero2!!Performance Art!!Must or Not\""
+title = "Must or Not"
+url = "https://panch.li/v2_23/wp-content/uploads/2024/06/2024-05-31_MUST-OR-NOT_zusammengesetzt_s_def.pdf"
+image = "perf_en_bref_klein.png"
+contact = "Chris Regn, Andrea Saemann"
+
+[[collections]]
+id = 80
+identifier = "cat:\"zotero2!!Partout\""
+title = "Partout"
+url = "https://apresperf.ch/category/interviews"
+image = "perf_en_bref_klein.png"
+contact = "Chris Regn, Andrea Saemann"
 
 [[collections]]
 id = 84
