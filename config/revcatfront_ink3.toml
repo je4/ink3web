@@ -496,8 +496,8 @@ contact = "Chris Regn, Andrea Saemann"
 id = 80
 identifier = "cat:\"zotero2!!Performance Art!!Partout\""
 title = "Partout"
-url = "https://apresperf.ch/category/interviews"
-image = "perf_en_bref_klein.png"
+url = "partout.panch.li"
+image = ""
 contact = "Chris Regn, Andrea Saemann"
 
 [[collections]]
@@ -511,7 +511,7 @@ contact = "Pascale Grau, Margarit von Büren, PANCH"
 [[collections]]
 id = 85
 identifier = "cat:\"zotero2!!Dokumentation Archiv Performativ\""
-title = "Interviews: Archiv Performativ "
+title = "Excerpte Archiv Performativ "
 url = "http://archivperformativ.zhdk.ch/"
 image = "interviews_archiv_performativ_klein.png"
 contact = "Pascale Grau, Margarit von Büren"
