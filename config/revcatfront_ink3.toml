@@ -177,7 +177,7 @@ contact = ""
 #identifier = "catalog:\"Art\""
 #title = "Art"
 #url = ""
-3contact = ""
+#3contact = ""
 
 #[[catalogs]]
 #id = 7
@@ -220,8 +220,6 @@ identifier = "catalog:\"Testing\""
 title = "Testumgebung"
 url = ""
 contact = ""
-
-
 
 [[collections]]
 id = 1
