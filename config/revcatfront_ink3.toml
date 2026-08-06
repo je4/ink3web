@@ -177,7 +177,7 @@ contact = ""
 #identifier = "catalog:\"Art\""
 #title = "Art"
 #url = ""
-3contact = ""
+#3contact = ""
 
 #[[catalogs]]
 #id = 7
@@ -214,6 +214,16 @@ title = "Open and Free Access"
 url = ""
 contact = ""
 
+<<<<<<< HEAD
+=======
+[[catalogs]]
+id = 100
+identifier = "catalog:\"Testing\""
+title = "Testumgebung"
+url = ""
+contact = ""
+
+>>>>>>> 7d85ebb9111c894c36b0be03f3baec6b8635ca82
 [[collections]]
 id = 1
 identifier = "cat:\"forms2!!diplom\""
@@ -231,7 +241,7 @@ contact = "Marion Ritzmann, Hannah Weinberger"
 
 [[collections]]
 id = 3
-identifier = "cat:\"forms2!!modul!!Modul Erinnerungsraum\""
+identifier = "cat:\"forms2!!modul\""
 title = "Erinnerungsraum"
 url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
 image = ""
@@ -255,23 +265,26 @@ contact = "Regine Halter, Catherine Walthard, Anka Falk"
 
 [[collections]]
 id = 6
-identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Plant_Intelligence\""
+identifier = "cat:\"zotero2!!Werke!!Plant_Intelligence\""
 title = "Plant Intelligence"
 url = "https://plants-intelligence.ch/"
 image = ""
 contact = "Yvonne Volkart"
 
 [[collections]]
-id = 12
+id = 8
 identifier = "cat:\"zotero2!!Netzkulturen\""
 title = "Netzkulturen"
 url = "https://plants-intelligence.ch/"
 image = ""
 contact = "Stefanie Bräuer"
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7d85ebb9111c894c36b0be03f3baec6b8635ca82
 [[collections]]
-id = 15
+id = 10
 identifier = "cat:\"zotero2!!Werke!!Lehre_Weiterbildung!!Incubator for Design Cultures\""
 title = "Incubator for Design Cultures"
 url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/37"
@@ -279,44 +292,61 @@ image = ""
 contact = "Marianna Meyer"
 
 [[collections]]
-id = 16
+id = 11
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!SMUC\""
+title = "SMUC Scaling Material Urban Commons"
+url = "https://criticalmedialab.ch/projects/smuc/"
+image = ""
+contact = "Viktor Bedö"
+
+[[collections]]
+id = 13
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!ubicombs - Technology – Human – Design: Paradigms of Ubiquitous Computing\""
+title = "Ubiquitous Computing"
+url = "https://criticalmedialab.ch/projects/paradigms-of-ubiquitous-computing/"
+image = ""
+contact = "Jan Torpus"
+
+[[collections]]
+id = 15
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Cycles of Circulation\""
+title = "Cycles or Circulation"
+url = "https://criticalmedialab.ch/projects/cycles-of-circulation/"
+image = ""
+contact = "Jamie Allen"
+
+[[collections]]
+id = 17
+identifier = "cat:\"zotero2!!Werke!!Lehre_Weiterbildung!!Incubator for Design Cultures\""
+title = "Mitwelten"
+url = "https://www.mitwelten.org/"
+image = ""
+contact = "Jan Torpus,Cedric Spindler"
+
+[[collections]]
+id = 18
 identifier = "cat:\"zotero2!!Werke!!Memory Full\""
 title = "Memory Full"
 url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/31"
 image = ""
 contact = "Meret Ernst"
 
-[[collections]]
-id = 17
-identifier = "cat:\"iid-Arbeit\""
-title = "Archiv Industrial Design ICDP"
-url = ""
-image = ""
-contact = "ICDP"
-
-[[collections]]
-id = 18
-identifier = "cat:\"zotero2!!HyperWerk\""
-title = "Hyperwerk / Transversal Design"
-url = "https://www.hypermagazine.ch/"
-image = ""
-contact = "IXDM"
-
-[[collections]]
-id = 19
-identifier = "cat:\"zotero2!!Institut Mode-Design Web\""
-title = "Mode Design/Doing Fashion Publisc"
-url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/mode-design-ba"
-image = ""
-contact = "Institut Mode"
 
 [[collections]]
 id = 20
-identifier = "cat:\"zotero2!!Institut Mode-Design\""
-title = "Mode Design/Doing Fashion"
-url = "https://doingfashion.ch/"
+identifier = "cat:\"zotero2!!Werke!!Konferenzen!!Shifting is Mapping\""
+title = "Shifts is Mapping"
+url = "https://data.snf.ch/grants/grant/205397"
 image = ""
-contact = "Mode"
+contact = "Christine Schranz"
+
+[[collections]]
+id = 24
+identifier = "cat:\"zotero2!!Grenzgang""
+title = "Grenzgang"
+url = "https://data.snf.ch/grants/grant/149339"
+image = ""
+contact = "Renate Florenz, Markus Schwander"
 
 [[collections]]
 id = 31
@@ -328,25 +358,42 @@ contact = "mediathek.hgk@fhnw.ch"
 
 
 [[collections]]
-id = 34
-identifier = "cat:\"zotero2!!Werke!!Konferenzen!!Shifting is Mapping\""
-title = "Shifting is Mapping"
+id = 35
+identifier = "cat:\"iid-Arbeit\""
+title = "Archiv Industrial Design ICDP"
 url = ""
 image = ""
-contact = "Christine Schranz"
-
-[[collections]]
-id = 35
-identifier = "cat:\"zotero2!!grenzgang\""
-title = "Grenzgang"
-url = "https://mediathek.hgk.fhnw.ch/grenzgang.php"
-image = ""
-contact = "René Pulfer"
-
-
+contact = "ICDP"
 
 [[collections]]
 id = 40
+identifier = "cat:\"zotero2!!HyperWerk\""
+title = "Hyperwerk / Transversal Design"
+url = "https://www.hypermagazine.ch/"
+image = ""
+contact = "IXDM"
+
+[[collections]]
+id = 43
+identifier = "cat:\"zotero2!!Institut Mode-Design Web\""
+title = "Mode Design/Doing Fashion Publisc"
+url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/mode-design-ba"
+image = ""
+contact = "Institut Mode"
+
+[[collections]]
+id = 46
+identifier = "cat:\"zotero2!!Institut Mode-Design\""
+title = "Mode Design/Doing Fashion"
+url = "https://doingfashion.ch/"
+image = ""
+contact = "Mode"
+
+
+
+
+[[collections]]
+id = 48
 identifier = "cat:\"zotero2!!ikuvid\""
 title = "IKUVID hist. Videokunst intern"
 url = ""
@@ -392,7 +439,7 @@ contact = "mediathek.hgk@fhnw.ch"
 id = 57
 identifier = "cat:\"zotero2!!DigitalBrainstorming\""
 title = "Digital Brainstorming"
-url = ""
+url = "https://engagement.migros.ch/en/stories/promoting-the-arts/digital-brainstorming"
 image = ""
 contact = "Dominic Landwehr"
 
@@ -400,7 +447,7 @@ contact = "Dominic Landwehr"
 id = 58
 identifier = "cat:\"zotero2!!Konvolute!!Feministisches* Improvisatorium\""
 title = "Feministisches Improvisatorium"
-url = ""
+url = "https://ink3.sammlung.cc/pages/estates/feministisches_improvisatorium.md"
 image = ""
 contact = "Chris Regn, Muda Mathis"
 
@@ -408,7 +455,7 @@ contact = "Chris Regn, Muda Mathis"
 id = 59
 identifier = "cat:\"zotero2!!Videocity_memoriav\""
 title = "Videocity"
-url = ""
+url = "https://www.videocity.org/"
 image = ""
 contact = "Andrea Domesle"
 
@@ -521,8 +568,8 @@ contact = "Tabea Lurk"
 [[collections]]
 id = 200
 identifier = "cat:\"zotero2!!HSM-Datenbanken\""
-title = "HSM Datenbanken"
-url = ""
+title = "Forschungsdaten Schola Cantorum Basiliensis"
+url = "https://www.forschung.schola-cantorum-basiliensis.ch/de.html"
 image = ""
 contact = "Tabea Lurk"
 
@@ -530,7 +577,7 @@ contact = "Tabea Lurk"
 id = 201
 identifier = "cat:\"zotero2!!Werke!!Hochschule für Musik!!Motet Cycles\""
 title = "Motet Cycles"
-url = ""
+url = "https://fhnw.swisscovery.slsp.ch/discovery/collectionDiscovery?vid=41SLSP_FNW:VU1&collectionId=8178617040005518&lang=de"
 image = ""
 contact = "Tabea Lurk"
 
