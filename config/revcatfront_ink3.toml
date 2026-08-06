@@ -379,7 +379,7 @@ contact = "Mode"
 
 [[collections]]
 id = 47
-identifier = "cat:\"zotero2!!Videocity_memoriav\""
+identifier = "cat:\"zotero2!!Fotoarchiv HGK\""
 title = "Fotoarchiv Hans-Peter Huser"
 url = 
 image = ""
@@ -494,7 +494,7 @@ contact = "Chris Regn, Andrea Saemann"
 
 [[collections]]
 id = 80
-identifier = "cat:\"zotero2!!Partout\""
+identifier = "cat:\"zotero2!!Performance Art!!Partout\""
 title = "Partout"
 url = "https://apresperf.ch/category/interviews"
 image = "perf_en_bref_klein.png"
