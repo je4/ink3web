@@ -138,21 +138,21 @@ title = "GPX File"
 
 
 [[catalogs]]
-id = 1
+id = 9
 identifier = "catalog:\"Graduation\""
 title = "Graduation"
 url = "https://www.fhnw.ch/de/gestaltung-kunst"
 contact = ""
 
 [[catalogs]]
-id = 2
+id = 20
 identifier = "catalog:\"Educational\""
 title = "Educational Resources"
 url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=08-00"
 contact = ""
 
 [[catalogs]]
-id = 3
+id = 30
 identifier = "catalog:\"Practice\""
 title = "Practice Based Research"
 url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=06-00"
@@ -214,15 +214,6 @@ title = "Open and Free Access"
 url = ""
 contact = ""
 
-[[catalogs]]
-id = 100
-identifier = "catalog:\"Testing\""
-title = "Testumgebung"
-url = ""
-contact = ""
-
-
-
 [[collections]]
 id = 1
 identifier = "cat:\"forms2!!diplom\""
@@ -277,7 +268,6 @@ title = "Netzkulturen"
 url = "https://plants-intelligence.ch/"
 image = ""
 contact = "Stefanie Bräuer"
-
 
 
 [[collections]]
