@@ -388,7 +388,7 @@ contact = "Kommunikation HGK Basel FHNW"
 
 [[collections]]
 id = 48
-identifier = "cat:\"zotero2!!ikuvid\""
+identifier = "cat:\"zotero2!!IKUVID\""
 title = "IKUVID hist. Videokunst intern"
 url = ""
 image = ""
@@ -483,6 +483,23 @@ title = "Together Elsewhere"
 url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/26"
 image = "together_elsewhere_klein.png"
 contact = "Gisela Hochuli (PANCH), Pavana Reid (PAB)"
+
+
+[[collections]]
+id = 77
+identifier = "cat:\"zotero2!!Performance Art!!Partout\""
+title = "Partout"
+url = ""
+image = ""
+contact = "Andrea Saemann, PANCH"
+
+[[collections]]
+id = 77
+identifier = "cat:\"zotero2!!Performance Art!!Must or Not\""
+title = "Must or Not"
+url = ""
+image = ""
+contact = "Andrea Saemann, Chris Regn"
 
 
 [[collections]]
