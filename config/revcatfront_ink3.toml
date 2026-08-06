@@ -271,10 +271,6 @@ url = "https://plants-intelligence.ch/"
 image = ""
 contact = "Stefanie Bräuer"
 
-<<<<<<< HEAD
-
-=======
->>>>>>> 7d85ebb9111c894c36b0be03f3baec6b8635ca82
 [[collections]]
 id = 10
 identifier = "cat:\"zotero2!!Werke!!Lehre_Weiterbildung!!Incubator for Design Cultures\""
@@ -382,8 +378,6 @@ image = ""
 contact = "Mode"
 
 
-
-
 [[collections]]
 id = 48
 identifier = "cat:\"zotero2!!ikuvid\""
@@ -400,8 +394,6 @@ title = "Summe 2017"
 url = "https://summe.xyz/"
 image = ""
 contact = "mediathek.hgk@fhnw.ch"
-
-
 
 [[collections]]
 id = 53
@@ -467,15 +459,6 @@ url = "https://www.performancechronikbasel.ch/"
 image = "performance_chronik_klein.png"
 contact = "Muda Mathis, Sabine Gebhardt Fink, Margarit von Büren"
 
-[[collections]]
-id = 73
-identifier = "cat:\"zotero2!!Performance Art!!\""
-title = "Performance Art Dossiers"
-url = "https://plants-intelligence.ch/"
-image = ""
-contact = "Max Spielmann, Catherine Walthard"
-
-
 
 [[collections]]
 id = 74
@@ -516,14 +499,6 @@ title = "Perf En Bref"
 url = "https://apresperf.ch/category/interviews"
 image = "perf_en_bref_klein.png"
 contact = "Chris Regn, Andrea Saemann"
-
-#[[collections]]
-#id = 87
-#identifier = "cat:\"zotero2!!MIGMA\""
-#title = "migma"
-#url = "https://www.migma.ch/ueber_migma.html"
-#image = ""
-#tcontact = "Judith Huber"
 
 [[collections]]
 id = 88
