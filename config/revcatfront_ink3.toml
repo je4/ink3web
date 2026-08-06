@@ -214,16 +214,8 @@ title = "Open and Free Access"
 url = ""
 contact = ""
 
-<<<<<<< HEAD
-=======
-[[catalogs]]
-id = 100
-identifier = "catalog:\"Testing\""
-title = "Testumgebung"
-url = ""
-contact = ""
 
->>>>>>> 7d85ebb9111c894c36b0be03f3baec6b8635ca82
+
 [[collections]]
 id = 1
 identifier = "cat:\"forms2!!diplom\""
