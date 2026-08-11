@@ -7,7 +7,8 @@ function doSearch(url, cursor, exhibition, ki, sortField, sortOrder) {
 
 function search(url, cursor, exhibition, ki, sortField, sortOrder) {
     let search = document.getElementById("search").value;
-    let searchType = document.getElementById("searchTypeButton").value
+    let searchTypeElement = document.getElementById("searchTypeButton");
+    let searchType = searchTypeElement ? searchTypeElement.value : "";
     const params = new URLSearchParams({
         search: search,
     });
@@ -91,11 +92,11 @@ function search(url, cursor, exhibition, ki, sortField, sortOrder) {
             vocParam += value + ",";
         }
     }
-    if( searchType.length > 0 ) {
-        params.set("searchtype", searchType)
-    }
-    if ( vocs.length > 0 ){
+    if ( vocParam.length > 0 ){
         params.set("vocabulary", vocParam);
+    }
+    if( searchType && searchType.length > 0 ) {
+        params.set("searchtype", searchType)
     }
     if (sortField !== undefined && sortField !== "") {
         params.set("sortField", sortField);

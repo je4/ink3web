@@ -87,11 +87,11 @@
                                     {{- range $collFacet := .CollectionFacets }}
                                         {{- if $collFacet.Checked }}
                                             <button
-                                                    onclick="{{ if $collFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                    onclick="this.removeAttribute('selected');doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                     type="button"
-                                                    class="btn btn-lg collectionButtonxx"
+                                                    class="btn btn-lg collectionButton"
                                                     value="{{ $collFacet.ID }}"
-                                                    selected="{{ if $collFacet.Checked }}true{{ else }}false{{ end }}">
+                                                    selected="true">
                                                 <span>{{ abbrev 50 $collFacet.Name }}</span><i class="iconx" data-icon="close16"></i>
                                                 {{- $ds := digits $collFacet.Count }}
                                             </button>
@@ -100,11 +100,11 @@
                                     {{- range $catFacet := .CatalogFacets }}
                                         {{- if $catFacet.Checked }}
                                             <button
-                                                    onclick="{{ if $catFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                    onclick="this.removeAttribute('selected');doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                     type="button"
                                                     class="btn btn-lg catalogButton"
                                                     value="{{ $catFacet.ID }}"
-                                                    selected="{{ if $catFacet.Checked }}true{{ else }}false{{ end }}">
+                                                    selected="true">
                                                 <span>{{ abbrev 50 $catFacet.Name }}</span><i class="iconx" data-icon="close16"></i>
                                                 {{- $ds := digits $catFacet.Count }}
                                             </button>
@@ -113,11 +113,11 @@
                                     {{- range $mediaFacet := .MediaFacets }}
                                         {{- if $mediaFacet.Checked }}
                                             <button
-                                                    onclick="{{ if $mediaFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                    onclick="this.removeAttribute('selected');doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                     type="button"
                                                     class="btn btn-lg mediaButton"
                                                     value="{{ $mediaFacet.ID }}"
-                                                    selected="{{ if $mediaFacet.Checked }}true{{ else }}false{{ end }}">
+                                                    selected="true">
                                                 <span>{{ localize (abbrev 50 $mediaFacet.Name) $lang }}</span><i class="iconx" data-icon="close16"></i>
                                                 {{- $ds := digits $mediaFacet.Count }}
                                             </button>
@@ -127,12 +127,11 @@
                                         {{- range $vocabFacet := $vocabFacets }}
                                             {{- if $vocabFacet.Checked }}
                                                 <button
-                                        
-                                                        onclick="{{ if $vocabFacet.Checked }}this.removeAttribute('selected');{{ else }}this.setAttribute('selected', 'true');{{ end }}doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
+                                                        onclick="this.removeAttribute('selected');doSearch('{{ $searchBase }}', '', {{ if $isExhibition }}true{{ else }}false{{ end }}, {{ if $useKI }}true{{ else }}false{{ end }})"
                                                         type="button"
-                                                        class="btn btn-lg btn-secondaryxx vocButton"
-                                                        value="voc:{{ $parent }}:{{ $vocabFacet.Name }}" selected="{{ if $vocabFacet.Checked }}true{{ else }}false{{ end }}"
-                                                >        
+                                                        class="btn btn-lg vocButton"
+                                                        value="voc:{{ $parent }}:{{ $vocabFacet.Name }}" selected="true"
+                                                >
                                                     <span>{{ abbrev 32 (localize $vocabFacet.Name $lang) }}</span>
                                                     <i class="iconx" data-icon="close16"></i>
                                                 </button>
