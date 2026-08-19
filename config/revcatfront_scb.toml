@@ -231,20 +231,20 @@ url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/publikationen.htm
 image = ""
 contact = "Martina Papiro"
 
-#[[collections]]
-#id = 50
-#identifier = "cat:\"zotero2!!HSM-Datenbanken\""
-#title = "HSM Datenbanken"
-#url = ""
-#image = ""
-#contact = "Tabea Lurk"
+[[collections]]
+id = 50
+identifier = "cat:\"zotero2!!HSM-Datenbanken\""
+title = "HSM Datenbanken"
+url = ""
+image = ""
+contact = "Tabea Lurk"
 
 
-#[[collections]]
-#id = 55
-#identifier = "cat:\"zotero2!!MAB-Datenportal!!eNoten\""
-#title = "eNoten HSM"
-#url = ""
-#image = ""
-#contact = "Tabea Lurk"
+[[collections]]
+id = 55
+identifier = "cat:\"zotero2!!MAB-Datenportal!!eNoten\""
+title = "eNoten HSM"
+url = ""
+image = ""
+contact = "Tabea Lurk"
 
