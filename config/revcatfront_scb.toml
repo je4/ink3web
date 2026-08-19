@@ -147,15 +147,46 @@ title = "GPX File"
 #id = 2
 #identifier = "catalog:\"Open\""
 #title = "Open and Free Access"
-#url = ""
+#url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/publikationen.html?view=search&search=OA+Publikation"
 #contact = ""
+
+
+#[[catalogs]]
+#id = 7
+#identifier = "catalog:\"HSM\""
+#title = "HSM Hochschule für Musik FHNW"
+#url = "https://www.musik-akademie.ch/de.html"
+#contact = ""
+
+[[catalogs]]
+id = 8
+identifier = "catalog:\"Education\""
+title = "Education"
+url = "https://www.fhnw.ch/de/musik"
+contact = ""
+
+[[catalogs]]
+id = 9
+identifier = "catalog:\"Research\""
+title = "Research Data Art"
+url = "https://www.fhnw.ch/de/musik/forschung-dienstleistungen/forschung"
+contact = ""
+
+[[catalogs]]
+id = 10
+identifier = "catalog:\"Video\""
+title = "Video Art and Culture"
+url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-08"
+contact = ""
+
+
 
 
 [[collections]]
 id = 1
 identifier = "cat:\"zotero2!!HSM-Datenbanken!!Schola Cantorum Basiliensis!!Grande Écurie\""
 title = "Grande Écurie"
-url = ""
+url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/forschung/grande-ecurie.html"
 image = ""
 contact = "Martina Papiro"
 
@@ -163,7 +194,7 @@ contact = "Martina Papiro"
 id = 2
 identifier = "cat:\"zotero2!!HSM-Datenbanken!!Schola Cantorum Basiliensis!!Frühe Streichinstrumente um 1500\""
 title = "Frühe Streichinstrumente um 1500 I&II"
-url = ""
+url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/forschung/fruehe-streichinstrumente-1.html"
 image = ""
 contact = "Martina Papiro"
 
@@ -171,24 +202,16 @@ contact = "Martina Papiro"
 id = 3
 identifier = "cat:\"zotero2!!HSM-Datenbanken!!Ina Lohr\""
 title = "Ina Lohr"
-url = ""
+url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/forschung/ina-lohr-project.html"
 image = ""
 contact = "Martina Papiro"
 
-
-#[[collections]]
-#id = 200
-#identifier = "cat:\"zotero2!!HSM-Datenbanken\""
-#title = "HSM Datenbanken"
-#url = ""
-#image = ""
-#contact = "Tabea Lurk"
 
 [[collections]]
 id = 4
 identifier = "cat:\"zotero2!!Werke!!Hochschule für Musik!!Motet Cycles\""
 title = "Motet Cycles"
-url = ""
+url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/forschung/motet-cylcles.html"
 image = ""
 contact = "Tabea Lurk"
 
@@ -196,14 +219,32 @@ contact = "Tabea Lurk"
 id = 5
 identifier = "cat:\"zotero2!!HSM-Datenbanken!!Schola Cantorum Basiliensis!!Die Gitarre in Frankreich\""
 title = "Die Gitarre in Frankreich"
-url = ""
+url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/forschung/guitare-en-france-1800.html"
 image = ""
 contact = "Martina Papiro"
 
 [[collections]]
-id = 50
+id = 20
 identifier = "cat:\"zotero2!!HSM-Datenbanken!!Schola Cantorum Basiliensis!!Open Access Publikationen\""
 title = "Open Access Publikationen"
-url = ""
+url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/publikationen.html?view=search&search=OA+Publikation"
 image = ""
 contact = "Martina Papiro"
+
+#[[collections]]
+#id = 50
+#identifier = "cat:\"zotero2!!HSM-Datenbanken\""
+#title = "HSM Datenbanken"
+#url = ""
+#image = ""
+#contact = "Tabea Lurk"
+
+
+#[[collections]]
+#id = 55
+#identifier = "cat:\""zotero2!!MAB-Datenportal!!eNoten\""
+#title = "eNoten HSM"
+#url = ""
+#image = ""
+#contact = "Tabea Lurk"
+
