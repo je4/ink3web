@@ -575,10 +575,17 @@ image = ""
 contact = "Tabea Lurk"
 
 
+#[[collections]]
+#id = 201
+#identifier = "cat:\"neos!!test\""
+#title = "Datentest Punkt"
+#url = ""
+#image = ""
+#contact = "Tabea Lurk"
+
 [[collections]]
 id = 201
-identifier = "cat:\"neos!!test\""
-title = "Datentest Punkt"
-url = ""
-image = ""
-contact = "Tabea Lurk"
+identifier = "cat:\"neosform!!fhnw!!Mediathek-Team!!Testing!!NeosGeneration\""
+title = "Next Generation"
+url = "https://nextgeneration.hgk.fhnw.ch/"
+contact = "kommunikation.hgk@fhnw.ch"
