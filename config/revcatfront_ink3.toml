@@ -503,12 +503,20 @@ contact = "Andrea Saemann, Chris Regn"
 
 
 [[collections]]
-id = 84
+id = 80
 identifier = "cat:\"zotero2!!Archive des Ephemeren\""
 title = "Archive des Ephemeren"
 url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/12"
 image = "archive_des_ephemeren_klein.png"
 contact = "Pascale Grau, Margarit von Büren, PANCH"
+
+[[collections]]
+id = 83
+identifier = "cat:\"zotero2!!Performance Art!!Doce en Diciembre\""
+title = "Doce en Diciembre"
+url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/25"
+image = "doce_en_diciembre_klein.png"
+contact = "Barbara Naegelin, Chris Regn, Andrea Saemann"
 
 [[collections]]
 id = 85
@@ -536,11 +544,11 @@ contact = "Kate Burgener, Gisela Hochuli"
 
 [[collections]]
 id = 90
-identifier = "cat:\"zotero2!!Performance Art!!Doce en Diciembre\""
-title = "Doce en Diciembre"
-url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/25"
-image = "doce_en_diciembre_klein.png"
-contact = "Barbara Naegelin, Chris Regn, Andrea Saemann"
+identifier = "cat:\"zotero2!!migma\""
+title = "migma"
+url = "https://migma.ch/2025.html"
+image = ""
+contact = "Judith Huber"
 
 [[collections]]
 id = 100
