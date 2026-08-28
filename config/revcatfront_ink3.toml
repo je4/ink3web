@@ -204,7 +204,7 @@ contact = ""
 id = 10
 identifier = "catalog:\"Video\""
 title = "Video Art and Culture"
-url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-08"
+url = "../pages/Topics/videokunstund-kultur.md"
 contact = ""
 
 [[catalogs]]
