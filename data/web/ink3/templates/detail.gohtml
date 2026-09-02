@@ -14,8 +14,10 @@
 {{- $detailAddr := .DetailAddr }}
 {{- if $isExhibition }}{{ $searchBase = printf "%sexhibition&" $searchBase }}{{ end }}
 {{- $search := $searchBase }}
+{{- $page := .Page }}
 {{- if ne .Params "" }}{{ $search = printf "%s%s" $search .Params }}{{ end }}
 {{- $back := .Back }}{{ if eq $back "" }}{{ $back = $search }}{{ end }}
+
 <html lang="{{ $lang }}">
 <head>
     {{ template "head.gohtml" . }}
@@ -45,8 +47,10 @@
 
 
 <main>
-    <div class="ds logo">
-        <a class="summary textbig" href="{{ $back }}" onclick="event.preventDefault(); historyOrLink('{{ $back }}');"><span class="icon back"></span><h1>
+    <div class="ds logo detail">
+        <a class="summary textbig" href="{{ $back }}" onclick="event.preventDefault(); historyOrLink('{{ $back }}');">
+            <span class="icon back d-none d-lg-block"></span>
+            <h1><span class="d-none d-lg-block">InK</span>
         {{- $title1 := multiLang $source.Base.Title }}
         {{- $title := $title1.String }}
         {{- $parts := split $title ". " -}}

@@ -21,13 +21,16 @@
 
 {{ template "nav.gohtml" . }}
 <main>
-<div class="sticky">
+<div class="sticky d-none d-md-block">
     <div class="ds logo">
-        <a class="summary textbig" href="{{ $back }}" onclick="event.preventDefault(); historyOrLink('{{ $back }}');"><span class="icon back"></span><h1>InK</h1></a>
+        <a class="summary textbig" href="{{ $back }}" onclick="event.preventDefault(); historyOrLink('{{ $back }}');">
+        <span class="icon back d-none d-lg-block"></span>
+        <h1>InK</h1>
+        </a>
     </div>
 </div>
 
-<div class="searchbar container-fluid  mt-3 mt-md-0 pb-2 px-5x py-lg-3">
+<div class="searchbar container-fluid  my-3">
     <div class="d-md-flex gap-2" role="search">
        <div class="left d-flex flex-column gap-2 flex-md-row gap-md-3">
             <div class="dropdown">
@@ -49,14 +52,15 @@
                         id="search"
                         class="form-control form-control-lg"
                         type="search"
-                        placeholder="{{ localize "search" $lang }}"
+                        enterkeyhint="search"
+                        placeholder="{{ localize "searchtext" $lang }}…"
                         aria-label="{{ localize "search" $lang }}"
                         value="{{.RequestQuery.Search}}"
                 />
                 <a class="iconx" data-icon="close16" onClick="document.getElementById('search').value='';doSearch('{{ $searchBase }}') "></a>
 
             </div>
-            <button class="btn btn-lg" onClick=" doSearch('{{ $searchBase }}') ">Suchen</button>   
+            <!--<button class="btn btn-lg search" onClick=" doSearch('{{ $searchBase }}') ">Suchen</button>-->
         </div>
         <div class="right d-flex flex-grow-1">
             <!-- access -->
@@ -66,16 +70,17 @@
             {{/*
             <label class="toggle ki"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
             <!--<button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
-             */}}
+            
             <!-- filter togggle-->
             <div class="d-flex flex-grow-1 justify-content-end">
 
-                <!--
+                
                 <button id="filterBtn" class="btn btn-lg navbar-togglerx" type="button" data-bs-toggle="offcanvas" data-bs-target="#facetBar" aria-controls="facetBar" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="iconx" data-icon="filter"></i>
                 </button>
-                -->
+                
             </div>
+             */}}
         </div>
     </div>
 </div>

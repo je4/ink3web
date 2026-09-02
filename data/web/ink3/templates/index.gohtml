@@ -45,7 +45,7 @@
 
         <!-- search line -->
 
-        <div class="searchbar container-fluid  mt-3 mt-md-0 pb-2 px-5x py-lg-3">
+        <div class="searchbar container-fluid  my-3">
             <div class="d-md-flex gap-2" role="search">
                 <div class="left d-flex flex-column gap-2 flex-md-row gap-md-3">
                     <div class="dropdown">
@@ -69,20 +69,21 @@
                         id="search"
                         class="form-control form-control-lg"
                         type="search"
+                        enterkeyhint="search"
                         placeholder="{{ localize "searchtext" $lang }}…"
                         aria-label="{{ localize "search" $lang }}"
                         value=""
                     />
                     <a class="iconx" data-icon="close" onClick="document.getElementById('search').value=''/*;doSearch('{{ $searchBase }}')*/"></a>
                 </div>
-                <button class="btn btn-lg" onClick=" doSearch('{{ $searchBase }}') ">Suchen</button>   
+                <!--<button class="btn btn-lg search" onClick=" doSearch('{{ $searchBase }}') ">Suchen</button>-->
                 </div>
                 <!-- access -->
                 <label class="toggle access" title="Es werden auch Einträge mit geshlossenen Medien angezeigt"><input type="checkbox" name="access" checkedx /><span class="checkmark"></span><span >Zugang</span></label><!--<a class="infobutton ms-0">i</a>-->
                 <!-- ki search -->
                 {{/*
-                <label class="toggle"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>-->
-                <!--<button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
+                <label class="toggle"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
+                    <button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>
                 */}}             
                 
             </div>

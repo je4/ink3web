@@ -6,7 +6,18 @@
 {{- $mode := .Mode }}
 {{- $name := .Name }}
 
+
+
 <nav class="maincolor navbar">
+    <div id="bdNavbarm" class="p-absolute d-flex  d-lg-none flex-grow-1  container-fluid justify-content-between py-3" tabindex="-1" aria-labelledby="bdNavbarOffcanvasLabel">
+        <button class="btn btn-lg navbar-back d-flex {{ if not $page }} d-none {{end}}" type="button"  aria-label="back"></button>
+         <div class="center d-flex">
+            <a {{ if not $isExhibition }} href="{{ $searchAddr }}/{{ $lang }}"{{ end }}>
+                  {{ if eq $name "scb.mab" }}SCB Katalog{{ else }}Integrierter Katalog {{ end }}
+            </a>
+        </div>
+        <a href="" class="btn btn-lg navbar-toggler d-flex d-lg-none m-3x" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation"></a>
+    </div> 
     <div id="bdNavbar" class="offcanvas-lg offcanvas-end d-lg-flex  flex-grow-1  container-fluid justify-content-between py-1" tabindex="-1" aria-labelledby="bdNavbarOffcanvasLabel">
         
         <div class="offcanvas-header w-100 p-2">
@@ -99,6 +110,8 @@
             </div>
         </div>
     </div>
+    <!--
     <button class="btn btn-lg navbar-toggler d-flex d-lg-none m-3" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation">
     </button>
+    -->
 </nav>

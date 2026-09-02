@@ -260,9 +260,6 @@ img.flipvertical {
 
 /* general varables (theme independed) */
 
-.btn-outline-primary{
-    --bs-btn-color
-}
 .container-fluid{
     padding:0 var(--space);
 }
@@ -277,17 +274,23 @@ img.flipvertical {
     background:var(--bs-body-color);
     width:1.5rem;
     height:1.5rem;
-    margin-left:auto !important;
+    border:none !important;
+}
+.navbar .navbar-back{
+    position: relative;
+    background:var(--bs-body-color);
+    width:1.5rem;
+    height:1.5rem;
     border:none !important;
 }
 
 /* layout */
 
-.lay, .text {
+.lay, .textxx {
     margin:0 1rem;
 }
 .text {
-    padding-bottom:1.5rem ;
+    //padding-bottom:1.5rem ;
     color: var(--color-hi);
 }
 @media (min-width: 992px) {
@@ -364,7 +367,7 @@ img.flipvertical {
     line-height: 1;
     height: 3rem;
     min-width: 3rem;
-    color: color:var(--color);
+    color: var(--color);
     background: var(--color-bg);
     vertical-align: center;
     display: flex;
@@ -439,7 +442,6 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
 .searchfield{
     position: relative;
     min-width: 200px;
-    //width: calc(100% - 2.5rem);
     border-radius:0;
     border:0;
     border-bottom:1px solid currentColor;
@@ -448,7 +450,6 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
 .searchfield input{
     border:none;
     background:none;
-    //padding-left:0;
 }
 
 .searchfield a{
@@ -462,9 +463,12 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
  .searchfield input[type=search]:not(:placeholder-shown) + a {
     display:block;
 }
+.searchbar .btn.search{
+    min-width: 160px;
+}
 .searchbar #filterBtn{
-    position: absolute;
-    top:0px;
+    //position: absolute;
+    //top:0px;
     right:0.25rem;
     width:3rem;
     height:3rem;
@@ -516,7 +520,7 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
     margin-bottom:1rem;  
 }
 .pagination{
-    padding:var(--space); 0;
+    padding:var(--space) 0;
     gap:var(--space);
 }
 
@@ -564,10 +568,6 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
             1fr
         )    
     );
-}
-
-.results-table{
-    
 }
 .results-table td, .results-table th{
     padding-left:0;
@@ -721,6 +721,7 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
         transition:all 0.25s ease-out;
         display: -webkit-box;
         -webkit-line-clamp: 3;
+        line-clamp: 3;
         -webkit-box-orient: vertical;
         overflow: hidden;
         padding-bottom:0.07em;
@@ -734,6 +735,7 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
     .inkcard .info .title{
         display: -webkit-box;
         -webkit-line-clamp: 1;
+        line-clamp: 1;
         -webkit-box-orient: vertical;
         overflow: hidden;
     }
@@ -980,7 +982,7 @@ details > summary:after{
     content:'';
 }
 details > div{
-    padding-bottom:1rem;
+    //padding-bottom:1rem;
 }
 /* specs */
 .specs td{
@@ -1005,6 +1007,7 @@ details > div{
 /* detail summary */
 .ds {
     user-select: none;
+    padding:0 1rem;
 }
 .ds .summary {
     position: relative;
@@ -1012,24 +1015,26 @@ details > div{
     align-items: start;
     cursor: pointer;
     padding:0 1rem 2px var(--space-sm);
+    padding:0 1rem 2px 0;
     text-decoration: none;
 }
 .ds.logo .summary h1{
     margin-left:-0.02em;
 }
 .ds .summary .icon {
-    position: absolute;
+    //position: absolute;
+    position: relative;
     top:0;
     width: 1em;
     height: 1em;
-    left:0.5rem;
+    //left:-0.15em;
     flex:0 0 1em;
 }
 
 .ds .summary .icon:after {
     position: absolute;
     top: 15%;
-    left: 15%;
+    left: 5%;
     width: 70%;
     height: 70%;
     mask-image: url('../img/icon_plus.svg');
@@ -1060,11 +1065,15 @@ details > div{
 }
 
 .ds .detail {
-    padding:0.5rem 1rem 1rem 1rem;
+    //padding:0.5rem 1rem 1rem 1rem;
+    padding-bottom:1rem;
 }
 
 @media (min-width: 992px) {
     /* screen larger then.. */
+    .ds{
+        padding:0 0rem;
+    }
     .ds.sub{
        color:currentColor;
         margin-left: var(--space);
@@ -1075,8 +1084,12 @@ details > div{
         top:0.25rem;
         left:0px;
     }
+    .ds .summary .icon:after{
+        top:10%;
+        left:15%;
+    }
     .ds.logo .summary {
-        padding: 0.25rem 0 0.25rem var(--space);
+        //padding: 0.25rem 0 0.25rem var(--space);
     }
     .ds .detail{
         padding:0.5rem 4rem 0.5rem 4rem;
@@ -1112,6 +1125,7 @@ details > div{
         display: -webkit-box;
         -webkit-box-orient: vertical;
         -webkit-line-clamp: 20;
+        line-clamp: 20;
         overflow: hidden;
         
     }
@@ -1527,6 +1541,5 @@ details > div{
     margin:0;
     padding:0;
     margin-left:1rem;
-    //margin-bottom:1rem;
     padding-left:0.25rem;    
 }
