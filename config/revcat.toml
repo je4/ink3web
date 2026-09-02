@@ -63,11 +63,12 @@ values = [
     "zotero2!!Werke!!Hochschule für Musik!!Motet Cycles"
 ]
 [client.roleweights]
-"artist" = 3.0
-"performer" = 3.0
-"director" = 2.5
-"author" = 2.0
+"artist" = 4.0
+"performer" = 4.0
+"director" = 1.5
+"author" = 4.0
 "eventcurator" = 2.0
+"contributor" = 2.0
 [client.fieldweights]
 "title" = 4.0
 "persons.name" = 4.0
