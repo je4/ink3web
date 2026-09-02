@@ -1,0 +1,107 @@
+logfile = ""
+loglevel = "DEBUG"
+
+localaddr = "localhost:8443"
+externaladdr = "https://localhost:8443/graphql"
+
+[elasticsearch]
+# endpoint = ["http://localhost:9201", "http://localhost:9200"]
+endpoint = ["https://elastic.med.campusderkuenste.ch/"]
+# endpoint = ["https://b.elastic.med.campusderkuenste.ch/"]
+index = "fhnw_ink"
+apikey = "%%ELASTIC_API_KEY%%"
+[elasticsearch.roleweights]
+"author" = 3.0
+"artist" = 2.5
+"director" = 2.5
+"performer" = 2.5
+"composer" = 2.5
+"Composer" = 2.5
+"camera" = 2.0
+"editor" = 1.5
+"creator" = 2.0
+"contributor" = 1.2
+"translator" = 1.1
+[elasticsearch.fieldweights]
+"title" = 4.0
+"persons.name" = 4.0
+"collectiontitle" = 2.0
+"series" = 2.0
+"tags" = 2.0
+"category" = 1.5
+"abstract" = 1.1
+"notes.title" = 1.2
+"notes.note" = 1.0
+"media.*.fulltext" = 1.0
+
+
+[[client]]
+name = "test"
+apikey = "%%TEST_APIKEY%%"
+groups = ["global/guest"]
+jwtkey = "%%JWTKEY%%" # ":Xf/#|IKYrDsNi4]LN*o(W7;:"
+jwtalg = ["HS256","HS384","HS512"]
+jwtmaxage = "10m"
+[[client.and]]
+[[client.or]]
+field = "category.keyword"
+values = [
+    "zotero2!!PCB_Basel",
+    "zotero2!!ACT Performance Festival",
+    "zotero2!!Konvolute",
+    "zotero2!!Performance Art",
+    "zotero2!!Kaskadenkondensator Basel",
+    "zotero2!!Archive des Ephemeren",
+    "zotero2!!Perf en Bref",
+    "bangbang",
+    "zotero2!!Digitale See",
+    "zotero2!!Albena Mihaylova",
+    "zotero2!!Doce en Diciembre!!Oceanic Issues - Mensajes Oceánicos",
+    "zotero2!!Interviews Archiv Performativ",
+    "zotero2!!Performance Art",
+    "zotero2!!Perf en Bref",
+    "zotero2!!Werke!!Hochschule für Musik!!Motet Cycles"
+]
+[client.roleweights]
+"artist" = 3.0
+"performer" = 3.0
+"director" = 2.5
+"author" = 2.0
+"eventcurator" = 2.0
+[client.fieldweights]
+"title" = 4.0
+"persons.name" = 4.0
+"collectiontitle" = 2.0
+"series" = 2.0
+"tags" = 2.0
+"category" = 1.5
+"abstract" = 1.1
+"notes.title" = 1.2
+"notes.note" = 1.0
+"media.*.fulltext" = 1.0
+
+
+[[client]]
+name = "ink"
+apikey = "%%INK_APIKEY%%"
+groups = ["global/guest"]
+jwtkey = "%%JWTKEY%%" # ":Xf/#|IKYrDsNi4]LN*o(W7;:"
+jwtalg = ["HS256","HS384","HS512"]
+jwtmaxage = "10m"
+[client.roleweights]
+"author" = 4.0
+"editor" = 2.0
+"creator" = 2.0
+"translator" = 1.5
+"contributor" = 1.2
+[client.fieldweights]
+"title" = 5.0
+"persons.name" = 4.0
+"collectiontitle" = 2.0
+"series" = 2.0
+"tags" = 2.0
+"category" = 1.5
+"abstract" = 1.1
+"notes.title" = 1.2
+"notes.note" = 1.0
+"media.*.fulltext" = 1.0
