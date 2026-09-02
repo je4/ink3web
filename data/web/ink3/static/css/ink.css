@@ -439,7 +439,7 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
 .searchfield{
     position: relative;
     min-width: 200px;
-    width: calc(100% - 2.5rem);
+    //width: calc(100% - 2.5rem);
     border-radius:0;
     border:0;
     border-bottom:1px solid currentColor;
@@ -448,7 +448,7 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
 .searchfield input{
     border:none;
     background:none;
-    padding-left:0;
+    //padding-left:0;
 }
 
 .searchfield a{

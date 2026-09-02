@@ -45,10 +45,10 @@
 
         <!-- search line -->
 
-        <div class="searchbar container-fluid pb-2 py-lg-3">
+        <div class="searchbar container-fluid  mt-3 mt-md-0 pb-2 px-5x py-lg-3">
             <div class="d-md-flex gap-2" role="search">
-                <div class="left d-md-flex gap-3">
-                    <div class="dropdown d-none d-md-block">
+                <div class="left d-flex flex-column gap-2 flex-md-row gap-md-3">
+                    <div class="dropdown">
                         <button id="searchTypeButton" class="btn btn-lg dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" value="all">
                             Alle
                         </button>
@@ -69,12 +69,13 @@
                         id="search"
                         class="form-control form-control-lg"
                         type="search"
-                        placeholder="{{ localize "search" $lang }}…"
+                        placeholder="{{ localize "searchtext" $lang }}…"
                         aria-label="{{ localize "search" $lang }}"
                         value=""
                     />
                     <a class="iconx" data-icon="close" onClick="document.getElementById('search').value=''/*;doSearch('{{ $searchBase }}')*/"></a>
                 </div>
+                <button class="btn btn-lg" onClick=" doSearch('{{ $searchBase }}') ">Suchen</button>   
                 </div>
                 <!-- access -->
                 <label class="toggle access" title="Es werden auch Einträge mit geshlossenen Medien angezeigt"><input type="checkbox" name="access" checkedx /><span class="checkmark"></span><span >Zugang</span></label><!--<a class="infobutton ms-0">i</a>-->
@@ -121,7 +122,7 @@
         <!-- ohter filters -->
         <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Resource Types</summary>
-            <div class="detail tags cols collection">
+            <div class="detail tags colsx collectionx">
                 {{- range $key, $media := .Medias }}
 
                     <button
@@ -140,16 +141,17 @@
                         <!--
                         <i class="info" data-href="vitrine.php?t='.$temp[0].'" onClick="openVitrine();return false">i</i>
                         -->
-                            <a class="info" href="{{ $media.Url }}" target="_blank" onclick="event.stopPropagation()"> </a>
+                            <a class="info" href="{{ $media.Url }}" target="_blank" onclick="event.stopPropagation()">i</a>
                         {{- end }}
                     </button>
 
                 {{ end }}
             </div>
         </details>
- <details class="ds">
+    <!-- Topcis -->
+        <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Topics</summary>
-            <div class="detail tags cols collection">
+            <div class="detail tags colsx collectionx">
                 {{- range $key, $catalog := .Catalogs }}
                     {{ if gt $catalog.Count 0 }}
                     <button
@@ -168,7 +170,7 @@
                         <!--
                         <i class="info" data-href="vitrine.php?t='.$temp[0].'" onClick="openVitrine();return false">i</i>
                         -->
-                        <a class="info" href="{{ $catalog.Url }}" target="_blank" onclick="event.stopPropagation()"> </a>
+                        <a class="info" href="{{ $catalog.Url }}" target="_blank" onclick="event.stopPropagation()">i</a>
                         {{- end }}
                     </button>
 
@@ -184,7 +186,7 @@
         </details> -->
         <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Mediathek</summary>
-            <div class="detail tags cols collection">
+            <div class="detail tags colsx collectionx">
                <button type="button" class="btn catalogButton">
                     <a href="https://www.fhnw.ch/de/gestaltung-kunst/ueber-uns/campus/mediathek"><div class="name">
                         <span>FHNW</span>
