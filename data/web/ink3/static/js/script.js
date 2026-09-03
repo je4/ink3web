@@ -45,3 +45,6 @@ function historyOrLink(link) {
         window.location.href = link;
     }
 }
+function hideLogininfo() {
+    document.body.classList.remove("showlogininfo");
+}
