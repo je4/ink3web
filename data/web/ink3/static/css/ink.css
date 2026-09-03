@@ -106,6 +106,12 @@
     --bs-body-color-80:rgba(var(--bs-color),0.8);
     --bs-body-color-90:rgba(var(--bs-color),0.9);
 }
+/* utilities */
+
+.w-48px {
+  width: 48px;
+}
+
 .btn {
     --bs-btn-border-color:var(--bs-border-color);
     --bs-btn-active-border-color:var(--bs-body-color);
@@ -278,10 +284,13 @@ img.flipvertical {
 }
 .navbar .navbar-back{
     position: relative;
-    background:var(--bs-body-color);
+    
     width:1.5rem;
     height:1.5rem;
     border:none !important;
+}
+.navbar .navbar-back i{
+    background:var(--bs-body-color);
 }
 
 /* layout */
@@ -500,9 +509,6 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
     
     .searchbar .searchfield{
         flex:1 1 100%;
-    }
-    .searchfield input{
-        padding-left:1rem;
     }
     .searchbar #filterBtn{
         position: relative;
@@ -1428,13 +1434,16 @@ details > div{
 /* costom icons */
 
 .iconx{
-    width:1.5rem;
-    height:1.5rem;
+    display: inline-block;
     width:1rem;
     height:1rem;
     mask-repeat: no-repeat;
     mask-size: 100% 100%;
     mask-position:center;
+}
+.iconx-24{
+    width:1.5rem;
+    height:1.5rem;
 }
 .iconx[data-icon=img]{
     mask-image: url('../img/icon-img.svg');
@@ -1456,6 +1465,9 @@ details > div{
 }
 .iconx[data-icon=close16]{
     mask-image: url('../img/icon-close-16.svg');
+}
+.iconx[data-icon=back]{
+    mask-image: url('../img/icon-back.svg');
 }
 .iconx[data-icon=filter]{
     mask-image: url('../img/icon-filter.svg');

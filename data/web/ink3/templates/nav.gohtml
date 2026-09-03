@@ -6,17 +6,25 @@
 {{- $mode := .Mode }}
 {{- $name := .Name }}
 
-
+{{- $searchSource := "grid" }}
+{{- $searchAddr := .SearchAddr }}
+{{- $searchBase := printf "%s/%s/%s?" .SearchAddr $searchSource .Lang }}
+{{- $detailAddr := .DetailAddr }}
+{{- if $isExhibition }}{{ $searchBase = printf "%sexhibition&" $searchBase }}{{ end }}
+{{- $search := $searchBase }}
+{{- $page := .Page }}
+{{- if ne .Params "" }}{{ $search = printf "%s%s" $search .Params }}{{ end }}
+{{- $back := .Back }}{{ if eq $back "" }}{{ $back = $search }}{{ end }}
 
 <nav class="maincolor navbar">
     <div id="bdNavbarm" class="p-absolute d-flex  d-lg-none flex-grow-1  container-fluid justify-content-between py-3" tabindex="-1" aria-labelledby="bdNavbarOffcanvasLabel">
-        <button class="btn btn-lg navbar-back d-flex {{ if not $page }} d-none {{end}}" type="button"  aria-label="back"></button>
+        <div class="w-48px"><a class="btn btn-lg p-0 navbar-back d-fle {{ if not $page }} d-nonex {{end}}" type="button"   href="{{ $back }}" onclick="event.preventDefault(); historyOrLink('{{ $back }}');" aria-label="back"><i class="iconx iconx-24" data-icon="back"></i></a></div>
          <div class="center d-flex">
             <a {{ if not $isExhibition }} href="{{ $searchAddr }}/{{ $lang }}"{{ end }}>
                   {{ if eq $name "scb.mab" }}SCB Katalog{{ else }}Integrierter Katalog {{ end }}
             </a>
         </div>
-        <a href="" class="btn btn-lg navbar-toggler d-flex d-lg-none m-3x" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation"></a>
+        <div class="w-48px d-flex justify-content-end"><a href="" class="btn btn-lg navbar-toggler d-flex d-lg-none m-3x" type="button" data-bs-toggle="offcanvas" data-bs-target="#bdNavbar" aria-controls="bdNavbar" aria-label="Toggle navigation"></a></div>
     </div> 
     <div id="bdNavbar" class="offcanvas-lg offcanvas-end d-lg-flex  flex-grow-1  container-fluid justify-content-between py-1" tabindex="-1" aria-labelledby="bdNavbarOffcanvasLabel">
         
