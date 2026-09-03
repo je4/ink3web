@@ -435,7 +435,9 @@
                 </details>
             </li>
             {{ end }}
+
             <!-- Thema -->
+            
             {{ if gt (len .CatalogFacets) 0 }}
             <li class="nav-item mb-1">
                 <details class="ds">
@@ -464,6 +466,8 @@
             </li>
             {{ end }}
             <!-- Media -->
+
+            
             {{ if gt (len .MediaFacets) 0 }}
             <li class="nav-item mb-1">
                 <details class="ds">
@@ -491,10 +495,13 @@
                 </details>
             </li>
             {{ end }}
-            <!-- other filters -->
 
             
 
+            <!-- other filters (old list) -->
+
+            
+            {{/*
             {{ range $parent, $vocabFacets := .VocabularyFacets }}
                 {{- $num := 0 }}
                 {{ range $vocabFacet := $vocabFacets }}
@@ -534,6 +541,7 @@
                 </li>
                 {{ end }}
             {{ end }}
+            */}}
     </ul>
     </div>
 </div>
