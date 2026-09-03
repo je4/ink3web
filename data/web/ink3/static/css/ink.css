@@ -1545,8 +1545,10 @@ details > summary:after{
     background:var(--color-bg);
 }
 @media (min-width: 992px) {
-    right:var(--space);
-    height:240px;
+    #logininfo{
+        right:var(--space);
+        height:240px;
+    }
 }
 .showlogininfo #logininfo{
     display: flex;
