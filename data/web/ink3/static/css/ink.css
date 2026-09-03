@@ -1536,12 +1536,17 @@ details > summary:after{
     display: none;
     position: absolute;
     top:60px;
-    right:var(--space);
+    right:0px;
     margin-right:28px;
     width:240px;
-    height:240px;
+    height:220px;
     border-right:1px solid currentColor;
     align-items: end;
+    background:var(--color-bg);
+}
+@media (min-width: 992px) {
+    right:var(--space);
+    height:240px;
 }
 .showlogininfo #logininfo{
     display: flex;
