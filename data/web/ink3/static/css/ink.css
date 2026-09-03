@@ -1542,7 +1542,7 @@ details > summary:after{
     right:var(--space);
     margin-right:28px;
     width:240px;
-    height:195px;
+    height:240px;
     border-right:1px solid currentColor;
     display:flex;
     align-items: end;
@@ -1559,7 +1559,7 @@ details > summary:after{
     rotate: 45deg;
 
 }
-#logininfo div{
+#logininfo > div{
     padding:0rem 1rem 1rem 1rem;
     border-bottom:1px solid currentColor;
     border-left:1px solid currentColor;
