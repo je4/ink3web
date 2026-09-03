@@ -62,7 +62,7 @@
             </div>
             <!--<button class="btn btn-lg search" onClick=" doSearch('{{ $searchBase }}') ">Suchen</button>-->
         </div>
-        <div class="right d-flex flex-grow-1">
+        <div class="right d-flex flex-grow-1 mt-2 mt-md-0">
             <!-- access -->
                 <label class="toggle access" title="Es werden auch Einträge mit geshlossenen Medien angezeigt"><input type="checkbox" name="access" checkedx /><span class="checkmark"></span><span >Zugang</span></label><!--<a class="infobutton ms-0">i</a>-->
             
@@ -71,16 +71,15 @@
             <label class="toggle ki"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
             <!--<button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>-->
             
+             */}}
             <!-- filter togggle-->
             <div class="d-flex flex-grow-1 justify-content-end">
-
-                
-                <button id="filterBtn" class="btn btn-lg navbar-togglerx" type="button" data-bs-toggle="offcanvas" data-bs-target="#facetBar" aria-controls="facetBar" aria-expanded="false" aria-label="Toggle navigation">
-                    <i class="iconx" data-icon="filter"></i>
+                <button id="filterBtn" class="btn btn-lg navbar-togglerx d-flex justify-content-center align-items-center ps-3 gap-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#facetBar" aria-controls="facetBar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="iconx iconx-24" data-icon="filter"></i><span>Filter</span>
                 </button>
                 
             </div>
-             */}}
+            
         </div>
     </div>
 </div>
@@ -414,7 +413,7 @@
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Sammlung" $lang }}</summary>
 
-                    <div class="tags cols collection px-2 px-lg-0">
+                    <div class="tags cols collection py-2">
                         {{ range $collFacet := .CollectionFacets }}
                             {{ if and (not $collFacet.Checked) (gt $collFacet.Count 0) }}
                                 <button
@@ -442,7 +441,7 @@
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Thema" $lang }}</summary>
 
-                    <div class="tags cols collection px-2 px-lg-0">
+                    <div class="tags cols collection py-2">
                         {{ range $catFacet := .CatalogFacets }}
                             {{ if and (not $catFacet.Checked) (gt $catFacet.Count 0) }}
                                 <button
@@ -470,7 +469,7 @@
                 <details class="ds">
                     <summary class="summary textbig"><span class="icon"></span>{{ localize "Ressourcentyp" $lang }}</summary>
 
-                    <div class="tags cols collection px-2 px-lg-0">
+                    <div class="tags cols collection py-2">
                         {{ range $mediaFacet := .MediaFacets }}
                             {{ if and (not $mediaFacet.Checked) (gt $mediaFacet.Count 0) }}
                                 <button
@@ -509,7 +508,7 @@
                         <summary class="summary textbig"><span class="icon"></span>{{ localize $parent $lang }} </summary>
                        
 
-                       <div class="tags cols collection px-2 px-lg-0">
+                       <div class="tags cols collection py-2">
                         {{ range $vocabFacet := $vocabFacets }}
                             {{ if not $vocabFacet.Checked }}
                            

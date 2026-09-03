@@ -49,8 +49,8 @@
 <main>
     <div class="ds logo detail">
         <a class="summary textbig" href="{{ $back }}" onclick="event.preventDefault(); historyOrLink('{{ $back }}');">
-            <span class="icon back d-none d-lg-block"></span>
-            <h1><span class="d-none d-lg-block">InK</span>
+            <span class="icon back d-none d-lg-inline"></span>
+            <h1>
         {{- $title1 := multiLang $source.Base.Title }}
         {{- $title := $title1.String }}
         {{- $parts := split $title ". " -}}
@@ -281,9 +281,9 @@
                                         fill: none;
                                     }
                                     .st1 {
-                                        stroke: #000;
+                                        stroke: currentColor;
                                         stroke-miterlimit: 10;
-                                        stroke-width: 4px;
+                                        stroke-width: 2px;
                                     }
                                     </style>
                                 </defs>
@@ -298,7 +298,7 @@
                                     ({{- range $mc := $source.Base.MediaCount }}
                                         {{ $mc.Count }} {{ $mc.Type }} locked
                                     {{- end }})<br />
-                                    Mehr über <a class="link">InK Berechtigungen</a>.</div>
+                                    Mehr über <a class="link" href="../pages/ink3_mediathek/access_INK.md">InK Berechtigungen</a>.</div>
                                 
                             </div>
                         {{- end }}

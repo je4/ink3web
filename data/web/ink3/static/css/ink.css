@@ -299,7 +299,6 @@ img.flipvertical {
     margin:0 1rem;
 }
 .text {
-    //padding-bottom:1.5rem ;
     color: var(--color-hi);
 }
 @media (min-width: 992px) {
@@ -429,7 +428,7 @@ img.flipvertical {
 
 svg.icon-16,i.icon-16 { display: inline-block; vertical-align: middle; width: 1rem; height: 1rem; stroke-width: 2;}
 svg.icon-20,i.icon-20 { display: inline-block;vertical-align: middle; width: 1.25rem; height: 1.25rem; stroke-width: 1.5;margin-bottom:2px}
-svg.icon-24,i.icon-24 { display: inline-block;vertical-align: middle; width: 1.5rem; height: .5rem; stroke-width: 1;}
+svg.icon-24,i.icon-24 { display: inline-block;vertical-align: middle; width: 1.5rem; height: 1.5rem; stroke-width: 1;}
 svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2rem; height: 2rem; stroke-width: 1;}
 
 
@@ -476,24 +475,10 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
     min-width: 160px;
 }
 .searchbar #filterBtn{
-    //position: absolute;
-    //top:0px;
     right:0.25rem;
-    width:3rem;
-    height:3rem;
-    padding:0.25rem;
-    aspect-ratio: 1;
-    border-radius: 100%;
-    border:0;
-}
-.searchbar #filterBtn span{
-    display: none;
 }
 .searchbar #filterBtn i {
-    display: block;
     background:currentColor;
-    width:100%;
-    height:100%;
 }
 
 
@@ -781,7 +766,7 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
 
 @media (min-width: 992px) {
   #facetBar .tags {
-    padding-left: 1.5rem !important;
+    padding-left: 2rem !important;
   }
 }
 
@@ -987,9 +972,6 @@ details > summary:after{
     height:2rem;
     content:'';
 }
-details > div{
-    //padding-bottom:1rem;
-}
 /* specs */
 .specs td{
     padding-right:1rem;
@@ -1008,6 +990,12 @@ details > div{
     padding-right:10%;
     letter-spacing: -0.02em;
     margin:0;
+    
+}
+@media (min-width: 992px) {
+    .textbig, h1 {
+    padding-right:340px !important;
+    }
 }
 
 /* detail summary */
@@ -1028,12 +1016,10 @@ details > div{
     margin-left:-0.02em;
 }
 .ds .summary .icon {
-    //position: absolute;
     position: relative;
     top:0;
     width: 1em;
     height: 1em;
-    //left:-0.15em;
     flex:0 0 1em;
 }
 
@@ -1071,7 +1057,6 @@ details > div{
 }
 
 .ds .detail {
-    //padding:0.5rem 1rem 1rem 1rem;
     padding-bottom:1rem;
 }
 
@@ -1094,18 +1079,13 @@ details > div{
         top:10%;
         left:15%;
     }
-    .ds.logo .summary {
-        //padding: 0.25rem 0 0.25rem var(--space);
-    }
     .ds .detail{
         padding:0.5rem 4rem 0.5rem 4rem;
         padding-left:var(--space);
     }
-    #facetBar .ds .summary{
-        padding-left: 2rem;
-    }
     #facetBar .ds .summary .icon::after{
         top:5%;
+        left:5%;
     }
 }
 
@@ -1554,4 +1534,33 @@ details > div{
     padding:0;
     margin-left:1rem;
     padding-left:0.25rem;    
+}
+
+#logininfo{
+    position: absolute;
+    top:60px;
+    right:var(--space);
+    margin-right:28px;
+    width:240px;
+    height:195px;
+    border-right:1px solid currentColor;
+    display:flex;
+    align-items: end;
+}
+#logininfo:after{
+    position:absolute;
+    top:1px;
+    right:-8px;
+    content: "";
+    width: 15px;
+    height: 15px;
+    border-top:1px solid currentColor;
+    border-left:1px solid currentColor;
+    rotate: 45deg;
+
+}
+#logininfo div{
+    padding:0rem 1rem 1rem 1rem;
+    border-bottom:1px solid currentColor;
+    border-left:1px solid currentColor;
 }
