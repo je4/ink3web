@@ -20,8 +20,8 @@ env:
   DEPLOY_USER: proserver
   BASTION_HOST: sshgw.fhnw.ch
   BASTION_USER: punkt.de-git
-  WEB_TARGET: /var/www/revcat_front_v3
-  CONFIG_TARGET: /var/opt/revcat_v3_config
+  WEB_TARGET: /var/opt/revcat_v3/web
+  CONFIG_TARGET: /var/opt/revcat_v3/config
 
 jobs:
   deploy:
