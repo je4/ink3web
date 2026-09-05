@@ -2,10 +2,10 @@ name = "ink"
 logfile = ""
 loglevel = "DEBUG"
 
-localaddr = "localhost:8449"
-externaladdr = "https://ink3.sammlung.cc"
-searchaddr = "https://ink3.sammlung.cc"
-detailaddr = "https://ink3.sammlung.cc"
+localaddr = "0.0.0.0:8449"
+externaladdr = "https://mediathek.hgk.fhnw.ch/ink3"
+searchaddr = "https://mediathek.hgk.fhnw.ch/ink3"
+detailaddr = "https://mediathek.hgk.fhnw.ch/ink3"
 
 mode = "dark"
 templates = "/root/ink3web/data/web/ink3/templates/"
@@ -203,7 +203,7 @@ contact = ""
 id = 10
 identifier = "catalog:\"Video\""
 title = "Video Art and Culture"
-url = "../pages/Topics/videokunstund-kultur.md"
+url = "/pages/Topics/videokunstund-kultur.md"
 contact = ""
 
 [[catalogs]]
@@ -438,7 +438,7 @@ contact = "Dominic Landwehr"
 id = 58
 identifier = "cat:\"zotero2!!Konvolute!!Feministisches* Improvisatorium\""
 title = "Feministisches Improvisatorium"
-url = "https://ink3.sammlung.cc/pages/estates/feministisches_improvisatorium.md"
+url = "https://mediathek.fhnw.hgk.ch/ink3/pages/estates/feministisches_improvisatorium.md"
 image = ""
 contact = "Chris Regn, Muda Mathis"
 

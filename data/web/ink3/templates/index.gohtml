@@ -1,5 +1,5 @@
 <!doctype html>
-  
+
 {{- $lang := .Lang}}
 {{- $root := .RootPath }}
 {{- $useKI := .KI }}
@@ -20,7 +20,7 @@
     {{ template "nav.gohtml" . }}
 
     <main class="flex-grow-1">
-        
+
         <!-- logo line -->
 
         <div class="sticky">
@@ -31,16 +31,16 @@
                     Der SCB Katalog versammelt Forschungsergebnisse und -Publikationen der Schola Cantorum Baciliensis (SCB).
                     Er fungiert als Datenbasis hinter dem Forschungsportal der Schola.
                 </div>
-            </details>    
+            </details>
             {{- else }}
             <details class="ds logo" open>
                 <summary class="summary textbig"><span class="icon"></span><h1>InK</h1></summary>
                 <div class="detail text textbig">
                     Der Integrierte Katalog vereint Quellen der Forschung und Lehre der Hochschule für Gestaltung und Kunst FHNW sowie von digitalen Sondersammlungen.
                 </div>
-            </details>    
+            </details>
             {{- end }}
-           
+
         </div>
 
         <!-- search line -->
@@ -84,8 +84,8 @@
                 {{/*
                 <label class="toggle"><input type="checkbox" name="ki" checkedx /><span class="checkmark"></span><span>mit KI suchen</span></label>
                     <button onclick="doSearch('{{ $searchBase }}', '', false, true)" class="btn noborder" type="submit"><i class="bi bi-stars"></i></button>
-                */}}             
-                
+                */}}
+
             </div>
         </div>
 
@@ -96,12 +96,12 @@
             <div class="detail tags cols collection">
                 {{- range $key, $coll := .Collections }}
                     {{ if gt $coll.Count 0 }}
-                    <button 
-                        style="" 
+                    <button
+                        style=""
                         onclick="document.querySelectorAll('.collectionButton').forEach(button => button.setAttribute('selected', 'false')); this.setAttribute('selected', 'true'); doSearch('{{ $searchBase }}', '', false, false)"
-                        type="button" 
-                        class="btn  collectionButton" 
-                        value="{{ $coll.Id }}" 
+                        type="button"
+                        class="btn  collectionButton"
+                        value="{{ $coll.Id }}"
                         selected="false"
                         >
                         <div class="name">
@@ -179,7 +179,7 @@
                 {{ end }}
             </div>
         </details>
-       
+
        <!-- <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Zugang</summary>
             <div class="detail tags cols collection">
@@ -187,28 +187,28 @@
         </details> -->
         <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Mediathek</summary>
-            
+
             <div class="detail tags colsx collectionx">
                <ul style="padding-left:20px">
                <li><a class="link" href="https://www.fhnw.ch/de/gestaltung-kunst/ueber-uns/campus/mediathek">
                        FHNW Mediathek der HGK Basel
                </a></li>
-                <li><a class="link" href="../pages/ink3_mediathek/InK-System.md">
+                <li><a class="link" href="/pages/ink3_mediathek/InK-System.md">
                      InK System
                </a></li>
-                <li><a class="link" href="../pages/ink3_mediathek/berechtigungen_INK.md">
+                <li><a class="link" href="/pages/ink3_mediathek/berechtigungen_INK.md">
                      InK Berechtigungen
                 </a></li>
-                 <li><a class="link" href="../pages/ink3_mediathek/InK-Workflows.md">
+                 <li><a class="link" href="/pages/ink3_mediathek/InK-Workflows.md">
                     InK Workflows
                 </a></li>
-                <li><a class="link" href="../pages/ink3_mediathek/kollaboration_im_InK.md">
+                <li><a class="link" href="/pages/ink3_mediathek/kollaboration_im_InK.md">
                     InK Kollaboration
                 </a></li>
-                <li><a class="link" href="../pages/ink3_mediathek/nachhaltigkeit_INK.md">
+                <li><a class="link" href="/pages/ink3_mediathek/nachhaltigkeit_INK.md">
                      InK Nachhaltigkeit
                 </a></li>
-               
+
                 </ul>
                <!--
                <button type="button" class="btn catalogButton">
@@ -219,28 +219,28 @@
                 </button>
 
                 <button type="button" class="btn catalogButton">
-                    <a href="../pages/ink3_mediathek/InK-System.md"><div class="name">
+                    <a href="/pages/ink3_mediathek/InK-System.md"><div class="name">
                         <span>i</span>
                         <i class="num"><b>InK System</b></i>
                     </div></a>
                 </button>
 
                 <button type="button" class="btn catalogButton">
-                    <a href="../pages/ink3_mediathek/InK-Workflows.md"><div class="name">
+                    <a href="/pages/ink3_mediathek/InK-Workflows.md"><div class="name">
                             <span>i</span>
                             <i class="num"><b>Workflows</b></i>
                         </div></a>
                 </button>
 
                 <button type="button" class="btn catalogButton">
-                    <a href="../pages/ink3_mediathek/kollaboration_im_InK.md"><div class="name">
+                    <a href="/pages/ink3_mediathek/kollaboration_im_InK.md"><div class="name">
                             <span>i</span>
                             <i class="num"><b>Kollaboration</b></i>
                         </div></a>
                 </button>
 
                 <button type="button" class="btn catalogButton">
-                    <a href="../pages/ink3_mediathek/nachhaltigkeit_INK.md"><div class="name">
+                    <a href="/pages/ink3_mediathek/nachhaltigkeit_INK.md"><div class="name">
                             <span>i</span>
                             <i class="num"><b>Nachhaltigkeit</b></i>
                         </div></a>
@@ -263,16 +263,16 @@
             <div class="detail tags cols collection">
             </div>
         </details> -->
-        {{ end }}   
+        {{ end }}
 
         <!-- login info (abhänig von class showinfo im body) -->
         <div id="logininfo">
             <div>
                 Login mit deiner Switch edu-ID, um alle für dich freigeschalteten Inhalte zu sehen.<br>
-                Info über <a class="link" href="../pages/ink3_mediathek/berechtigungen_INK.md">Berechtigungen</a>
+                Info über <a class="link" href="/pages/ink3_mediathek/berechtigungen_INK.md">Berechtigungen</a>
                 <div class="pt-3"><a class="btn btn-sm px-3" style="border-radius:0px" href="javascript:hideLogininfo()">ok</a></div>
             </div>
-        </div>      
+        </div>
     </main>
 
     {{ template "footer.gohtml" . }}
@@ -282,4 +282,3 @@
     <script src="static/js/script.js"></script>
 </body>
 </html>
-
