@@ -1,0 +1,598 @@
+name = "ink"
+logfile = ""
+loglevel = "DEBUG"
+
+localaddr = "localhost:8449"
+externaladdr = "https://ink3.sammlung.cc"
+searchaddr = "https://ink3.sammlung.cc"
+detailaddr = "https://ink3.sammlung.cc"
+
+mode = "dark"
+templates = "/root/ink3web/data/web/ink3/templates/"
+staticfiles = "/root/ink3web/data/web/ink3/static"
+pagesfiles = "/root/ink3pages/ink3/pages/"
+datadir = "/var/www/vhosts/performance.ausstellung.cc/digitalesee"
+
+mediaserverbase = "https://ba14ns21403-sec1.fhnw.ch/mediasrv"
+mediaserverkey = "%%MEDIASERVER_KEY%%"
+mediaservertokenexp = "6h"
+
+jwtkey = "%%JWTKEY%%" # ":Xf/#|IKYrDsNi4]LN*o(W7;:"
+jwtalg = "HS512"
+
+fieldmapping.author = "[persons].name"
+fieldmapping.category = "category.keyword"
+fieldmapping.title = "title"
+fieldmapping.fulltext = "[media.pdf].fulltext"
+fieldmapping.collection = "collectiontitle"
+fieldmapping.signature = "signature.keyword"
+fieldmapping.abstract = "abstract"
+
+
+openaiapikey = "%%OPENAI_API_KEY%%"
+
+facetinclude = []
+facetexclude = ["vww:*"]
+
+basefilter = """
+[]
+"""
+
+
+#[[auth]]
+#user="performance"
+#password="schweiz"
+
+[login]
+jwtkey = "%%LOGIN_JWTKEY%%" # ":Xf/#|IKYrDsNi4]LN*o(W7;:"
+jwtalg = ["HS256","HS384","HS512"]
+linktokenexp = "1h"
+#url = "https://intern.hgk.fhnw.ch/ango/shib/auth/localhost"
+url = "https://intern.hgk.fhnw.ch/ango/oidc/auth/revcat"
+issuer = "auth.hgk.fhnw.ch/revcat"
+
+
+
+[[locations]]
+group = "net/local"
+networks = ["127.0.0.1/32", "::1/128"]
+
+[[locations]]
+group = "location/fhnw"
+networks = ["10.0.0.0/8", "192.168.0.0/16", "147.86.0.0/16"]
+
+[[locations]]
+group = "net/fhnw"
+networks = ["10.0.0.0/8", "192.168.0.0/16", "147.86.0.0/16"]
+
+[[locations]]
+group = "location/memoriav"
+networks = ["62.2.199.158/32"]
+
+[[locations]]
+group = "net/bfh"
+networks = ["147.87.0.0/16", "5.35.244.248/32", "213.200.195.102/32", "193.5.80.0/21", "2a07:6b40::/29", "2001:620:500::/48"]
+
+[[locations]]
+group = "net/tabeahome"
+networks = ["212.51.149.28/32", "2a02:168:5608:0:c8b5:db0f:4ce6:f9d1/48"]
+
+
+[revcat]
+endpoint = "https://localhost:8443/graphql"
+insecure = true
+apikey = "%%INK_APIKEY%%"
+
+[directus]
+baseurl = "https://cms.basel-collections.ch"
+token = "abc123"
+cachetime = "10s"
+catalogid = 2
+
+[locale]
+default = "de"
+folder = ""
+#folder = "rcfront/revcati13n"
+available = ["de", "fr", "it", "en"]
+
+[[medias]]
+id = 1
+identifier = "mediatypes.keyword:\"image\""
+title = "Image"
+
+[[medias]]
+id = 2
+identifier = "mediatypes.keyword:\"video\""
+title = "Video"
+
+[[medias]]
+id = 3
+identifier = "mediatypes.keyword:\"pdf\""
+title = "PDF"
+
+[[medias]]
+id = 4
+identifier = "mediatypes.keyword:\"audio\""
+title = "Audio"
+
+[[medias]]
+id = 5
+identifier = "mediatypes.keyword:\"mei\""
+title = "MEI"
+
+[[medias]]
+id = 6
+identifier = "mediatypes.keyword:\"webrecorder\""
+title = "Webrecording"
+
+[[medias]]
+id = 7
+identifier = "mediatypes.keyword:\"office\""
+title = "Office Document"
+
+[[medias]]
+id = 8
+identifier = "mediatypes.keyword:\"gpx\""
+title = "GPX File"
+
+
+[[catalogs]]
+id = 9
+identifier = "catalog:\"Graduation\""
+title = "Graduation"
+url = "https://www.fhnw.ch/de/gestaltung-kunst"
+contact = ""
+
+[[catalogs]]
+id = 20
+identifier = "catalog:\"Educational\""
+title = "Educational Resources"
+url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=08-00"
+contact = ""
+
+[[catalogs]]
+id = 30
+identifier = "catalog:\"Practice\""
+title = "Practice Based Research"
+url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=06-00"
+contact = ""
+
+[[catalogs]]
+id = 4
+identifier = "catalog:\"Collaborative\""
+title = "Collaborative Practices"
+url = ""
+contact = ""
+
+[[catalogs]]
+id = 5
+identifier = "catalog:\"Creative\""
+title = "Creative Publishing"
+url = ""
+contact = ""
+
+#[[catalogs]]
+#id = 6
+#identifier = "catalog:\"Art\""
+#title = "Art"
+#url = ""
+#3contact = ""
+
+#[[catalogs]]
+#id = 7
+#identifier = "catalog:\"Design\""
+#title = "Design"
+#url = ""
+#contact = ""
+
+[[catalogs]]
+id = 8
+identifier = "catalog:\"Contemporary\""
+title = "Contemporary Discourses"
+url = ""
+contact = ""
+
+[[catalogs]]
+id = 9
+identifier = "catalog:\"Performance\""
+title = "Performance Art"
+url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-03"
+contact = ""
+
+[[catalogs]]
+id = 10
+identifier = "catalog:\"Video\""
+title = "Video Art and Culture"
+url = "../pages/Topics/videokunstund-kultur.md"
+contact = ""
+
+[[catalogs]]
+id = 20
+identifier = "catalog:\"Open\""
+title = "Open and Free Access"
+url = ""
+contact = ""
+
+
+
+[[collections]]
+id = 1
+identifier = "cat:\"forms2!!diplom\""
+title = "Next Generation"
+url = "https://nextgeneration.hgk.fhnw.ch/"
+contact = "kommunikation.hgk@fhnw.ch"
+
+[[collections]]
+id = 2
+identifier = "cat:\"zotero2!!ACT Performance Festival\""
+title = "ACT Performance Festival"
+url = "https://www.act-perform.net/"
+image = "act_klein.png"
+contact = "Marion Ritzmann, Hannah Weinberger"
+
+[[collections]]
+id = 3
+identifier = "cat:\"forms2!!modul\""
+title = "Erinnerungsraum"
+url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
+image = ""
+contact = "Eva Hauck"
+
+[[collections]]
+id = 4
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Peripher_ies\""
+title = "Peripher_ies"
+url = "https://sndscp.ch/"
+image = ""
+contact = "Max Spielmann, Catherine Walthard"
+
+[[collections]]
+id = 5
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!CulturalSpace&Design - Research\""
+title = "Cultural Spaces and Design"
+url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/32"
+image = ""
+contact = "Regine Halter, Catherine Walthard, Anka Falk"
+
+[[collections]]
+id = 6
+identifier = "cat:\"zotero2!!Werke!!Plant_Intelligence\""
+title = "Plant Intelligence"
+url = "https://plants-intelligence.ch/"
+image = ""
+contact = "Yvonne Volkart"
+
+[[collections]]
+id = 8
+identifier = "cat:\"zotero2!!Netzkulturen\""
+title = "Netzkulturen"
+url = "https://plants-intelligence.ch/"
+image = ""
+contact = "Stefanie Bräuer"
+
+[[collections]]
+id = 10
+identifier = "cat:\"zotero2!!Werke!!Lehre_Weiterbildung!!Incubator for Design Cultures\""
+title = "Incubator for Design Cultures"
+url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/37"
+image = ""
+contact = "Marianna Meyer"
+
+[[collections]]
+id = 11
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!SMUC\""
+title = "SMUC"
+url = "https://criticalmedialab.ch/projects/smuc/"
+image = ""
+contact = "Viktor Bedö"
+
+[[collections]]
+id = 13
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!ubicombs - Technology – Human – Design: Paradigms of Ubiquitous Computing\""
+title = "Ubiquitous Computing"
+url = "https://ubimus.ixdm.ch/"
+image = ""
+contact = "Jan Torpus"
+
+[[collections]]
+id = 15
+identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Cycles of Circulation\""
+title = "Cycles or Circulation"
+url = "https://criticalmedialab.ch/projects/cycles-of-circulation/"
+image = ""
+contact = "Jamie Allen"
+
+[[collections]]
+id = 17
+identifier = "cat:\"zotero2!!Werke!!Lehre_Weiterbildung!!Incubator for Design Cultures\""
+title = "Mitwelten"
+url = "https://www.mitwelten.org/"
+image = ""
+contact = "Jan Torpus,Cedric Spindler"
+
+[[collections]]
+id = 18
+identifier = "cat:\"zotero2!!Werke!!Memory Full\""
+title = "Memory Full"
+url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/31"
+image = ""
+contact = "Meret Ernst"
+
+
+[[collections]]
+id = 20
+identifier = "cat:\"zotero2!!Werke!!Konferenzen!!Shifting is Mapping\""
+title = "Shifts is Mapping"
+url = "https://data.snf.ch/grants/grant/205397"
+image = ""
+contact = "Christine Schranz"
+
+[[collections]]
+id = 24
+identifier = "cat:\"zotero2!!Grenzgang\""
+title = "Grenzgang"
+url = "https://data.snf.ch/grants/grant/149339"
+image = ""
+contact = "Renate Florenz, Markus Schwander"
+
+[[collections]]
+id = 31
+identifier = "cat:\"zotero2!!Werke\""
+title = "Forschungsdaten & Publikationen"
+url = ""
+image = ""
+contact = "mediathek.hgk@fhnw.ch"
+
+
+[[collections]]
+id = 35
+identifier = "cat:\"iid-Arbeit\""
+title = "Archiv Industrial Design ICDP"
+url = "https://industrialdesign-basel.ch/projekte?category=Semesterprojekte"
+image = ""
+contact = "ICDP"
+
+[[collections]]
+id = 40
+identifier = "cat:\"zotero2!!HyperWerk\""
+title = "Hyperwerk / Transversal Design"
+url = "https://www.hypermagazine.ch/"
+image = ""
+contact = "IXDM"
+
+[[collections]]
+id = 43
+identifier = "cat:\"zotero2!!Institut Mode-Design Web\""
+title = "Doing Fashion Publisc"
+url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/mode-design-ba"
+image = ""
+contact = "Institut Mode"
+
+[[collections]]
+id = 46
+identifier = "cat:\"zotero2!!Institut Mode-Design\""
+title = "Mode Design/Doing Fashion"
+url = "https://doingfashion.ch/"
+image = ""
+contact = "Mode"
+
+[[collections]]
+id = 47
+identifier = "cat:\"zotero2!!Fotoarchiv HGK\""
+title = "Fotoarchiv Hans-Peter Huser"
+url = ""
+image = ""
+contact = "Kommunikation HGK Basel FHNW"
+
+
+[[collections]]
+id = 48
+identifier = "cat:\"zotero2!!IKUVID\""
+title = "IKUVID hist. Videokunst intern"
+url = ""
+image = ""
+contact = "René Pulfer"
+
+
+[[collections]]
+id = 50
+identifier = "cat:\"zotero2!!Summe2017\""
+title = "Summe 2017"
+url = "https://summe.xyz/"
+image = ""
+contact = "mediathek.hgk@fhnw.ch"
+
+[[collections]]
+id = 53
+identifier = "cat:\"zotero2!!e-Publications\""
+title = "e-Publications"
+url = "https://fhnw.swisscovery.slsp.ch/discovery/collectionDiscovery?vid=41SLSP_FNW:VU1&collectionId=8182193720005518&lang=de"
+image = ""
+contact = "Tabea Lurk"
+
+[[collections]]
+id = 55
+identifier = "cat:\"zotero2!!Film + Design\""
+title = "Film + Design"
+url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/28"
+image = ""
+contact = "Michael Renner"
+
+[[collections]]
+id = 56
+identifier = "cat:\"zotero2!!Videowochen im Wenkenpark\""
+title = "Video Wochen Wenkenpark"
+url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/5"
+image = ""
+contact = "mediathek.hgk@fhnw.ch"
+
+[[collections]]
+id = 57
+identifier = "cat:\"zotero2!!DigitalBrainstorming\""
+title = "Digital Brainstorming"
+url = "https://engagement.migros.ch/en/stories/promoting-the-arts/digital-brainstorming"
+image = ""
+contact = "Dominic Landwehr"
+
+[[collections]]
+id = 58
+identifier = "cat:\"zotero2!!Konvolute!!Feministisches* Improvisatorium\""
+title = "Feministisches Improvisatorium"
+url = "https://ink3.sammlung.cc/pages/estates/feministisches_improvisatorium.md"
+image = ""
+contact = "Chris Regn, Muda Mathis"
+
+[[collections]]
+id = 59
+identifier = "cat:\"zotero2!!Videocity_memoriav\""
+title = "Videocity"
+url = "https://www.videocity.org/"
+image = ""
+contact = "Andrea Domesle"
+
+[[collections]]
+id = 70
+identifier = "cat:\"zotero2!!Videonetzwerke\""
+title = "Videonetzwerke"
+url = "https://mediathek.hgk.fhnw.ch/collection/videonetzwerke"
+image = "act_klein.png"
+contact = "Point de Vue, Piet Esch, Stefanie Bräuer"
+
+[[collections]]
+id = 71
+identifier = "cat:\"zotero2!!PCB_Basel\""
+title = "Performance Chronik Basel"
+url = "https://www.performancechronikbasel.ch/"
+image = "performance_chronik_klein.png"
+contact = "Muda Mathis, Sabine Gebhardt Fink, Margarit von Büren"
+
+
+[[collections]]
+id = 74
+identifier = "cat:\"bangbang\""
+title = "Revolving Histories"
+url = "https://revolving-histories.ch/"
+image = "revolving_histories_klein.png"
+contact = "Sabine Gebhardt Fink, Muda Mathis, Chris Regn, Andrea Saemann, Margarit von Büren"
+
+[[collections]]
+id = 75
+identifier = "cat:\"zotero2!!Performance Art!!Together Elsewhere\""
+title = "Together Elsewhere"
+url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/26"
+image = "together_elsewhere_klein.png"
+contact = "Gisela Hochuli (PANCH), Pavana Reid (PAB)"
+
+
+[[collections]]
+id = 77
+identifier = "cat:\"zotero2!!Performance Art!!Partout\""
+title = "Partout"
+url = ""
+image = ""
+contact = "Andrea Saemann, PANCH"
+
+[[collections]]
+id = 77
+identifier = "cat:\"zotero2!!Performance Art!!Must or Not\""
+title = "Must or Not"
+url = "https://panch.li/v2_23/wp-content/uploads/2024/06/2024-05-31_MUST-OR-NOT_zusammengesetzt_s_def.pdf"
+image = ""
+contact = "Andrea Saemann, Chris Regn"
+
+
+[[collections]]
+id = 80
+identifier = "cat:\"zotero2!!Archive des Ephemeren\""
+title = "Archive des Ephemeren"
+url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/12"
+image = "archive_des_ephemeren_klein.png"
+contact = "Pascale Grau, Margarit von Büren, PANCH"
+
+[[collections]]
+id = 83
+identifier = "cat:\"zotero2!!Performance Art!!Doce en Diciembre\""
+title = "Doce en Diciembre"
+url = "https://mediathek.hgk.fhnw.ch/#/de/bestaende/25"
+image = "doce_en_diciembre_klein.png"
+contact = "Barbara Naegelin, Chris Regn, Andrea Saemann"
+
+[[collections]]
+id = 85
+identifier = "cat:\"zotero2!!Dokumentation Archiv Performativ\""
+title = "Dokumentation Archiv Performativ "
+url = "http://archivperformativ.zhdk.ch/"
+image = "interviews_archiv_performativ_klein.png"
+contact = "Pascale Grau, Margarit von Büren"
+
+[[collections]]
+id = 86
+identifier = "cat:\"zotero2!!Perf en Bref\""
+title = "Perf En Bref"
+url = "https://apresperf.ch/category/interviews"
+image = "perf_en_bref_klein.png"
+contact = "Chris Regn, Andrea Saemann"
+
+[[collections]]
+id = 88
+identifier = "cat:\"zotero2!!PPP-ProgrPerformancePlattform\""
+title = "PPP Progr Performance Plattform"
+url = "https://www.ppp-art.ch/"
+image = ""
+contact = "Kate Burgener, Gisela Hochuli"
+
+[[collections]]
+id = 90
+identifier = "cat:\"zotero2!!migma\""
+title = "migma"
+url = "https://migma.ch/2025.html"
+image = ""
+contact = "Judith Huber"
+
+[[collections]]
+id = 100
+identifier = "cat:\"zotero2!!Lemusa\""
+title = "Lemusa"
+url = "https://samuelherzog.net/lemusa/"
+image = ""
+contact = "Samluel Herzog"
+
+[[collections]]
+id = 101
+identifier = "cat:\"zotero2!!Konvolute\""
+title = "Konvolute zur Performance Kunst"
+url = "https://performance.sammlung.cc/de"
+image = ""
+contact = "Tabea Lurk"
+
+[[collections]]
+id = 200
+identifier = "cat:\"zotero2!!HSM-Datenbanken\""
+title = "Forschungsdaten SCB"
+url = "https://www.forschung.schola-cantorum-basiliensis.ch/de.html"
+image = ""
+contact = "Tabea Lurk"
+
+[[collections]]
+id = 201
+identifier = "cat:\"zotero2!!Werke!!Hochschule für Musik!!Motet Cycles\""
+title = "Motet Cycles"
+url = "https://fhnw.swisscovery.slsp.ch/discovery/collectionDiscovery?vid=41SLSP_FNW:VU1&collectionId=8178617040005518&lang=de"
+image = ""
+contact = "Tabea Lurk"
+
+
+#[[collections]]
+#id = 201
+#identifier = "cat:\"neos!!test\""
+#title = "Datentest Punkt"
+#url = ""
+#image = ""
+#contact = "Tabea Lurk"
+
+[[collections]]
+id = 201
+identifier = "cat:\"neosform!!fhnw!!Mediathek-Team!!Testing!!NeosGeneration\""
+title = "Textdaden Neuer Import Punkt"
+url = "https://nextgeneration.hgk.fhnw.ch/"
+contact = "kommunikation.hgk@fhnw.ch"
