@@ -147,7 +147,7 @@ contact = ""
 id = 20
 identifier = "catalog:\"Educational\""
 title = "Educational Resources"
-url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=08-00"
+url = "../pages/Topics/educational_resources.md"
 contact = ""
 
 [[catalogs]]
