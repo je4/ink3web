@@ -189,21 +189,21 @@ contact = ""
 id = 8
 identifier = "catalog:\"Contemporary\""
 title = "Contemporary Discourses"
-url = ""
+url = "../Topics/gegenwartskunstundkultur.md"
 contact = ""
 
 [[catalogs]]
 id = 9
 identifier = "catalog:\"Performance\""
 title = "Performance Art"
-url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-03"
+url = "https://performance.sammlung.cc/"
 contact = ""
 
 [[catalogs]]
 id = 10
 identifier = "catalog:\"Video\""
 title = "Video Art and Culture"
-url = "/pages/Topics/videokunstund-kultur.md"
+url = "../pages/Topics/videokunstund-kultur.md"
 contact = ""
 
 [[catalogs]]
