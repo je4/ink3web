@@ -140,21 +140,21 @@ title = "GPX File"
 id = 9
 identifier = "catalog:\"Graduation\""
 title = "Graduation"
-url = "https://www.fhnw.ch/de/gestaltung-kunst"
+url = "./pages/Topics/graduation.md"
 contact = ""
 
 [[catalogs]]
 id = 20
 identifier = "catalog:\"Educational\""
 title = "Educational Resources"
-url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=08-00"
+url = "./pages/Topics/educational_resources.md"
 contact = ""
 
 [[catalogs]]
 id = 30
 identifier = "catalog:\"Practice\""
 title = "Practice Based Research"
-url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=06-00"
+url = "./pages/Topics/practicebasedresearch.md"
 contact = ""
 
 [[catalogs]]
@@ -168,7 +168,7 @@ contact = ""
 id = 5
 identifier = "catalog:\"Creative\""
 title = "Creative Publishing"
-url = ""
+url = "./pages/Topics/kreative_publ_formen.md"
 contact = ""
 
 #[[catalogs]]
@@ -189,21 +189,21 @@ contact = ""
 id = 8
 identifier = "catalog:\"Contemporary\""
 title = "Contemporary Discourses"
-url = ""
+url = "./pages/Topics/gegenwartskunstundkultur.md"
 contact = ""
 
 [[catalogs]]
 id = 9
 identifier = "catalog:\"Performance\""
 title = "Performance Art"
-url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-03"
+url = "https://performance.sammlung.cc/"
 contact = ""
 
 [[catalogs]]
 id = 10
 identifier = "catalog:\"Video\""
 title = "Video Art and Culture"
-url = "../pages/Topics/videokunstund-kultur.md"
+url = "./pages/Topics/videokunstund-kultur.md"
 contact = ""
 
 [[catalogs]]
