@@ -147,7 +147,7 @@ contact = ""
 id = 20
 identifier = "catalog:\"Educational\""
 title = "Educational Resources"
-url = "../pages/Topics/educational_resources.md"
+url = "./pages/Topics/educational_resources.md"
 contact = ""
 
 [[catalogs]]
@@ -203,7 +203,7 @@ contact = ""
 id = 10
 identifier = "catalog:\"Video\""
 title = "Video Art and Culture"
-url = "../pages/Topics/videokunstund-kultur.md"
+url = "./pages/Topics/videokunstund-kultur.md"
 contact = ""
 
 [[catalogs]]
@@ -438,7 +438,7 @@ contact = "Dominic Landwehr"
 id = 58
 identifier = "cat:\"zotero2!!Konvolute!!Feministisches* Improvisatorium\""
 title = "Feministisches Improvisatorium"
-url = "https://mediathek.fhnw.hgk.ch/ink3/pages/estates/feministisches_improvisatorium.md"
+url = "./pages/estates/feministisches_improvisatorium.md"
 image = ""
 contact = "Chris Regn, Muda Mathis"
 

@@ -60,20 +60,20 @@
         {{ else }}
             {{ $title }}
         {{ end }}
-        </h1></a>    
-     </div>   
+        </h1></a>
+     </div>
 </main>
 <div class="container-fluid">
     <!-- autor -->
     <div>
-        
+
         {{- $firstPerson := true}}
             {{- range $key, $p := $source.Base.Person}}{{/*
             */}}{{- if hasPrefix "artist" $p.Role}}{{ if not $firstPerson }}; {{ end }}<a class="link" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a>{{/* if $p.Year }} (*{{ $p.Year }}){{ end }}{{ range $key, $id := $p.Identifier }}{{ if eq $id.Name "viaf" }}<img src="{{ $root }}static/img/viaf.png" alt="VIAF" width="18">{{ end }}{{ end */}}{{/*
                 */}}{{- $firstPerson = false }}{{/*
             */}}{{- end}}{{/*
         */}}{{- end}}
-       
+
     </div>
     <!-- collection -->
     {{ if ne (ptrString $source.Base.CollectionTitle) "" }}
@@ -90,10 +90,10 @@
 
 {{ end }}
 
-<div class="container-fluidxx mt-2">    
+<div class="container-fluidxx mt-2">
 
                 <!-- --------- media ---------- -->
-               
+
                     {{- if $source.Media }}
                         {{- if $showContent }}
 
@@ -118,7 +118,7 @@
                         {{- $active := "" }}
 
                         {{- range $typedMedia := $source.Media }}
-                            
+
                             {{- if or (eq $typedMedia.GetType "default") (eq $typedMedia.GetType "mei") }}
                                 {{- range $m := $typedMedia.GetItems }}
                                     {{- if and (contains "mei" (lower $m.URI)) (eq $m.Mimetype "application/xml") }}
@@ -157,11 +157,11 @@
                             {{- end }}
 
                         {{- end }}
-                        
-                        
+
+
                         <!-- --------- new media all in one carousell --------- -->
-                        
-                        
+
+
                         <div class="imgcarousel">
                             <a id="imageTop"></a>
                             <div id="carouselDetailImage" class="carousel slide">
@@ -189,7 +189,7 @@
                                     {{- end }}
                                 </div>
                                 {{- if gt $num 1 }}
-                                <!-- carousel butons --> 
+                                <!-- carousel butons -->
                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselDetailImage" data-bs-slide="prev">
                                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                                     <span class="visually-hidden">Previous</span>
@@ -201,24 +201,24 @@
                                 {{- end }}
 
                             </div>
-                            
-                           
 
-                            <!-- carousel thumbnail img nav --> 
+
+
+                            <!-- carousel thumbnail img nav -->
 
                             {{- if gt $num 1 }}
                             {{- $num := 0 }}
                             <div id="carouselThumbnails" class="imgnav d-flex">
                                 {{- if gt $videoCount 0 }}
                                     {{- range $key, $media := $videos }}
-                                        
+
                                         {{- $size := calcAspectSize $media.Width $media.Height 600 480 }}
 
                                         <span id="thumb{{ $num }}" class="masked video {{ if eq $num 0 }} active{{ end }}" onclick="carouselTo({{ $num }});" >
-                                            <img 
-                                                
-                                                class="bd-placeholder-img card-img-top" 
-                                                src="{{ medialink (printf "%s%s%v" $media.URI "$$timeshot$$" 3) "resize" (printf "size%vx%v/formatPNG/autorotate" (div $size.Width 5) (div $size.Height 5)) (and $source.Base.MediaVisible $source.Base.MediaProtected) }}" 
+                                            <img
+
+                                                class="bd-placeholder-img card-img-top"
+                                                src="{{ medialink (printf "%s%s%v" $media.URI "$$timeshot$$" 3) "resize" (printf "size%vx%v/formatPNG/autorotate" (div $size.Width 5) (div $size.Height 5)) (and $source.Base.MediaVisible $source.Base.MediaProtected) }}"
                                             />
                                         </span>
                                         {{- $num = add $num 1}}
@@ -227,9 +227,9 @@
                                 {{- if gt $imageCount 0 }}
                                     {{- range $key, $media := $images }}
                                         <span id="thumb{{ $num }}" class="masked image {{ if eq $num 0 }} active{{ end }}" onclick="carouselTo({{ $num }});" >
-                                            <img 
-                                                class="bd-placeholder-img card-img-top" 
-                                                src="{{ medialink $media.URI "resize" "size100x1000/formatPNG/autorotate" (and $source.Base.MediaVisible $source.Base.MediaProtected) }}" 
+                                            <img
+                                                class="bd-placeholder-img card-img-top"
+                                                src="{{ medialink $media.URI "resize" "size100x1000/formatPNG/autorotate" (and $source.Base.MediaVisible $source.Base.MediaProtected) }}"
                                             />
                                         </span>
                                         {{- $num = add $num 1}}
@@ -249,8 +249,8 @@
                                 {{- if gt $audioCount 0 }}
                                     {{- range $key, $media := $audios }}
                                         <span id="thumb{{ $num }}" class="masked audio {{ if eq $num 0 }} active{{ end }}" onclick="carouselTo({{ $num }});" >
-                                            <img 
-                                                class="bd-placeholder-img card-img-top" 
+                                            <img
+                                                class="bd-placeholder-img card-img-top"
                                                 src="{{ medialink (printf "%s%s" $media.URI "$$poster") "resize" "size100x1000/formatPNG/autorotate" (and $source.Base.MediaVisible $source.Base.MediaProtected) }}"
                                             />
                                         </span>
@@ -260,9 +260,9 @@
                                 {{- if gt $meiCount 0 }}
                                     {{- range $key, $media := $meis }}
                                         <span id="thumb{{ $num }}" class="masked audio {{ if eq $num 0 }} active{{ end }}" onclick="carouselTo({{ $num }});" >
-                                            <img 
-                                                class="bd-placeholder-img card-img-top" 
-                                                src="{{ medialink $media.URI "resize" "size100x1000/formatPNG/autorotate" (and $source.Base.MediaVisible $source.Base.MediaProtected) }}" 
+                                            <img
+                                                class="bd-placeholder-img card-img-top"
+                                                src="{{ medialink $media.URI "resize" "size100x1000/formatPNG/autorotate" (and $source.Base.MediaVisible $source.Base.MediaProtected) }}"
                                             />
                                         </span>
                                         {{- $num = add $num 1}}
@@ -271,7 +271,7 @@
                             </div>
                             {{- end }}
                         </div>
-                       
+
                         {{- else }}
                             <div class="lockedmedia">
                                 <svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 50 50">
@@ -298,17 +298,17 @@
                                     ({{- range $mc := $source.Base.MediaCount }}
                                         {{ $mc.Count }} {{ $mc.Type }} locked
                                     {{- end }})<br />
-                                    Mehr über <a class="link" href="../pages/ink3_mediathek/berechtigungen_INK.md">InK Berechtigungen</a>.</div>
-                                
+                                    Mehr über <a class="link" href="./pages/ink3_mediathek/berechtigungen_INK.md">InK Berechtigungen</a>.</div>
+
                             </div>
                         {{- end }}
                     {{- end }}
-               
+
             {{/* --------- info ---------- */}}
 
             <div class="container-content">
                 <div class="infogroup block">
-                    
+
                     {{/* -- title -- */}}
                     {{- $title := multiLang $source.Base.Title }}
                     <div class="infoline">
@@ -326,7 +326,7 @@
                     {{ end }}
 
                     {{/* -- collection-- */}}
-                    
+
                     {{ if ne (ptrString $source.Base.CollectionTitle) "" }}
                     <div class="infoline">
                         <div class="summary">Bestand</div>
@@ -344,21 +344,21 @@
                         <div class="detail">#{{ $source.Base.Signature }}</div>
                     </div>
 
-                    
+
 
                     {{/* -- authors -- */}}
 
                     <div class="infoline">
                         <div class="summary">Autor/en</div>
                         <div class="detail">
-                        
+
                         {{- $firstPerson := true}}
                         {{- range $key, $p := $source.Base.Person}}{{/*
                             */}}{{- if hasPrefix "artist" $p.Role}}{{ if not $firstPerson }}; {{ end }}<a class="link" href="{{ printf "%s/%s/%s" $searchAddr $searchSource $lang }}?searchtype=author&search={{ $p.Name }}">{{$p.Name}}</a>{{/* if $p.Year }} (*{{ $p.Year }}){{ end }}{{ range $key, $id := $p.Identifier }}{{ if eq $id.Name "viaf" }}<img src="{{ $root }}static/img/viaf.png" alt="VIAF" width="18">{{ end }}{{ end */}}{{/*
                                 */}}{{- $firstPerson = false }}{{/*
                                 */}}{{- end}}{{/*
                             */}}{{- end}}
-                       
+
                         {{- range $p := $source.Base.Person}}
                             {{- if not (hasPrefix "artist" $p.Role)}}
                                 {{ if not $firstPerson }}<br />{{ $firstPerson = true }}{{ end }}
@@ -367,38 +367,38 @@
                         {{- end}}
                         </div>
                     </div>
-                </div> 
+                </div>
 
                 {{/* -- abstract -- */}}
 
                 {{- $abstract := multiLang $source.Abstract }}
                 {{- $abstractStr := $abstract.GetStr $lang }}
                 {{- $abstractOriginalLang := $abstract.GetNativeLanguage  }}
-                {{- if eq $abstractStr "" }}{{ $abstractStr = $abstract.String }}{{ end }}      
+                {{- if eq $abstractStr "" }}{{ $abstractStr = $abstract.String }}{{ end }}
 
                 {{- if ne $abstractStr "" }}
 
-                <div class="infogroup line">    
+                <div class="infogroup line">
                     <div class="infoline">
                         <div class="summary">Abstract</div>
                         <div class="detail html">
-                          
+
                             {{ toHTML (nl2br $abstractStr) }}
                             {{- if and (ne $abstractOriginalLang.String $lang) (ne $abstractOriginalLang.String "und") }}
                                 <div class="autotranslation">
                                     {{ localize "autotranslatefrom" $lang }} {{ localize (printf "%sen" $abstractOriginalLang.String) $lang }}
                                 </div>
-                            {{- end }}                        
+                            {{- end }}
                         </div>
                     </div>
                 </div>
 
                 {{- end }}
 
-                <div class="infogroup line"> 
+                <div class="infogroup line">
 
                     {{/* -- tags -- */}}
-                           
+
                     {{ if $source.Base.Tags }}
                     <div class="infoline">
                         <div class="summary">Tags</div>
@@ -420,27 +420,27 @@
                         </div>
                     </div>
                     {{- end }}
-                </div>    
+                </div>
 
                 {{/* -- categories-- */}}
 
                 {{- $hasCategories := gt (len $source.Base.Category) 0 }}
                 {{- if $hasCategories }}
 
-                <div class="infogroup line">     
+                <div class="infogroup line">
                     <div class="infoline">
                         <div class="summary">Ablagestruktur</div>
                         <div class="detail">
                             {{- range $cat := $source.Base.Category }}
-                                
+
                                 <div class="cats">
                                 {{- $catParts := splitList "!!" $cat }}
-                                
+
                                 <ul class="taghierarchy">
                                     {{- $first := true }}
                                     {{- $catString := "" }}
                                     {{- range $key, $catPart := $catParts }}
-                                        
+
                                         {{- if not $first }}
                                             {{- $catString = printf "%s!!%s" $catString $catPart }}
                                             <li class="taghierarchy-item"><a class="btn" href="{{ if or $isExhibition $isIFrame }}#{{ else }}{{ printf "%ssearch=category:\"%s\"" $searchBase $catString }}{{ end }}">{{ $catPart }}</a><ul>
@@ -453,7 +453,7 @@
                                 </div>
                             {{- end }}
                         </div>
-                    </div>                   
+                    </div>
                 </div>
                 {{ end }}
 
@@ -467,22 +467,22 @@
                             <div>
                             {{range $note := $source.Notes}}
                                 <div>{{ $note.Title }}</div>
-                                <div class="opacity-50">{{ toHTMLif $note.Text }}</div> 
+                                <div class="opacity-50">{{ toHTMLif $note.Text }}</div>
                             {{end}}
                             </div>
                             <div class="readmore"><a class="link ">Read more</a> …</div>
                         </div>
                     </div>
-                </div>    
+                </div>
                 {{- end }}
 
                 <div class="infogroup line">
 
                     {{/* -- event -- */}}
-                    
+
                     {{- $festival := map $source.Extra "festival" }}
                     {{- $extraIgnore = append $extraIgnore "festival"}}
-                    {{ if ne $festival ""}}        
+                    {{ if ne $festival ""}}
                     <div class="infoline">
                         <div class="summary">Events</div>
                         <div class="detail">
@@ -515,10 +515,10 @@
                     </div>
                     {{- end }}
                 </div>
-                
+
 
                 {{/* -- metadata -- */}}
-                
+
                 {{- $num := 0 }}
                 {{- range $extra := $source.Extra }}
                     {{- if not (has $extra.Key $extraIgnore) }}
@@ -551,13 +551,13 @@
                         </table>
                         </div>
                     </div>
-                </div>    
+                </div>
                 {{- end }}
 
                 {{/* -- Medium -- */}}
                 <!--
                 {{- if (ne $source.Base.Source "zotero2-1624911")}}
-                
+
                 {{- $medium := map $source.Extra "medium" }}
                 {{- $extraIgnore = append $extraIgnore "medium"}}
                 {{- if ne $medium "" }}
@@ -575,10 +575,10 @@
                             </div>
                         </div>
                          {{- end }}
-                 </div> 
+                 </div>
                 {{- end }}
                 -->
-                
+
                 {{/* -- Link/QRCode -- */}}
                 <!--
                 {{ if $source.Base.Signature }}
@@ -590,7 +590,7 @@
                             </div>
                         </div>
                     </div>
-                {{ end }}                
+                {{ end }}
                 -->
                 {{/* -- references -- */}}
 
@@ -602,14 +602,14 @@
                         <div class="summary">Verwandte Einträge</div>
                         <div class="detail">
                              <table class="references">
-                            {{ range $ref := $references }}                               
+                            {{ range $ref := $references }}
                                 <tr>
                                     <td class="poster">
                                         {{ if and $ref.Poster (ne $ref.Poster.URI "") }}
                                             <a href="{{ printf "%s/detail/%s/%s" $detailAddr $ref.Signature $lang }}"><img src="{{ medialink $ref.Poster.URI "resize" "size200x200/formatJPEG/autorotate" true }}"  /></a>
                                         {{ end }}
                                     </td>
-                                    
+
                                     <td>
                                 {{- $title := multiLang $ref.Title }}
                                         <div>
@@ -629,7 +629,7 @@
                                 {{- end}}
                                     </td>
                                 </tr>
-                                
+
                             {{ end }}
                             </table>
                         </div>
@@ -638,8 +638,8 @@
 
                 </div>
             </div>
-        <div>                  
-    </div>         
+        <div>
+    </div>
 </div>
 
 <!-- ---------- script ---------- -->
@@ -654,7 +654,7 @@
 </script>
 <script src="{{ .RootPath }}static/videojs/video.min.js"></script>
 <script>
-    
+
     function isInViewport(el) {
         const rect = el.getBoundingClientRect();
 
@@ -678,7 +678,7 @@
 
     // when carousel slides manually/swipe/buttons
     carouselElement.addEventListener('slide.bs.carousel', function (event) {
-        
+
         const top = document.getElementById('carouselDetailImage');
         if( !isInViewport(top) ) {
             top.scrollIntoView();
@@ -687,7 +687,7 @@
         setActiveThumb(event.to);
     });
 
-    
+
 
     // update active thumbnail
     function setActiveThumb(index) {
@@ -737,12 +737,12 @@
         if (event.key === 'ArrowRight') {
             carousel.next();
         }
-    }); 
-    
+    });
+
     /* video stuff */
     document.querySelectorAll('video.video-js').forEach(videoEl => {
         const player = videojs(videoEl.id);
-        
+
         player.on('play', function () {
 
             // scroll only if not already visible
