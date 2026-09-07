@@ -140,7 +140,7 @@ title = "GPX File"
 id = 9
 identifier = "catalog:\"Graduation\""
 title = "Graduation"
-url = "https://www.fhnw.ch/de/gestaltung-kunst"
+url = "./pages/Topics/graduation.md"
 contact = ""
 
 [[catalogs]]
@@ -154,7 +154,7 @@ contact = ""
 id = 30
 identifier = "catalog:\"Practice\""
 title = "Practice Based Research"
-url = "../Topics/practicebasedresearch.md"
+url = "./pages/Topics/practicebasedresearch.md"
 contact = ""
 
 [[catalogs]]
@@ -168,7 +168,7 @@ contact = ""
 id = 5
 identifier = "catalog:\"Creative\""
 title = "Creative Publishing"
-url = ""
+url = "./pages/Topics/kreative_publ_formen.md"
 contact = ""
 
 #[[catalogs]]
@@ -189,7 +189,7 @@ contact = ""
 id = 8
 identifier = "catalog:\"Contemporary\""
 title = "Contemporary Discourses"
-url = "../Topics/gegenwartskunstundkultur.md"
+url = "./pages/Topics/gegenwartskunstundkultur.md"
 contact = ""
 
 [[catalogs]]
@@ -212,7 +212,6 @@ identifier = "catalog:\"Open\""
 title = "Open and Free Access"
 url = ""
 contact = ""
-
 
 
 [[collections]]
