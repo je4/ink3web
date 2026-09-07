@@ -154,7 +154,7 @@ contact = ""
 id = 30
 identifier = "catalog:\"Practice\""
 title = "Practice Based Research"
-url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=06-00"
+url = "../Topics/practicebasedresearch.md"
 contact = ""
 
 [[catalogs]]
