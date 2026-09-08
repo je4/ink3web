@@ -1,20 +1,20 @@
+{{- $root := .RootPath }}
 {{- $mediaserverBase := .MediaserverBase }}
 {{- $source := .Source }}
-{{- $root := .RootPath }}
 {{- $lang := .Lang }}
 {{- $isExhibition := .Exhibition }}
 {{- $data := . }}
-<script src="{{ .RootPath }}static/js/jquery.min.js"></script>
-<script src="{{ .RootPath }}static/js/html2canvas.min.js"></script>
-<script src="{{ .RootPath }}static/js/three.min.js"></script>
-<script src="{{ .RootPath }}static/js/pdf.min.js"></script>
+<script src="{{ $root }}static/js/jquery.min.js"></script>
+<script src="{{ $root }}static/js/html2canvas.min.js"></script>
+<script src="{{ $root }}static/js/three.min.js"></script>
+<script src="{{ $root }}static/js/pdf.min.js"></script>
 <script type="text/javascript">
     window.PDFJS_LOCALE = {
-        pdfJsWorker: '{{ .RootPath }}static/js/pdf.worker.js',
+        pdfJsWorker: '{{ $root }}static/js/pdf.worker.js',
         pdfJsCMapUrl: 'cmaps'
     };
 </script>
-<script src="{{ .RootPath }}static/js/flip-book.min.js"></script>
+<script src="{{ $root }}static/js/flip-book.min.js"></script>
 
 <script>
     let options = {

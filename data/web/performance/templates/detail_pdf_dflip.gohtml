@@ -1,12 +1,12 @@
+{{- $root := .RootPath }}
 {{- $mediaserverBase := .MediaserverBase }}
 {{- $source := .Source }}
-{{- $root := .RootPath }}
 {{- $lang := .Lang }}
 {{- $isExhibition := .Exhibition }}
 {{- $data := . }}
 
-<script src="{{ .RootPath }}static/dflip/js/libs/jquery.min.js"></script>
-<script src="{{ .RootPath }}static/dflip/js/dflip.min.js"></script>
+<script src="{{ $root }}static/dflip/js/libs/jquery.min.js"></script>
+<script src="{{ $root }}static/dflip/js/dflip.min.js"></script>
 
 
 {{ range $typedMedia := $source.Media }}

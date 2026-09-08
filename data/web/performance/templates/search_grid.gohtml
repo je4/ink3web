@@ -1,7 +1,7 @@
 <!doctype html>
+{{- $root := .RootPath }}
 {{- $data := . }}
 {{- $lang := .Lang}}
-{{- $root := .RootPath }}
 {{- $mediaserverBase := .MediaserverBase }}
 {{- $searchBase := printf "%s/%s/%s" .SearchAddr .Page .Lang }}
 {{- $params := .Params }}
@@ -178,7 +178,7 @@
                                 {{- end }}
                                 {{- if eq $page "grid"}}
                                 {{- range $edge := .Edges }}
-                                    <!-- div class="col p-0" style='max-width: 320px; background-image: url("../static/img/frame0.png"); background-size: 100% 100%;' -->
+                                    <!-- div class="col p-0" style='max-width: 320px; background-image: url("{{ $root }}static/img/frame0.png"); background-size: 100% 100%;' -->
                                     <div class="col p-0" style='max-width: 320px;'>
                                         {{- $query := printf "source=%s" $page }}
                                         {{- if ne $data.Cursor "" }}{{- $query = printf "%s&cursor=%s" $query $data.Cursor }}{{- end }}
@@ -359,8 +359,8 @@
 {{ template "footer.gohtml" . }}
 
 
-<script src="../../static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="../../static/js/search.js"></script>
+<script src="{{ $root }}static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="{{ $root }}static/js/search.js"></script>
 </body>
 </html>
 
