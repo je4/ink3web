@@ -168,23 +168,23 @@
                                 <div class="carousel-inner h-100">
                                     {{- $num := 0 }}
                                     {{- if gt $videoCount 0 }}
-                                        {{ template "detail_video.gohtml" dict "Videos" $videos "Source" $source "Num" $num}}
+                                        {{ template "detail_video.gohtml" dict "Videos" $videos "Source" $source "Num" $num "RootPath" $root }}
                                         {{- $num = add $num $videoCount}}
                                     {{- end }}
                                     {{- if gt $imageCount 0 }}
-                                        {{ template "detail_image.gohtml" dict "Images" $images "Source" $source "Num" $num }}
+                                        {{ template "detail_image.gohtml" dict "Images" $images "Source" $source "Num" $num "RootPath" $root }}
                                         {{- $num = add $num $imageCount}}
                                     {{- end }}
                                     {{- if gt $pdfCount 0 }}
-                                        {{ template "detail_pdf_dflip.gohtml" dict "Pdfs" $pdfs "Source" $source "Num" $num }}
+                                        {{ template "detail_pdf_dflip.gohtml" dict "Pdfs" $pdfs "Source" $source "Num" $num "RootPath" $root }}
                                         {{- $num = add $num $pdfCount}}
                                     {{- end }}
                                     {{- if gt $audioCount 0 }}
-                                        {{ template "detail_audio.gohtml" dict "Audios" $audios "Source" $source "Num" $num }}
+                                        {{ template "detail_audio.gohtml" dict "Audios" $audios "Source" $source "Num" $num "RootPath" $root }}
                                         {{- $num = add $num $audioCount}}
                                     {{- end }}
                                     {{- if gt $meiCount 0 }}
-                                        {{ template "detail_audio.gohtml" dict "Audios" $meis "Source" $source "Num" $num }}
+                                        {{ template "detail_audio.gohtml" dict "Audios" $meis "Source" $source "Num" $num "RootPath" $root }}
                                         {{- $num = add $num $meiCount}}
                                     {{- end }}
                                 </div>
@@ -298,7 +298,7 @@
                                     ({{- range $mc := $source.Base.MediaCount }}
                                         {{ $mc.Count }} {{ $mc.Type }} locked
                                     {{- end }})<br />
-                                    Mehr über <a class="link" href="./pages/ink3_mediathek/berechtigungen_INK.md">InK Berechtigungen</a>.</div>
+                                    Mehr über <a class="link" href="{{ $root }}pages/ink3_mediathek/berechtigungen_INK.md">InK Berechtigungen</a>.</div>
 
                             </div>
                         {{- end }}

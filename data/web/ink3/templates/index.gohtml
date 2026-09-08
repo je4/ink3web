@@ -269,7 +269,7 @@
         <div id="logininfo">
             <div>
                 Login mit deiner Switch edu-ID, um alle für dich freigeschalteten Inhalte zu sehen.<br>
-                Info über <a class="link" href="./pages/ink3_mediathek/berechtigungen_INK.md">Berechtigungen</a>
+                Info über <a class="link" href="{{ $root }}pages/ink3_mediathek/berechtigungen_INK.md">Berechtigungen</a>
                 <div class="pt-3"><a class="btn btn-sm px-3" style="border-radius:0px" href="javascript:hideLogininfo()">ok</a></div>
             </div>
         </div>
@@ -277,8 +277,8 @@
 
     {{ template "footer.gohtml" . }}
 
-    <script src="static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-    <script src="static/js/search.js"></script>
-    <script src="static/js/script.js"></script>
+    <script src="{{ $root }}static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+    <script src="{{ $root }}static/js/search.js"></script>
+    <script src="{{ $root }}static/js/script.js"></script>
 </body>
 </html>
