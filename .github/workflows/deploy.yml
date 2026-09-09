@@ -102,6 +102,19 @@ jobs:
           if [ "${DRY_RUN:-false}" = "true" ]; then RSYNC_OPTS+=(--dry-run); fi
           rsync "${RSYNC_OPTS[@]}" config/ "${DEPLOY_HOST}:${CONFIG_TARGET}/"
 
+      - name: Restart services
+        if: ${{ inputs.dry_run != true }}
+        env:
+          SERVICES: revcat_v3 revcat_front_v3
+        run: |
+          set -euo pipefail
+          for service in ${SERVICES}; do
+            echo "::group::restart ${service}"
+            ssh -tt "${DEPLOY_HOST}" "sudo systemctl restart ${service}"
+            ssh "${DEPLOY_HOST}" "systemctl is-active ${service}"
+            echo "::endgroup::"
+          done
+
       - name: Clean up SSH material
         if: always()
         run: rm -rf ~/.ssh
