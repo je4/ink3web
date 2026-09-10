@@ -1,6 +1,6 @@
+{{- $root := .RootPath }}
 <!doctype html>
 {{- $lang := .Lang}}
-{{- $root := .RootPath }}
 {{- $searchBase := printf "%s/search/%s?" .SearchAddr .Lang }}
 <html lang="{{ $lang }}">
 <head>
@@ -49,6 +49,6 @@ openDOAR anerkannt und gelistet.</p>
     </div>
 </div>
     {{ template "footer.gohtml" . }}
-<script src="{{ .RootPath }}static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="{{ $root }}static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 </body>
 </html>

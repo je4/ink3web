@@ -1,6 +1,6 @@
+{{- $root := .RootPath }}
 <!doctype html>
 {{- $lang := .Lang}}
-{{- $root := .RootPath }}
 <html lang="{{ $lang }}">
 <head>
     {{ template "head.gohtml" . }}
@@ -44,8 +44,8 @@
 
     {{ template "footer.gohtml" . }}
 
-<script src="{{ .RootPath }}static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="{{ .RootPath }}static/openseadragon/openseadragon.min.js" crossorigin="anonymous"></script>
+<script src="{{ $root }}static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="{{ $root }}static/openseadragon/openseadragon.min.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
 
     function isTouchDevice() {
@@ -68,7 +68,7 @@
         console.log(webPoint.toString(), viewportPoint.toString(), imagePoint.toString());
 
         let xhr = new XMLHttpRequest();
-        let url = "{{ .RootPath }}zoom/signature/" + Math.round(imagePoint.x) + "/" + Math.round(imagePoint.y);
+        let url = "{{ $root }}zoom/signature/" + Math.round(imagePoint.x) + "/" + Math.round(imagePoint.y);
         xhr.open("GET", url, true);
         xhr.setRequestHeader("Content-Type", "application/json");
         xhr.onreadystatechange = function () {
@@ -79,7 +79,7 @@
                 console.log("Signature: "+signature)
                 if( signature === "" ) return
                 documenttitle = signature
-                documenturl = "{{ .RootPath }}detail/"+signature+"/{{ .Lang }}?iframe" {{ if .Exhibition }}+"&exhibition"{{ end }}
+                documenturl = "{{ $root }}detail/"+signature+"/{{ .Lang }}?iframe" {{ if .Exhibition }}+"&exhibition"{{ end }}
                 documentModal.show();
             }
         }
@@ -114,8 +114,8 @@
     var viewer = OpenSeadragon({
         id: "collage",
         showNavigator: true,
-        prefixUrl: "{{ .RootPath | toJSStr }}static/openseadragon/images/",
-        tileSources: "{{ .RootPath }}data/collage/collage.dzi",
+        prefixUrl: "{{ $root | toJSStr }}static/openseadragon/images/",
+        tileSources: "{{ $root }}data/collage/collage.dzi",
         //defaultZoomLevel: 5,
     });
     let parent = document.getElementById('collage');

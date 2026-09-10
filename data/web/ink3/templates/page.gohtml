@@ -1,6 +1,6 @@
+{{- $root := .RootPath }}
 <!doctype html>
 {{- $lang := .Lang}}
-{{- $root := .RootPath }}
 {{- $isExhibition := .Exhibition }}
 {{- $searchAddr := .SearchAddr }}
 {{- $back := .Back }}{{ if eq $back "" }}{{ $back = $root }}{{ end }}
@@ -36,8 +36,8 @@
 <!-- ---------- script ---------- -->
 
  {{ template "footer.gohtml" . }}
-<script src="{{ .RootPath }}static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
-<script src="{{ .RootPath }}static/js/script.js"></script>
+<script src="{{ $root }}static/bootstrap/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="{{ $root }}static/js/script.js"></script>
 <script>
 </script>
 
