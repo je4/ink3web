@@ -3,9 +3,9 @@ logfile = ""
 loglevel = "DEBUG"
 
 localaddr = "0.0.0.0:8449"
-externaladdr = "https://mediathek.hgk.fhnw.ch/ink3"
-searchaddr = "https://mediathek.hgk.fhnw.ch/ink3"
-detailaddr = "https://mediathek.hgk.fhnw.ch/ink3"
+externaladdr = "https://mediathek.hgk.fhnw.ch/ink"
+searchaddr = "https://mediathek.hgk.fhnw.ch/ink"
+detailaddr = "https://mediathek.hgk.fhnw.ch/ink"
 
 mode = "dark"
 templates = "/root/ink3web/data/web/ink3/templates/"
