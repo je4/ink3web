@@ -566,7 +566,7 @@ image = ""
 contact = "Tabea Lurk"
 
 [[collections]]
-id = 200
+id = 203
 identifier = "cat:\"zotero2!!HSM-Datenbanken\""
 title = "Forschungsdaten SCB"
 url = "https://www.forschung.schola-cantorum-basiliensis.ch/de.html"
@@ -574,7 +574,7 @@ image = ""
 contact = "Tabea Lurk"
 
 [[collections]]
-id = 201
+id = 205
 identifier = "cat:\"zotero2!!Werke!!Hochschule für Musik!!Motet Cycles\""
 title = "Motet Cycles"
 url = "https://fhnw.swisscovery.slsp.ch/discovery/collectionDiscovery?vid=41SLSP_FNW:VU1&collectionId=8178617040005518&lang=de"
