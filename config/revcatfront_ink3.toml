@@ -351,6 +351,23 @@ url = "https://industrialdesign-basel.ch/projekte?category=Semesterprojekte"
 image = ""
 contact = "ICDP"
 
+
+[[collections]]
+id = 36
+identifier = "cat:\"zotero2!!In3\""
+title = "Abschlussarbeiten In3"
+url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/innenarchitektur-und-szenografie-ba"
+image = ""
+contact = "HGK Basel FHNW - Fachbereich In3"
+
+[[collections]]
+id = 37
+identifier = "cat:\"zotero2!!Institut Integrative Gestaltung / Masterstudio\""
+title = "Masterstudio/IIG"
+url = ""
+image = ""
+contact = "IXDM"
+
 [[collections]]
 id = 40
 identifier = "cat:\"zotero2!!HyperWerk\""
