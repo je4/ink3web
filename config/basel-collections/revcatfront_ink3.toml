@@ -353,6 +353,22 @@ image = ""
 contact = "ICDP"
 
 [[collections]]
+id = 36
+identifier = "cat:\"Institut In3\""
+title = "Abschlussarbeiten In3"
+url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/innenarchitektur-und-szenografie-ba"
+image = ""
+contact = "In3"
+
+[[collections]]
+id = 37
+identifier = "cat:\"Institut Integrative Gestaltung / Masterstudio\""
+title = "Masterstudio/IIG"
+url = ""
+image = ""
+contact = "IXDM"
+
+[[collections]]
 id = 40
 identifier = "cat:\"zotero2!!HyperWerk\""
 title = "Hyperwerk / Transversal Design"
