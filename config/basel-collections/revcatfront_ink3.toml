@@ -339,14 +339,14 @@ contact = "Renate Florenz, Markus Schwander"
 id = 31
 identifier = "cat:\"zotero2!!Werke\""
 title = "Forschungsdaten & Publikationen"
-url = ""
+url = "https://www.fhnw.ch/de/gestaltung-kunst/forschung-dienstleistungen/forschung"
 image = ""
 contact = "mediathek.hgk@fhnw.ch"
 
 
 [[collections]]
 id = 35
-identifier = "cat:\"iid-Arbeit\""
+identifier = "cat:\"zotero2!!iid-Arbeit\""
 title = "Archiv Industrial Design ICDP"
 url = "https://industrialdesign-basel.ch/projekte?category=Semesterprojekte"
 image = ""
@@ -354,15 +354,15 @@ contact = "ICDP"
 
 [[collections]]
 id = 36
-identifier = "cat:\"In3\""
+identifier = "cat:\"zotero2!!In3\""
 title = "Abschlussarbeiten In3"
 url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/innenarchitektur-und-szenografie-ba"
 image = ""
-contact = "In3"
+contact = "HGK Basel FHNW - Fachbereich In3"
 
 [[collections]]
 id = 37
-identifier = "cat:\"Institut Integrative Gestaltung / Masterstudio\""
+identifier = "cat:\"zotero2!!Institut Integrative Gestaltung / Masterstudio\""
 title = "Masterstudio/IIG"
 url = ""
 image = ""
