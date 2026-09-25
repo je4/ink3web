@@ -346,7 +346,7 @@ contact = "mediathek.hgk@fhnw.ch"
 
 [[collections]]
 id = 35
-identifier = "cat:\"zotero2!!iid-Arbeit\""
+identifier = "cat:\"iid-Arbeit\""
 title = "Archiv Industrial Design ICDP"
 url = "https://industrialdesign-basel.ch/projekte?category=Semesterprojekte"
 image = ""
