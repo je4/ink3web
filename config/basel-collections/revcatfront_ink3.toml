@@ -354,7 +354,7 @@ contact = "ICDP"
 
 [[collections]]
 id = 36
-identifier = "cat:\"Institut In3\""
+identifier = "cat:\"In3\""
 title = "Abschlussarbeiten In3"
 url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/innenarchitektur-und-szenografie-ba"
 image = ""
