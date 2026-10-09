@@ -613,18 +613,18 @@
                                     <td>
                                 {{- $title := multiLang $ref.Title }}
                                         <div>
-                                        <a href="{{ printf "%s/detail/%s/%s" $detailAddr $ref.Signature $lang }}"><span class="title">{{ $title.String }}</span>
+                                        <a class="link" href="{{ printf "%s/detail/%s/%s" $detailAddr $ref.Signature $lang }}"><span class="title">{{ $title.String }}</span>
                                 {{ if $ref.Date }}<span class="date">{{ if ne ( ptrString $ref.Date) "" }}({{ $ref.Date }}){{ end }}</span>{{ end }}
                                         </a>
                                         </div>
                                 {{- range $key, $p := $ref.Person}}
                                     {{- if hasPrefix "artist" $p.Role}}
-                                        {{- if gt $key 0}}; {{end}}<div class="opacity-50"><a class="link" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a></div>
+                                        {{- if gt $key 0}}; {{end}}<div class="opacity-50"><a class="link2" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a></div>
                                     {{- end}}
                                 {{- end}}
                                 {{- range $p := $ref.Person}}
                                     {{- if not (hasPrefix "artist" $p.Role)}}
-                                        <div class="opacity-50"><a class="link" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a> ({{camelcase (trimPrefix "performer:" $p.Role)}})</div>
+                                        <div class="opacity-50"><a class="link2" href="{{ printf "%s/%s/%s?search=author:\"%s\"" $searchAddr $searchSource $lang $p.Name }}">{{$p.Name}}</a> ({{camelcase (trimPrefix "performer:" $p.Role)}})</div>
                                     {{- end}}
                                 {{- end}}
                                     </td>

@@ -236,6 +236,9 @@ a.link-dimmed:hover{
 .link{
     border-bottom: 1px solid currentColor;
 }
+.link2{
+    border-bottom: 1px dotted currentColor;
+}
 audio + .vjs-poster img {
     object-fit: fill;
 }
@@ -1115,7 +1118,10 @@ details > summary:after{
         display: inline-block;
         margin:1rem 0;
         cursor: pointer;
-    }    
+    }
+    .textclamp > div a{
+        border-bottom:1px solid currentColor;
+    }
     /*
     .infoline .detail.html br + br + br{
         display: none;
@@ -1148,8 +1154,7 @@ details > summary:after{
         padding:0rem;
         margin:0 1px 0.25rem 0;
         line-height: 1.5;
-        background:var(--color);
-        color:var(--color-on);
+        background:var(--color-dimmed-10);
         transition:all 0.3s;
         padding:0 0.5rem;
         border-radius:0;
@@ -1157,6 +1162,7 @@ details > summary:after{
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
+        border:0;
     }
     
     .infoline .btn:hover{
@@ -1216,8 +1222,9 @@ details > summary:after{
     .infogroup .infoline:first-child  > *:last-child{
         padding-top:0.5rem;
     }
-    
- }
+     .infoline .detail table td:first-child{
+        width:25%;
+    }
  .nav-tabs{
     border-bottom: 0;
  }
@@ -1404,7 +1411,6 @@ details > summary:after{
     width:100%;
     height: 100%;
     object-fit: cover;
-    mix-blend-mode: multiply;
 }
 
 /* costom icons */
