@@ -462,6 +462,10 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
     border:none;
     background:none;
 }
+.searchfield input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+  appearance: none;
+}
 
 .searchfield a{
     position: absolute;
