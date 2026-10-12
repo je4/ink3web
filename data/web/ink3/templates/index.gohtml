@@ -93,14 +93,14 @@
 
         <details class="ds">
             <summary class="summary textbig"><span class="icon"></span>Collections</summary>
-            <div class="detail tags cols collection">
+            <div class="detail tags cols colsxx collection">
                 {{- range $key, $coll := .Collections }}
                     {{ if gt $coll.Count 0 }}
                     <button
                         style=""
                         onclick="document.querySelectorAll('.collectionButton').forEach(button => button.setAttribute('selected', 'false')); this.setAttribute('selected', 'true'); doSearch('{{ $searchBase }}', '', false, false)"
                         type="button"
-                        class="btn  collectionButton"
+                        class="btn  collectionButton btnxx"
                         value="{{ $coll.Id }}"
                         selected="false"
                         >
@@ -130,7 +130,7 @@
                             style=""
                             onclick="this.setAttribute('selected', 'true');doSearch('{{ $searchBase }}', '', false, false)"
                             type="button"
-                            class="btn mediaButton"
+                            class="btn mediaButton btnxx"
                             value="{{ $media.Id }}"
                             selected="false"
                     >
@@ -159,7 +159,7 @@
                             style=""
                             onclick="this.setAttribute('selected', 'true');doSearch('{{ $searchBase }}', '', false, false)"
                             type="button"
-                            class="btn catalogButton"
+                            class="btn catalogButton btnxx"
                             value="{{ $catalog.Id }}"
                             selected="false"
                     >

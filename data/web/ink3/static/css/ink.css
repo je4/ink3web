@@ -1,6 +1,7 @@
 @font-face {
       font-family: 'custom';
-      src: url('../fonts/GT-America-Regular.otf');
+      //src: url('../fonts/GT-America-Regular.otf');
+      //src: url('../fonts/Geist-VariableFont_wght.ttf');
       font-weight: 400;
       font-style: normal;
       font-display: swap;
@@ -21,7 +22,7 @@
 }
 @media (max-width: 992px) {
     :root{
-        --space:1rem;
+        --space:0.5rem;
     }
 }
 
@@ -279,11 +280,12 @@ img.flipvertical {
 }
 /* navbar */
 .navbar .navbar-toggler{
+    display: block;
     position: relative;
-    background:var(--bs-body-color);
     width:1.5rem;
     height:1.5rem;
-    border:none !important;
+    border:1px solid currentColor;
+    padding:0;
 }
 .navbar .navbar-back{
     position: relative;
@@ -394,8 +396,9 @@ img.flipvertical {
     width: 0;
 }
 .toggle .checkmark {
+    position: relative;
     top: 0;
-    left: 0;
+    left: 0.125rem;
     height: 1.5rem;
     width: 1.5rem;
     border:1px solid currentColor;
@@ -678,8 +681,13 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
            background-color: rgba(var(--bs-color),0.05) !important;
         }
         .inkcard .info{
-            padding:0.5rem 0 1.5rem;
+            padding:0.5rem 0 0.5rem;
             line-height:1.25;
+        }
+        .inkcard .info .title{
+            font-size:clamp(2rem, calc(1.273rem + 3.636vw), 4rem);
+            line-height:1;
+            margin-bottom:0.5rem;
         }
         
         .inkcard .author, .inkcard .estate{
@@ -731,6 +739,10 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
         padding-bottom:0;
     }
     .inkcard .info .title{
+        font-size:1rem;
+        line-height:1.25;
+        margin-bottom:0rem;
+        letter-spacing:0;
         display: -webkit-box;
         -webkit-line-clamp: 1;
         line-clamp: 1;
@@ -798,9 +810,10 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
 .tags button .name{
     display:flex;
     gap:0.125rem;
-    border-radius:1rem;
+    border-radius:2rem;
     background:var(--color);
     color:var(--color-on);
+    padding:2px;
 }
 .tags button span {
     position: relative;
@@ -837,11 +850,11 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
     padding:0 0.75rem 0 0.5rem;
 }
 .tags button .info {
-    flex:0 0 1.5rem;
+    flex:0 0 1.75rem;
     border-radius: 100%;
-    width: 1.5rem;
-    height: 1.5rem;
-    line-height: 1.35rem;
+    width: 1.75rem;
+    height: 1.75rem;
+    line-height: 1.65rem;
     text-align: center;
     opacity:1;
     border:1px solid currentColor;
@@ -925,6 +938,35 @@ svg.icon-32,i.icon-32 { display: inline-block;vertical-align: middle; width: 2re
         text-decoration: line-through 2px currentColor;
         text-underline-offset: -1rem;
     }
+    /* btnx */
+    .tags.colsx{
+        column-width:100vw !important;
+    }
+    .btnx{
+        margin:0px;
+        color:var(--color-hi) !important;
+    }
+    .btnx .name{
+        align-items: center;
+        border-radius: 2px !important;
+        background: none !important;
+        //
+         color:inherit !important;
+    }
+    
+    .btnx span{
+        font-size:clamp(2rem, calc(1.273rem + 3.636vw), 4rem);
+        line-height: 1 !important;
+        padding:0px !important;
+        color:inherit !important;
+    }
+    .btnx span:after{
+        display: none;
+    }
+     .btnx:hover{
+        background: none !important;
+        color:red !important;
+    }
     
 }
 
@@ -995,7 +1037,6 @@ details > summary:after{
     font-weight:inherit;
     text-wrap:unset;
     padding-right:10%;
-    letter-spacing: -0.02em;
     margin:0;
     
 }
@@ -1004,7 +1045,7 @@ details > summary:after{
 /* detail summary */
 .ds {
     user-select: none;
-    padding:0 1rem;
+    padding:0 0.5rem;
 }
 .ds .summary {
     position: relative;
@@ -1020,7 +1061,8 @@ details > summary:after{
 }
 .ds .summary .icon {
     position: relative;
-    top:0;
+    top:1px;
+    left:-4px;
     width: 1em;
     height: 1em;
     flex:0 0 1em;
@@ -1028,10 +1070,11 @@ details > summary:after{
 
 .ds .summary .icon:after {
     position: absolute;
-    top: 15%;
-    left: 5%;
+    top: 48%;
+    left: 50%;
     width: 70%;
     height: 70%;
+    transform: translate(-50%, -50%);
     mask-image: url('../img/icon_plus.svg');
     mask-repeat: no-repeat;
     mask-size: var(--space);
@@ -1079,16 +1122,16 @@ details > summary:after{
         left:0px;
     }
     .ds .summary .icon:after{
-        top:10%;
-        left:15%;
+        //top:10%;
+        //left:15%;
     }
     .ds .detail{
         padding:0.5rem 4rem 0.5rem 4rem;
         padding-left:var(--space);
     }
     #facetBar .ds .summary .icon::after{
-        top:5%;
-        left:5%;
+        //top:5%;
+        //left:5%;
     }
 }
 
@@ -1096,7 +1139,7 @@ details > summary:after{
 
     
     .infogroup{
-        margin:0rem 1rem 1rem 1rem;
+        margin:0.5rem
     }
     .infoline .summary{
         padding:0.5rem 0;
