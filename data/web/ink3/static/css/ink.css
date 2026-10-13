@@ -1272,6 +1272,7 @@ details > summary:after{
      .infoline .detail table td:first-child{
         width:25%;
     }
+}
  .nav-tabs{
     border-bottom: 0;
  }
@@ -1586,43 +1587,78 @@ details > summary:after{
 }
 
 #logininfo{
+    position: relative;
     display: none;
+    z-index:1000;
+    padding:0 8px;
+    margin-bottom:1rem;
+    width: 100%;
+}
+#logininfo > div{
+    background:var(--color-text);
+    color:var(--color-bg);
+    padding:8px;
+    width: 100%;
+    text-align: right;
+}
+
+#logininfo .btn{
+    filter:invert();
+}
+#logininfo:after{
     position: absolute;
-    top:60px;
-    right:0px;
-    margin-right:28px;
-    width:240px;
-    height:220px;
-    border-right:1px solid currentColor;
-    align-items: end;
-    background:var(--color-bg);
+    top:-8px;
+    right:11px;
+    background:var(--color-text);
+    content: "";
+    display: block;
+    width: 16px;
+    height: 16px;
+    transform: rotate(45deg);
+    transform-origin: center center;  
 }
 @media (min-width: 992px) {
     #logininfo{
+        position: absolute;
+        top:60px;
         right:var(--space);
+        width:240px;
         height:240px;
+        margin-right:28px;
+        border-right:1px solid currentColor;
+        align-items: end;
+        background:var(--color-bg);
+        padding:0px;
+        
+    }
+    #logininfo:after{
+        position:absolute;
+        top:1px;
+        right:-8px;
+        content: "";
+        width: 15px;
+        height: 15px;
+        border-top:1px solid currentColor;
+        border-left:1px solid currentColor;
+        background:none;
+       
+    }
+    #logininfo > div{
+        padding:0rem 1rem 1rem 1rem;
+        border-bottom:1px solid currentColor;
+        border-left:1px solid currentColor;
+        background:var(--color-bg);
+        color:var(--color-text);
+        text-align: left;
+    }
+    #logininfo .btn{
+        filter:none;
     }
 }
 .showlogininfo #logininfo{
     display: flex;
 }
-#logininfo:after{
-    position:absolute;
-    top:1px;
-    right:-8px;
-    content: "";
-    width: 15px;
-    height: 15px;
-    border-top:1px solid currentColor;
-    border-left:1px solid currentColor;
-    rotate: 45deg;
 
-}
-#logininfo > div{
-    padding:0rem 1rem 1rem 1rem;
-    border-bottom:1px solid currentColor;
-    border-left:1px solid currentColor;
-}
 
 @media (min-width: 992px) {
     .showlogininfo .textbig{

@@ -19,6 +19,14 @@
 <body class="w-100 d-flex flex-column showlogininfo">
     {{ template "nav.gohtml" . }}
 
+    <!-- login info (abhänig von class showinfo im body) -->
+        <div id="logininfo">
+            <div>
+                Login mit deiner Switch edu-ID, um alle für dich freigeschalteten Inhalte zu sehen.<br>
+                Info über <a class="link" href="{{ $root }}pages/ink3_mediathek/berechtigungen_INK.md">Berechtigungen</a>
+                <div class="pt-3"><a class="btn btn-sm px-3 invert" style="border-radius:0px" href="javascript:hideLogininfo()">ok</a></div>
+            </div>
+        </div>
     <main class="flex-grow-1">
 
         <!-- logo line -->
@@ -265,14 +273,7 @@
         </details> -->
         {{ end }}
 
-        <!-- login info (abhänig von class showinfo im body) -->
-        <div id="logininfo">
-            <div>
-                Login mit deiner Switch edu-ID, um alle für dich freigeschalteten Inhalte zu sehen.<br>
-                Info über <a class="link" href="{{ $root }}pages/ink3_mediathek/berechtigungen_INK.md">Berechtigungen</a>
-                <div class="pt-3"><a class="btn btn-sm px-3" style="border-radius:0px" href="javascript:hideLogininfo()">ok</a></div>
-            </div>
-        </div>
+       
     </main>
 
     {{ template "footer.gohtml" . }}
