@@ -411,7 +411,7 @@ img.flipvertical {
 }
 
 .toggle.access .checkmark{
-    mask-image:url('../img/icon-locked.svg');
+    mask-image:url('../img/icon-unlocked.svg');
     mask-size:16px;
     mask-repeat:no-repeat;
     mask-position:center;
@@ -419,7 +419,7 @@ img.flipvertical {
     border:0;
 }
 .toggle.access input:checked ~ .checkmark{
-    mask-image:url('../img/icon-unlocked.svg');
+    mask-image:url('../img/icon-locked.svg');
 }
 
 
