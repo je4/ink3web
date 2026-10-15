@@ -143,12 +143,12 @@ title = "GPX File"
 #url = ""
 #contact = ""
 
-#[[catalogs]]
-#id = 2
-#identifier = "catalog:\"Open\""
-#title = "Open and Free Access"
-#url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/publikationen.html?view=search&search=OA+Publikation"
-#contact = ""
+[[catalogs]]
+id = 2
+identifier = "catalog:\"Open\""
+title = "Open and Free Access"
+url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/publikationen.html?view=search&search=OA+Publikation"
+contact = ""
 
 
 [[catalogs]]
@@ -190,7 +190,7 @@ contact = "Martina Papiro"
 
 [[collections]]
 id = 2
-identifier = "cat:\"zotero2!!HSM-Datenbanken!!RIMAB-Legacy!!Frühe Streichinstrumente um 1500\""
+identifier = "cat:\"zotero2!!HSM-Datenbanken!!Schola Cantorum Basiliensis!!RIMAB-Legacy!!Frühe Streichinstrumente um 1500\""
 title = "Frühe Streichinstrumente"
 url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/forschung/fruehe-streichinstrumente-1.html"
 image = ""
