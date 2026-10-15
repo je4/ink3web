@@ -158,26 +158,26 @@ title = "HSM Hochschule für Musik FHNW"
 url = "https://www.musik-akademie.ch/de.html"
 contact = ""
 
-#[[catalogs]]
-#id = 8
-#identifier = "catalog:\"Education\""
-#title = "Education"
-#url = "https://www.fhnw.ch/de/musik"
-#contact = ""
+[[catalogs]]
+id = 8
+identifier = "catalog:\"Education\""
+title = "Education"
+url = "https://www.fhnw.ch/de/musik"
+contact = ""
 
-#[[catalogs]]
-#id = 9
-#identifier = "catalog:\"Research\""
-#title = "Research Data Art"
-#url = "https://www.fhnw.ch/de/musik/forschung-dienstleistungen/forschung"
-#contact = ""
+[[catalogs]]
+id = 9
+identifier = "catalog:\"Research\""
+title = "Research Data Art"
+url = "https://www.fhnw.ch/de/musik/forschung-dienstleistungen/forschung"
+contact = ""
 
-#[[catalogs]]
-#id = 10
-#identifier = "catalog:\"Video\""
-#title = "Video Art and Culture"
-#url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-08"
-#contact = ""
+[[catalogs]]
+id = 10
+identifier = "catalog:\"Video\""
+title = "Video Art and Culture"
+url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-08"
+contact = ""
 
 
 [[collections]]
