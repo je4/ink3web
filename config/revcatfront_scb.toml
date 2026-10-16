@@ -136,12 +136,12 @@ id = 8
 identifier = "mediatypes.keyword:\"gpx\""
 title = "GPX File"
 
-#[[catalogs]]
-#id = 1
-#identifier = "catalog:\"Educational\""
-#title = "Educational Resources"
-#url = ""
-#contact = ""
+[[catalogs]]
+id = 1
+identifier = "catalog:\"Educational\""
+title = "Educational Resources"
+url = ""
+contact = ""
 
 [[catalogs]]
 id = 2
@@ -158,26 +158,6 @@ title = "HSM Hochschule für Musik FHNW"
 url = "https://www.musik-akademie.ch/de.html"
 contact = ""
 
-[[catalogs]]
-id = 8
-identifier = "catalog:\"Education\""
-title = "Education"
-url = "https://www.fhnw.ch/de/musik"
-contact = ""
-
-[[catalogs]]
-id = 9
-identifier = "catalog:\"Research\""
-title = "Research Data Art"
-url = "https://www.fhnw.ch/de/musik/forschung-dienstleistungen/forschung"
-contact = ""
-
-[[catalogs]]
-id = 10
-identifier = "catalog:\"Video\""
-title = "Video Art and Culture"
-url = "https://mediathek.hgk.fhnw.ch/nebis/viewer?sys=02-08"
-contact = ""
 
 
 [[collections]]
@@ -190,7 +170,7 @@ contact = "Martina Papiro"
 
 [[collections]]
 id = 2
-identifier = "cat:\"zotero2!!HSM-Datenbanken!!Schola Cantorum Basiliensis!!RIMAB-Legacy!!Frühe Streichinstrumente um 1500\""
+identifier = "cat:\"zotero2!!HSM-Datenbanken!!RIMAB-Legacy!!Frühe Streichinstrumente um 1500\""
 title = "Frühe Streichinstrumente"
 url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/forschung/fruehe-streichinstrumente-1.html"
 image = ""
@@ -198,7 +178,7 @@ contact = "Martina Papiro"
 
 #[[collections]]
 #id = 3
-#identifier = "cat:\"zotero2!!HSM-Datenbanken!!Ina Lohr\""
+#identifier = "cat:\"zotero2!!HSM-Datenbanken!!RIMAB-Legacy!!Ina Lohr\""
 #title = "Ina Lohr"
 #url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/forschung/ina-lohr-project.html"
 #image = ""
@@ -222,7 +202,7 @@ contact = "Tabea Lurk"
 #contact = "Martina Papiro"
 
 [[collections]]
-id = 6
+id = 20
 identifier = "cat:\"zotero2!!HSM-Datenbanken!!Open Access Publikationen\""
 title = "Open Access Publikationen"
 url = "https://www.forschung.schola-cantorum-basiliensis.ch/de/publikationen.html?view=search&search=OA+Publikation"
