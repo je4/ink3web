@@ -102,15 +102,22 @@
                                                     <td>{{ $edge.Title.String }}</td>
                                                     <td>{{ $edge.Date }}</td>
                                                     <td>
-                                                        {{- range $role, $persons := $edge.PersonRole }}
-                                                            {{- if has $role (list "artist" "director") }}
-                                                                <div class="p-0 m-0" style="text-indent: 2em hanging;">
-                                                                    {{ range $k, $name := $persons }}{{ if ne $k 0 }}; {{ end }}{{ $name }}{{ end }}
-                                                                </div>
+                                                        {{- if ne $edge.Persons "" }}
+                                                            <div class="p-0 m-0" style="text-indent: 2em hanging;">{{ $edge.Persons }}</div>
+                                                        {{- else }}
+                                                            {{- range $role, $persons := $edge.PersonRole }}
+                                                                {{- if has $role $roles }}
+                                                                    <div class="p-0 m-0" style="text-indent: 2em hanging;">
+                                                                        {{ range $k, $name := $persons }}{{ if ne $k 0 }}; {{ end }}{{ $name }}{{ end }}
+                                                                    </div>
+                                                                {{- end }}
                                                             {{- end }}
                                                         {{- end }}
                                                     </td>
                                                     <td>
+                                                        {{- if ne (ptrString $edge.Edge.Base.CollectionTitle) "" }}
+                                                            <div class="p-0 m-0" style="text-indent: 2em hanging;">{{ ptrString $edge.Edge.Base.CollectionTitle }}</div>
+                                                        {{- end }}
                                                         {{- range $e := $edge.Edge.Extra }}
                                                             {{- if has $e.Key (list "festival") }}
                                                                 <div class="p-0 m-0" style="text-indent: 2em hanging;">

@@ -175,12 +175,7 @@
                                     <table class="results-table table table-hover">
                                         <thead>
                                             <tr>
-                                                <!--
-                                                <th scope="col" style="min-width: 100px;">&nbsp</th>
-                                                <th scope="col" style="white-space: nowrap;">
-                                                    {{ localize "signature" $lang }}
-                                                </th>
-                                                -->
+                                                <th scope="col" style="min-width: 100px;">&nbsp;</th>
                                                 <th scope="col" style="white-space: nowrap;">
                                                     {{ localize "titel" $lang }}
                                                 </th>
@@ -204,7 +199,6 @@
                                                 {{- if $useKI }}{{- $query = printf "%s&ki" $query }}{{- end }}
                                                 {{- $query = trimPrefix "&" $query }}
                                                 <tr onclick="window.location='{{ $detailAddr }}/detail/{{ $edge.Edge.Base.Signature }}/{{ $lang }}{{ if ne $query "" }}?{{ $query | toURL }}{{ end }}';">
-                                                    <!--
                                                     <td>{{- if $edge.Edge.Base.Poster }}
                                                             {{- if $edge.Edge.Base.MediaVisible }}
                                                                 <img src="{{ medialink $edge.Edge.Base.Poster.URI "resize" "size100x100/formatPNG/autorotate" (and ($edge.Edge.Base.MediaVisible) $edge.ProtectedContent) }}" class="img-fluid rounded" alt="">
@@ -213,20 +207,25 @@
                                                             {{- end }}
                                                         {{- end }}
                                                     </td>
-                                                    <td>{{ $edge.Edge.Base.Signature }}</td>
-                                                    -->
                                                     <td class="title"><h2 class="bigtext mb-0">{{ $edge.Title.String }}</h2></td>
                                                     <td>{{ $edge.Date }}</td>
                                                     <td>
-                                                        {{- range $role, $persons := $edge.PersonRole }}
-                                                            {{- if has $role (list "artist" "director") }}
-                                                                <div>
-                                                                    {{ range $k, $name := $persons }}{{ if ne $k 0 }}; {{ end }}{{ $name }}{{ end }}
-                                                                </div>
+                                                        {{- if ne $edge.Persons "" }}
+                                                            <div>{{ $edge.Persons }}</div>
+                                                        {{- else }}
+                                                            {{- range $role, $persons := $edge.PersonRole }}
+                                                                {{- if has $role $roles }}
+                                                                    <div>
+                                                                        {{ range $k, $name := $persons }}{{ if ne $k 0 }}; {{ end }}{{ $name }}{{ end }}
+                                                                    </div>
+                                                                {{- end }}
                                                             {{- end }}
                                                         {{- end }}
                                                     </td>
                                                     <td>
+                                                        {{- if ne (ptrString $edge.Edge.Base.CollectionTitle) "" }}
+                                                            <div>{{ ptrString $edge.Edge.Base.CollectionTitle }}</div>
+                                                        {{- end }}
                                                         {{- range $e := $edge.Edge.Extra }}
                                                             {{- if has $e.Key (list "festival") }}
                                                                 <div>
