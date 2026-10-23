@@ -217,7 +217,7 @@ contact = ""
 
 [[collections]]
 id = 1
-identifier = "cat:\"forms2!!diplom\""
+identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Next Generation\""
 title = "Next Generation"
 url = "https://nextgeneration.hgk.fhnw.ch/"
 contact = "kommunikation.hgk@fhnw.ch"
@@ -231,10 +231,10 @@ image = "act_klein.png"
 contact = "Marion Ritzmann, Hannah Weinberger"
 
 [[collections]]
-id = 3
-identifier = "cat:\"forms2!!modul\""
+id = 16
+identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Erinnerungsraum\""
 title = "Erinnerungsraum"
-url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
+url = "https://modulbeschreibungen.webapps.fhnw.ch/detail/26HS_9916410?uiLanguage=de&semester=26HS&university=Hochschule%20f%C3%BCr%20Gestaltung%20und%20Kunst%20Basel%20FHNW&teachers=Hauck%20Eva&searchInput=Raummodelle"
 image = ""
 contact = "Eva Hauck"
 
@@ -280,6 +280,14 @@ contact = "Marianna Meyer"
 
 [[collections]]
 id = 11
+identifier = "cat:\"forms2!!modul\""
+title = "Making Erinnerungsraum"
+url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
+image = ""
+contact = "Eva Hauck"
+
+[[collections]]
+id = 12
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!SMUC\""
 title = "SMUC"
 url = "https://criticalmedialab.ch/projects/smuc/"
@@ -294,6 +302,7 @@ url = "https://ubimus.ixdm.ch/"
 image = ""
 contact = "Jan Torpus"
 
+
 [[collections]]
 id = 15
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Cycles of Circulation\""
@@ -301,6 +310,7 @@ title = "Cycles or Circulation"
 url = "https://criticalmedialab.ch/projects/cycles-of-circulation/"
 image = ""
 contact = "Jamie Allen"
+
 
 [[collections]]
 id = 17
@@ -383,6 +393,13 @@ title = "Doing Fashion Public"
 url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/mode-design-ba"
 image = ""
 contact = "Institut Mode"
+
+[[collections]]
+id = 44
+identifier = "cat:\"forms2!!diplom\""
+title = "Next Generation 2017-2024"
+url = "https://nextgeneration.hgk.fhnw.ch/"
+contact = "kommunikation.hgk@fhnw.ch"
 
 [[collections]]
 id = 46
