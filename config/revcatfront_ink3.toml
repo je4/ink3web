@@ -214,9 +214,10 @@ url = ""
 contact = ""
 
 
+
 [[collections]]
 id = 1
-identifier = "cat:\"forms2!!diplom\""
+identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Next Generation\""
 title = "Next Generation"
 url = "https://nextgeneration.hgk.fhnw.ch/"
 contact = "kommunikation.hgk@fhnw.ch"
@@ -230,10 +231,10 @@ image = "act_klein.png"
 contact = "Marion Ritzmann, Hannah Weinberger"
 
 [[collections]]
-id = 3
-identifier = "cat:\"forms2!!modul\""
+id = 16
+identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Erinnerungsraum\""
 title = "Erinnerungsraum"
-url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
+url = "https://modulbeschreibungen.webapps.fhnw.ch/detail/26HS_9916410?uiLanguage=de&semester=26HS&university=Hochschule%20f%C3%BCr%20Gestaltung%20und%20Kunst%20Basel%20FHNW&teachers=Hauck%20Eva&searchInput=Raummodelle"
 image = ""
 contact = "Eva Hauck"
 
@@ -279,6 +280,14 @@ contact = "Marianna Meyer"
 
 [[collections]]
 id = 11
+identifier = "cat:\"forms2!!modul\""
+title = "Making Erinnerungsraum"
+url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
+image = ""
+contact = "Eva Hauck"
+
+[[collections]]
+id = 12
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!SMUC\""
 title = "SMUC"
 url = "https://criticalmedialab.ch/projects/smuc/"
@@ -293,6 +302,7 @@ url = "https://ubimus.ixdm.ch/"
 image = ""
 contact = "Jan Torpus"
 
+
 [[collections]]
 id = 15
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Cycles of Circulation\""
@@ -300,6 +310,7 @@ title = "Cycles or Circulation"
 url = "https://criticalmedialab.ch/projects/cycles-of-circulation/"
 image = ""
 contact = "Jamie Allen"
+
 
 [[collections]]
 id = 17
@@ -338,7 +349,7 @@ contact = "Renate Florenz, Markus Schwander"
 id = 31
 identifier = "cat:\"zotero2!!Werke\""
 title = "Forschungsdaten & Publikationen"
-url = ""
+url = "https://www.fhnw.ch/de/gestaltung-kunst/forschung-dienstleistungen/forschung"
 image = ""
 contact = "mediathek.hgk@fhnw.ch"
 
@@ -350,7 +361,6 @@ title = "Archiv Industrial Design ICDP"
 url = "https://industrialdesign-basel.ch/projekte?category=Semesterprojekte"
 image = ""
 contact = "ICDP"
-
 
 [[collections]]
 id = 36
@@ -383,6 +393,13 @@ title = "Doing Fashion Public"
 url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/mode-design-ba"
 image = ""
 contact = "Institut Mode"
+
+[[collections]]
+id = 44
+identifier = "cat:\"forms2!!diplom\""
+title = "Next Generation 2017-2024"
+url = "https://nextgeneration.hgk.fhnw.ch/"
+contact = "kommunikation.hgk@fhnw.ch"
 
 [[collections]]
 id = 46
@@ -454,7 +471,7 @@ contact = "Dominic Landwehr"
 id = 58
 identifier = "cat:\"zotero2!!Konvolute!!Feministisches* Improvisatorium\""
 title = "Feministisches Improvisatorium"
-url = "./pages/estates/feministisches_improvisatorium.md"
+url = "https://ink3.sammlung.cc/pages/estates/feministisches_improvisatorium.md"
 image = ""
 contact = "Chris Regn, Muda Mathis"
 
@@ -597,14 +614,21 @@ url = "https://fhnw.swisscovery.slsp.ch/discovery/collectionDiscovery?vid=41SLSP
 image = ""
 contact = "Tabea Lurk"
 
+[[collections]]
+id = 230
+identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Next Generation!!2025\""
+title = "Datentest Punkt"
+url = ""
+image = ""
+contact = "Tabea Lurk"
 
-#[[collections]]
-#id = 201
-#identifier = "cat:\"neos!!test\""
-#title = "Datentest Punkt"
-#url = ""
-#image = ""
-#contact = "Tabea Lurk"
+[[collections]]
+id = 231
+identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Erinnerungsraum!!2025\""
+title = "Datentest Punkt 2"
+url = ""
+image = ""
+contact = "Tabea Lurk"
 
 [[collections]]
 id = 201

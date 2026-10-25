@@ -614,11 +614,18 @@ url = "https://fhnw.swisscovery.slsp.ch/discovery/collectionDiscovery?vid=41SLSP
 image = ""
 contact = "Tabea Lurk"
 
-
 [[collections]]
 id = 230
 identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Next Generation!!2025\""
 title = "Datentest Punkt"
+url = ""
+image = ""
+contact = "Tabea Lurk"
+
+[[collections]]
+id = 231
+identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Erinnerungsraum!!2025\""
+title = "Datentest Punkt 2"
 url = ""
 image = ""
 contact = "Tabea Lurk"
