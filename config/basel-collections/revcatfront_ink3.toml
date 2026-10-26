@@ -2,10 +2,10 @@ name = "ink"
 logfile = ""
 loglevel = "DEBUG"
 
-localaddr = "localhost:8449"
-externaladdr = "https://ink3.sammlung.cc"
-searchaddr = "https://ink3.sammlung.cc"
-detailaddr = "https://ink3.sammlung.cc"
+localaddr = "0.0.0.0:8449"
+externaladdr = "https://mediathek.hgk.fhnw.ch/ink"
+searchaddr = "https://mediathek.hgk.fhnw.ch/ink"
+detailaddr = "https://mediathek.hgk.fhnw.ch/ink"
 
 mode = "dark"
 templates = "/root/ink3web/data/web/ink3/templates/"
@@ -79,7 +79,7 @@ networks = ["212.51.149.28/32", "2a02:168:5608:0:c8b5:db0f:4ce6:f9d1/48"]
 
 
 [revcat]
-endpoint = "https://localhost:8443/graphql"
+endpoint = "https://revcat_v3:8443/graphql"
 insecure = true
 apikey = "%%INK_APIKEY%%"
 
@@ -231,14 +231,7 @@ image = "act_klein.png"
 contact = "Marion Ritzmann, Hannah Weinberger"
 
 [[collections]]
-id = 3
-identifier = "cat:\"forms2!!diplom\""
-title = "Next Generation 2017-2024"
-url = "https://nextgeneration.hgk.fhnw.ch/"
-contact = "kommunikation.hgk@fhnw.ch"
-
-[[collections]]
-id = 5
+id = 16
 identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Erinnerungsraum\""
 title = "Erinnerungsraum"
 url = "https://modulbeschreibungen.webapps.fhnw.ch/detail/26HS_9916410?uiLanguage=de&semester=26HS&university=Hochschule%20f%C3%BCr%20Gestaltung%20und%20Kunst%20Basel%20FHNW&teachers=Hauck%20Eva&searchInput=Raummodelle"
@@ -246,7 +239,7 @@ image = ""
 contact = "Eva Hauck"
 
 [[collections]]
-id = 7
+id = 4
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Peripher_ies\""
 title = "Peripher_ies"
 url = "https://sndscp.ch/"
@@ -254,7 +247,7 @@ image = ""
 contact = "Max Spielmann, Catherine Walthard"
 
 [[collections]]
-id = 8
+id = 5
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!CulturalSpace&Design - Research\""
 title = "Cultural Spaces and Design"
 url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/32"
@@ -262,7 +255,7 @@ image = ""
 contact = "Regine Halter, Catherine Walthard, Anka Falk"
 
 [[collections]]
-id = 9
+id = 6
 identifier = "cat:\"zotero2!!Werke!!Plant_Intelligence\""
 title = "Plant Intelligence"
 url = "https://plants-intelligence.ch/"
@@ -270,7 +263,7 @@ image = ""
 contact = "Yvonne Volkart"
 
 [[collections]]
-id = 10
+id = 8
 identifier = "cat:\"zotero2!!Netzkulturen\""
 title = "Netzkulturen"
 url = "https://plants-intelligence.ch/"
@@ -278,7 +271,7 @@ image = ""
 contact = "Stefanie Bräuer"
 
 [[collections]]
-id = 11
+id = 10
 identifier = "cat:\"zotero2!!Werke!!Lehre_Weiterbildung!!Incubator for Design Cultures\""
 title = "Incubator for Design Cultures"
 url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/37"
@@ -286,7 +279,7 @@ image = ""
 contact = "Marianna Meyer"
 
 [[collections]]
-id = 12
+id = 11
 identifier = "cat:\"forms2!!modul\""
 title = "Making Erinnerungsraum"
 url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
@@ -294,7 +287,7 @@ image = ""
 contact = "Eva Hauck"
 
 [[collections]]
-id = 13
+id = 12
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!SMUC\""
 title = "SMUC"
 url = "https://criticalmedialab.ch/projects/smuc/"
@@ -302,7 +295,7 @@ image = ""
 contact = "Viktor Bedö"
 
 [[collections]]
-id = 14
+id = 13
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!ubicombs - Technology – Human – Design: Paradigms of Ubiquitous Computing\""
 title = "Ubiquitous Computing"
 url = "https://ubimus.ixdm.ch/"
@@ -400,6 +393,13 @@ title = "Doing Fashion Public"
 url = "https://www.fhnw.ch/de/gestaltung-kunst/studium/angebot/studiengaenge/mode-design-ba"
 image = ""
 contact = "Institut Mode"
+
+[[collections]]
+id = 44
+identifier = "cat:\"forms2!!diplom\""
+title = "Next Generation 2017-2024"
+url = "https://nextgeneration.hgk.fhnw.ch/"
+contact = "kommunikation.hgk@fhnw.ch"
 
 [[collections]]
 id = 46
