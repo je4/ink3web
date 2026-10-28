@@ -217,7 +217,7 @@ contact = ""
 
 [[collections]]
 id = 1
-identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Next Generation\""
+identifier = "cat:\"neosform!!Mediathek HGK!!Next Generation\""
 title = "Next Generation"
 url = "https://nextgeneration.hgk.fhnw.ch/"
 contact = "kommunikation.hgk@fhnw.ch"
@@ -232,7 +232,7 @@ contact = "Marion Ritzmann, Hannah Weinberger"
 
 [[collections]]
 id = 16
-identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Erinnerungsraum\""
+identifier = "cat:\"neosform!!Mediathek HGK!!Erinnerungsraum\""
 title = "Erinnerungsraum"
 url = "https://modulbeschreibungen.webapps.fhnw.ch/detail/26HS_9916410?uiLanguage=de&semester=26HS&university=Hochschule%20f%C3%BCr%20Gestaltung%20und%20Kunst%20Basel%20FHNW&teachers=Hauck%20Eva&searchInput=Raummodelle"
 image = ""
@@ -616,7 +616,7 @@ contact = "Tabea Lurk"
 
 [[collections]]
 id = 230
-identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Next Generation!!2025\""
+identifier = "cat:\"neosform!!Mediathek HGK!!Next Generation!!2025\""
 title = "Datentest Punkt"
 url = ""
 image = ""
@@ -624,7 +624,7 @@ contact = "Tabea Lurk"
 
 [[collections]]
 id = 231
-identifier = "cat:\"neosform!!fhnw!!Mediathek HGK!!Erinnerungsraum!!2025\""
+identifier = "cat:\"neosform!!Mediathek HGK!!Erinnerungsraum!!2025\""
 title = "Erinnerungsraum 2025"
 url = ""
 image = ""
@@ -632,7 +632,7 @@ contact = "Tabea Lurk"
 
 [[collections]]
 id = 201
-identifier = "cat:\"neosform!!fhnw!!Mediathek-Team!!Testing!!NeosGeneration\""
+identifier = "cat:\"neosform!!Mediathek-Team!!Testing!!NeosGeneration\""
 title = "Textdaden Neuer Import Punkt"
 url = "https://nextgeneration.hgk.fhnw.ch/"
 contact = "kommunikation.hgk@fhnw.ch"
