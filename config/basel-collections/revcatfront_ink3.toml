@@ -3,9 +3,9 @@ logfile = ""
 loglevel = "DEBUG"
 
 localaddr = "0.0.0.0:8449"
-externaladdr = "https://ink3.basel-collections.ch"
-searchaddr = "https://ink3.basel-collections.ch"
-detailaddr = "https://ink3.basel-collections.ch"
+externaladdr = "https://ink3.sammlung.cc"
+searchaddr = "https://ink3.sammlung.cc"
+detailaddr = "https://ink3.sammlung.cc"
 
 mode = "dark"
 templates = "/root/ink3web/data/web/ink3/templates/"
