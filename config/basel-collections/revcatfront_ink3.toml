@@ -230,7 +230,6 @@ url = "https://www.act-perform.net/"
 image = "act_klein.png"
 contact = "Marion Ritzmann, Hannah Weinberger"
 
-
 [[collections]]
 id = 4
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Peripher_ies\""
@@ -270,6 +269,14 @@ title = "Incubator for Design Cultures"
 url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/37"
 image = ""
 contact = "Marianna Meyer"
+
+[[collections]]
+id = 11
+identifier = "cat:\"neosform!!Mediathek HGK!!Erinnerungsraum\""
+title = "Erinnerungsraum"
+url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
+image = ""
+contact = "Eva Hauck"
 
 [[collections]]
 id = 16
