@@ -231,7 +231,7 @@ image = "act_klein.png"
 contact = "Marion Ritzmann, Hannah Weinberger"
 
 [[collections]]
-id = 11
+id = 3
 identifier = "cat:\"neosform!!Mediathek HGK!!Erinnerungsraum\""
 title = "Erinnerungsraum"
 url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
@@ -280,7 +280,7 @@ contact = "Marianna Meyer"
 
 
 [[collections]]
-id = 16
+id = 11
 identifier = "cat:\"zotero2!!Erinnerungsraum\""
 title = "Making Erinnerungsraum"
 url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
