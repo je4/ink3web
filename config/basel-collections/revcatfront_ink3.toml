@@ -231,6 +231,21 @@ image = "act_klein.png"
 contact = "Marion Ritzmann, Hannah Weinberger"
 
 [[collections]]
+id = 11
+identifier = "cat:\"neosform!!Mediathek HGK!!Erinnerungsraum\""
+title = "Erinnerungsraum"
+url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
+image = ""
+contact = "Eva Hauck"[[collections]]
+id = 11
+identifier = "cat:\"neosform!!Mediathek HGK!!Erinnerungsraum\""
+title = "Erinnerungsraum"
+url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
+image = ""
+contact = "Eva Hauck"
+
+
+[[collections]]
 id = 4
 identifier = "cat:\"zotero2!!Werke!!Data-Publications!!Peripher_ies\""
 title = "Peripher_ies"
@@ -270,13 +285,6 @@ url = "https://mediathek.hgk.fhnw.ch/front/#/de/bestaende/37"
 image = ""
 contact = "Marianna Meyer"
 
-[[collections]]
-id = 11
-identifier = "cat:\"neosform!!Mediathek HGK!!Erinnerungsraum\""
-title = "Erinnerungsraum"
-url = "https://erinnerungsraum.in3.campusderkuenste.ch/"
-image = ""
-contact = "Eva Hauck"
 
 [[collections]]
 id = 16
