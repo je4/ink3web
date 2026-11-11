@@ -217,7 +217,7 @@ contact = ""
 
 [[collections]]
 id = 1
-identifier = "cat:\"neosform!!Mediathek HGK!!Next Generation\""
+identifier = "cat:\"neosform!!Next Generation\""
 title = "Next Generation"
 url = "https://nextgeneration.hgk.fhnw.ch/"
 contact = "kommunikation.hgk@fhnw.ch"
